@@ -1,0 +1,28 @@
+import email_image from '../assets/img/email_image.png';
+
+function Contacto() {
+  return (
+    <section className='bg-red-200 h-dvh flex flex-col py-10'>
+      <div className='flex flex-col bg-amber-200'>
+        <p className='font-steelfish uppercase text-[61.04px] font-bold text-center leading-none'>
+          Lorem ipsum
+          <br />
+          dolor sit amet consectetur
+        </p>
+      </div>
+      <div className='bg-main-black flex flex-col items-center gap-20 my-auto'>
+        <img
+          src={email_image}
+          alt='email_image'
+        />
+        <button
+          type='button'
+          className='w-40 h-15 border border-translucent-white text-white rounded-full cursor-pointer'
+        >
+          Contactar
+        </button>
+      </div>
+    </section>
+  );
+}
+export default Contacto;
