@@ -1,0 +1,23 @@
+@import 'tailwindcss';
+
+/* FONTS */
+
+@font-face {
+  font-family: 'Overused Grotesk';
+  src: url('./assets/fonts/OverusedGrotesk/OverusedGrotesk-Medium.ttf');
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'High Summit';
+  src: url('./assets/fonts/HighSummit/High\ Summit.ttf');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@theme {
+  /* FONTS */
+  --font-overused-grotesk: 'Overused Grotesk', sans-serif;
+  --font-high-summit: 'High Summit', sans-serif;
+}
