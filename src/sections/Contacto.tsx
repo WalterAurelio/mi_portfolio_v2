@@ -2,7 +2,7 @@ import email_image from '../assets/img/email_image.png';
 
 function Contacto() {
   return (
-    <section className='bg-red-200 h-dvh flex flex-col py-10'>
+    <section className='bg-red-200 h-dvh flex flex-col p-10 -ml-10 w-dvw'>
       <div className='flex flex-col bg-amber-200'>
         <p className='font-steelfish uppercase text-[61.04px] font-bold text-center leading-none'>
           Lorem ipsum

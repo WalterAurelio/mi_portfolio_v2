@@ -1,23 +1,39 @@
-/* import Contacto from './sections/Contacto'
+import gsap from 'gsap'
+import LenguajeTech from './components/LenguajeTech'
+import ProyectosContainer from './interfaces/ProyectosContainer'
+import Contacto from './sections/Contacto'
 import Footer from './sections/Footer'
 import Hero from './sections/Hero'
-import Proyectos from './sections/Proyectos'
 import SobreMi from './sections/SobreMi'
-import Tecnologias from './sections/Tecnologias' */
-import gsap from 'gsap'
+import Tecnologias from './sections/Tecnologias'
 import { useGSAP } from '@gsap/react'
-import { ScrollTrigger, MotionPathPlugin } from 'gsap/all'
-import SideScroll from './components/temp/SideScroll'
-import SideScroll_2 from './components/temp/SideScroll_2'
-import Techs_2 from './components/temp/Techs_2'
+import { ScrollSmoother } from 'gsap/all'
 
-gsap.registerPlugin(useGSAP, ScrollTrigger, MotionPathPlugin)
+gsap.registerPlugin(useGSAP, ScrollSmoother)
 
 function App() {
+  useGSAP(() => {
+    ScrollSmoother.create({
+      wrapper: '#smooth-wrapper',
+      content: '#smooth-content',
+      smooth: 2,
+      effects: true
+    })
+  })
 
   return (
-    <div className='font-overused-grotesk px-10 overflow-x-hidden text-main-black'>
-      <SideScroll_2 />
+    <div id='smooth-wrapper' className='font-overused-grotesk px-10 overflow-x-hidden text-main-black'>
+      <div id='smooth-content'>
+
+        {/* <Hero />
+        <SobreMi />
+        <Tecnologias />
+        <ProyectosContainer />
+        <Contacto />
+        <Footer /> */}
+        <Tecnologias />
+      
+      </div>
     </div>
   )
 }

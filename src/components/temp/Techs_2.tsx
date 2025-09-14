@@ -1,6 +1,7 @@
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger, ScrollSmoother } from 'gsap/all'
+import SideScroll from './SideScroll'
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother)
 // gsap.defaults({ ease: 'none', duration: 2 })
