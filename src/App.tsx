@@ -12,26 +12,25 @@ import { ScrollSmoother } from 'gsap/all'
 gsap.registerPlugin(useGSAP, ScrollSmoother)
 
 function App() {
-  useGSAP(() => {
+  /* useGSAP(() => {
     ScrollSmoother.create({
       wrapper: '#smooth-wrapper',
       content: '#smooth-content',
       smooth: 2,
       effects: true
     })
-  })
+  }) */
 
   return (
     <div id='smooth-wrapper' className='font-overused-grotesk px-10 overflow-x-hidden text-main-black'>
       <div id='smooth-content'>
 
-        {/* <Hero />
+        <Hero />
         <SobreMi />
         <Tecnologias />
         <ProyectosContainer />
         <Contacto />
-        <Footer /> */}
-        <Tecnologias />
+        <Footer />
       
       </div>
     </div>
