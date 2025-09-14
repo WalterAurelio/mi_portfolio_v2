@@ -8,6 +8,8 @@ import SobreMi from './sections/SobreMi'
 import Tecnologias from './sections/Tecnologias'
 import { useGSAP } from '@gsap/react'
 import { ScrollSmoother } from 'gsap/all'
+import ProyectosContainer_2 from './interfaces/ProyectosContainer_2'
+import SideScroll from './components/temp/SideScroll'
 
 gsap.registerPlugin(useGSAP, ScrollSmoother)
 
@@ -28,7 +30,8 @@ function App() {
         <Hero />
         <SobreMi />
         <Tecnologias />
-        <ProyectosContainer />
+        {/* <ProyectosContainer /> */}
+        <ProyectosContainer_2 />
         <Contacto />
         <Footer />
       
