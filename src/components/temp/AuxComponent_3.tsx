@@ -72,7 +72,7 @@ function AuxComponent_3() {
   }, [])
 
   return (
-    <div id='smooth-wrapper' className='w-dvw aux-component absolute -left-10'>
+    <div id='smooth-wrapper' className='w-dvw aux-component absolute -left-10 z-10'>
       <div id='smooth-content'>
         <div className='font-overused-grotesk overflow-x-hidden text-main-black'>
           {/* <div className='w-40 h-160 bg-yellow-500'></div> */}
