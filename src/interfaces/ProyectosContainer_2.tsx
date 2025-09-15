@@ -17,7 +17,7 @@ function ProyectosContainer_2() {
     })
 
     const tl = gsap.timeline();
-    tl.from('.scroll-panel-a', { xPercent: 100 })
+    tl/* .from('.scroll-panel-a', {}) */
     .from('.scroll-panel-b', { xPercent: 100 })
     .from('.scroll-panel-c', { xPercent: 100 })
     
@@ -28,7 +28,7 @@ function ProyectosContainer_2() {
       end: '+=4000',
       scrub: true,
       pin: true,
-      anticipatePin: 1
+      anticipatePin: 1,
     });    
   })
 
