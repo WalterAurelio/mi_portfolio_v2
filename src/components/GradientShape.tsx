@@ -1,28 +1,28 @@
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { MotionPathPlugin } from 'gsap/all'
+import { twMerge } from 'tailwind-merge';
+import { clsx } from 'clsx';
 
 gsap.registerPlugin(useGSAP, MotionPathPlugin);
 
 type GradientShapeProps = {
   id: string;
   className?: string;
-  options: {
-    colors: [string, string],
+  options?: {
     delay?: number,
     runBackwards?: boolean
-  }
+  },
+  variant: 1 | 2;
 }
 
-function GradientShape({ id, className, options }: GradientShapeProps) {
-  const { colors, delay, runBackwards } = options;
-  
+function GradientShape({ id, className, options, variant }: GradientShapeProps) {
   useGSAP(() => {
     gsap.to(`#${id}`, {
       duration: 12,
       repeat: -1,
-      delay: delay ?? 0,
-      runBackwards: runBackwards ?? false,
+      delay: options?.delay ?? 0,
+      runBackwards: options?.runBackwards ?? false,
       ease: 'power1.inOut',
       motionPath: {
         path: `#circle-path-${id}`,
@@ -30,12 +30,14 @@ function GradientShape({ id, className, options }: GradientShapeProps) {
       }
     })
   })
-  const colorOne = colors[0];
-  const colorTwo = colors[1];
 
   return (
-    <div className={`border w-fit ${className}`}>
-      <div id={id} className={`w-60 aspect-square rounded-full bg-radial-[at_25%_25%] from-[${colorOne}] from-20% to-[${colorTwo}]`}></div>
+    <div className={`w-fit ${className}`}>
+
+      <div id={id} className={twMerge(clsx('w-60 aspect-square rounded-full blur-xl', {
+        'bg-radial-[at_25%_25%] from-[#E07C17] from-20% to-[#4C4880]': variant === 1,
+        'bg-radial-[at_25%_25%] from-[#A8F877] from-20% to-[#727082]': variant === 2,
+      }))}></div>
       <svg className='hidden' width="240" height="240" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
         <path
           id={`circle-path-${id}`}

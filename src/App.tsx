@@ -34,13 +34,13 @@ function App() {
     <div id='smooth-wrapper' className='font-overused-grotesk px-10 overflow-x-hidden text-main-black relative'>
       <div id='smooth-content'>
       
-      <FloatingShapes />
-
-      {/* <AuxComponent_3 />
-
+      {/* <AuxComponent_3 /> */}
+      <div className='absolute right-1/12 -z-10'>
+        <FloatingShapes />
+      </div>
       <Hero />
-      <SobreMi />
-      <Tecnologias />
+      {/* <SobreMi /> */}
+      {/* <Tecnologias />
       <ProyectosContainer_2 />
       <Contacto /> */}
 
