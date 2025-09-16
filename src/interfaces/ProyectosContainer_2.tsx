@@ -3,11 +3,13 @@ import Proyectos from '../sections/Proyectos'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger, ScrollSmoother } from 'gsap/all'
+import type { SeeBoxes } from '../sections/Hero'
+import clsx from 'clsx'
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother)
 gsap.defaults({ ease: 'none', duration: 2 })
 
-function ProyectosContainer_2() {
+function ProyectosContainer_2({ seeBoxes }: SeeBoxes) {
   useGSAP(() => {
     ScrollSmoother.create({
       wrapper: '#smooth-wrapper',
@@ -35,8 +37,8 @@ function ProyectosContainer_2() {
   return (
     <div id='smooth-wrapper'>
       <div id='smooth-content' className='flex -ml-10 w-dvw h-dvh relative proyectos-section'>
-        <div className='pl-10 overflow-clip min-w-full bg-green-500 absolute scroll-panel-a'>
-          <Proyectos />
+        <div className={clsx('pl-10 overflow-clip min-w-full absolute scroll-panel-a', { 'bg-green-500': seeBoxes })}>
+          <Proyectos seeBoxes={seeBoxes} />
         </div>
         <Proyecto className='min-w-full absolute border-l scroll-panel-b' />
         <Proyecto className='min-w-full absolute border-l scroll-panel-c' />

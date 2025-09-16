@@ -1,9 +1,11 @@
+import clsx from 'clsx';
 import email_image from '../assets/img/email_image.png';
+import type { SeeBoxes } from './Hero';
 
-function Contacto() {
+function Contacto({ seeBoxes }: SeeBoxes) {
   return (
-    <section className='bg-red-200 h-dvh flex flex-col p-10 -ml-10 w-dvw'>
-      <div className='flex flex-col bg-amber-200'>
+    <section className={clsx('h-dvh flex flex-col p-10 -ml-10 w-dvw', { 'bg-red-200': seeBoxes })}>
+      <div className={clsx('flex flex-col', { 'bg-amber-200': seeBoxes })}>
         <p className='font-steelfish uppercase text-[61.04px] font-bold text-center leading-none'>
           Lorem ipsum
           <br />

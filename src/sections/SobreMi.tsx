@@ -1,7 +1,10 @@
-function SobreMi() {
+import { clsx } from 'clsx';
+import type { SeeBoxes } from './Hero';
+
+function SobreMi({ seeBoxes }: SeeBoxes) {
   return (
-    <section id='sobre-mi-section' className='bg-green-300 h-dvh flex flex-col justify-between py-10'>
-      <div className='flex flex-col gap-10 bg-amber-200 max-w-[1062px] relative'>
+    <section id='sobre-mi-section' className={clsx('h-dvh flex flex-col justify-between py-10', { 'bg-green-300': seeBoxes })}>
+      <div className={clsx('flex flex-col gap-10 max-w-[1062px] relative', { 'bg-amber-200': seeBoxes })}>
         <h2 className='text-[97.66px] z-1'>Sobre mí.</h2>
         <p className='text-[25px]'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non urna id nibh mattis vulputate at at velit. Phasellus sed feugiat felis. Suspendisse tristique mollis

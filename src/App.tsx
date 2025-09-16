@@ -35,14 +35,15 @@ function App() {
       <div id='smooth-content'>
       
       {/* <AuxComponent_3 /> */}
-      <div className='absolute right-1/12 -z-10'>
+      <div className='absolute right-1/12'>
         <FloatingShapes />
       </div>
       <Hero />
-      {/* <SobreMi /> */}
-      {/* <Tecnologias />
-      <ProyectosContainer_2 />
-      <Contacto /> */}
+      <SobreMi />
+      {/* <Tecnologias seeBoxes />
+      <ProyectosContainer_2 seeBoxes />
+      <Contacto seeBoxes />
+      <Footer seeBoxes /> */}
 
       </div>
     </div>
