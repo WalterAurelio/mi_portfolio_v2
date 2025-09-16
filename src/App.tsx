@@ -27,23 +27,21 @@ function App() {
       effects: true
     })
   }) */
-
-  console.log(window.innerHeight)
   
   return (
     <div id='smooth-wrapper' className='font-overused-grotesk px-10 overflow-x-hidden text-main-black relative'>
       <div id='smooth-content'>
       
-      {/* <AuxComponent_3 /> */}
-      <div className='absolute right-1/12'>
+      <AuxComponent_3 />
+      {/* <div className='absolute right-1/12 -z-10'>
         <FloatingShapes />
-      </div>
+      </div> */}
       <Hero />
       <SobreMi />
-      {/* <Tecnologias seeBoxes />
-      <ProyectosContainer_2 seeBoxes />
-      <Contacto seeBoxes />
-      <Footer seeBoxes /> */}
+      <Tecnologias />
+      <ProyectosContainer_2 />
+      <Contacto />
+      <Footer />
 
       </div>
     </div>

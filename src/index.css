@@ -44,7 +44,7 @@
 }
 
 .proyectos-text {
-  /* animation: left-to-right 12s infinite linear reverse; */
+  animation: left-to-right 12s infinite linear reverse;
 }
 
 @keyframes left-to-right {
