@@ -15,6 +15,7 @@ import AuxComponent from './components/temp/AuxComponent'
 import AuxComponent_2 from './components/temp/AuxComponent_2'
 import AuxComponent_3 from './components/temp/AuxComponent_3'
 import FloatingShapes from './components/FloatingShapes'
+import CircularText from './components/CircularText'
 
 gsap.registerPlugin(useGSAP, ScrollSmoother)
 
@@ -30,18 +31,20 @@ function App() {
   
   return (
     <div id='smooth-wrapper' className='font-overused-grotesk px-10 overflow-x-hidden text-main-black relative'>
-      <div id='smooth-content'>
-      
-      <AuxComponent_3 />
-      {/* <div className='absolute right-1/12 -z-10'>
-        <FloatingShapes />
-      </div> */}
-      <Hero />
-      <SobreMi />
-      <Tecnologias />
-      <ProyectosContainer_2 />
-      <Contacto />
-      <Footer />
+      <CircularText className='fixed right-10 bottom-10' />
+      <div id='smooth-content' className='flex flex-col'>
+        
+        <AuxComponent_3 />
+        {/* <div className='absolute right-1/12 -z-10'>
+          <FloatingShapes />
+        </div> */}
+
+        <Hero />
+        <SobreMi />
+        <Tecnologias />
+        <ProyectosContainer_2 />
+        <Contacto />
+        {/* <Footer /> */}
 
       </div>
     </div>

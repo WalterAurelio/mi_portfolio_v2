@@ -10,7 +10,7 @@ export type SeeBoxes = {
 }
 
 function Hero({ seeBoxes }: SeeBoxes) {
-  useGSAP(() => {
+  /* useGSAP(() => {
     const split = SplitText.create('#nombre-aurelio', { type: 'chars' });
     
     gsap.from(split.chars, {
@@ -48,7 +48,7 @@ function Hero({ seeBoxes }: SeeBoxes) {
       ease: 'bounce',
       delay: -0.4
     })
-  })
+  }) */
 
   return (
     <section className={clsx('h-dvh flex flex-col justify-between py-10', { 'bg-red-200': seeBoxes })}>

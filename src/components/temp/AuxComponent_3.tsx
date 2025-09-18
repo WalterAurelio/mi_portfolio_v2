@@ -57,8 +57,6 @@ function AuxComponent_3() {
           </svg>
 
 
-
-
           {/* <div id='caja-b' className='w-40 h-40 bg-green-500 text-6xl flex items-center justify-center'>b</div> */}
           <div id='caja-b' className='w-fit relative flex items-center justify-center'>
             <FloatingShapes />
