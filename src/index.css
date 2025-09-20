@@ -4,6 +4,13 @@
 
 @font-face {
   font-family: 'Overused Grotesk';
+  src: url('./assets/fonts/OverusedGrotesk/OverusedGrotesk-Light.ttf');
+  font-style: normal;
+  font-weight: 300; /* Light */
+}
+
+@font-face {
+  font-family: 'Overused Grotesk';
   src: url('./assets/fonts/OverusedGrotesk/OverusedGrotesk-Medium.ttf');
   font-style: normal;
   font-weight: 500; /* Medium */
@@ -73,7 +80,7 @@
 }
 
 .animate-spin-slow {
-  animation: spin-slow 16s linear infinite;
+  /* animation: spin-slow 16s linear infinite; */
 }
 
 /* Aurelio */

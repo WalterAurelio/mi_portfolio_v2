@@ -12,6 +12,7 @@ import ProyectosContainer_2 from './interfaces/ProyectosContainer_2'
 import AuxComponent_3 from './components/temp/AuxComponent_3'
 import CircularText from './components/CircularText'
 import Proyecto from './components/Proyecto'
+import InfoProyecto from './components/InfoProyecto'
 
 gsap.registerPlugin(useGSAP, ScrollSmoother, ScrollTrigger)
 
@@ -40,18 +41,16 @@ function App() {
   
   return (
     <div id='smooth-wrapper' className='font-overused-grotesk px-10 overflow-x-hidden text-main-black relative'>
-      <CircularText className='fixed right-10 bottom-10 z-10 circular-text' />
+      {/* <CircularText className='fixed right-10 bottom-10 z-10 circular-text' /> */}
       <div id='smooth-content' className='flex flex-col'>
         
-        {/* <AuxComponent_3 /> */}
+        <AuxComponent_3 />
         <Hero />
         <SobreMi />
         <Tecnologias />
         <ProyectosContainer_2 />
         <Contacto />
         <Footer />
-        {/* <Proyecto /> */}
-        
 
       </div>
     </div>

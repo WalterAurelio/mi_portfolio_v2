@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import email_image from '../assets/img/email_image.png';
 import type { SeeBoxes } from './Hero';
+import Button from '../components/Button';
 
 function Contacto({ seeBoxes }: SeeBoxes) {
   return (
@@ -17,12 +18,13 @@ function Contacto({ seeBoxes }: SeeBoxes) {
           src={email_image}
           alt='email_image'
         />
-        <button
+        <Button>Contactar</Button>
+        {/* <button
           type='button'
           className='w-40 h-15 border border-translucent-white-30 text-main-white rounded-full cursor-pointer'
         >
           Contactar
-        </button>
+        </button> */}
       </div>
     </section>
   );
