@@ -10,7 +10,7 @@ function SobreMi({ seeBoxes }: SeeBoxes) {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non urna id nibh mattis vulputate at at velit. Phasellus sed feugiat felis. Suspendisse tristique mollis
           lorem quis ullamcorper. Donec quis nunc consequat, lobortis odio at, ultrices nulla. Duis euismod elit vitae tincidunt faucibus.
         </p>
-        <p className='font-high-summit text-translucent-grey text-[61.04px] absolute left-[108px] top-18'>Sobre mi</p>
+        <p className='font-high-summit text-translucent-grey-30 text-[61.04px] absolute left-[108px] top-18'>Sobre mi</p>
       </div>
     </section>
   );

@@ -29,7 +29,7 @@ function Tecnologías({ seeBoxes }: SeeBoxes) {
         <p className='text-xl text-center'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non urna id nibh mattis vulputate at at velit. Phasellus sed feugiat felis.
         </p>
-        <p className='font-high-summit text-translucent-grey text-[61.04px] absolute left-[108px] top-18'>Tecnologias</p>
+        <p className='font-high-summit text-translucent-grey-30 text-[61.04px] absolute left-[108px] top-66'>Tecnologias</p>
       </div>
 
       <div id='lang-container' className='relative h-[calc(100dvh*5)]'>

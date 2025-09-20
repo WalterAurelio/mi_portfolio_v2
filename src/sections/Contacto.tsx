@@ -4,7 +4,7 @@ import type { SeeBoxes } from './Hero';
 
 function Contacto({ seeBoxes }: SeeBoxes) {
   return (
-    <section className={clsx('h-dvh flex flex-col p-10 -ml-10 w-dvw', { 'bg-red-200': seeBoxes })}>
+    <section id='contacto-section' className={clsx('h-dvh flex flex-col p-10 -ml-10 w-dvw', { 'bg-red-200': seeBoxes })}>
       <div className={clsx('flex flex-col', { 'bg-amber-200': seeBoxes })}>
         <p className='font-steelfish uppercase text-[61.04px] font-bold text-center leading-none'>
           Lorem ipsum
@@ -19,7 +19,7 @@ function Contacto({ seeBoxes }: SeeBoxes) {
         />
         <button
           type='button'
-          className='w-40 h-15 border border-translucent-white text-white rounded-full cursor-pointer'
+          className='w-40 h-15 border border-translucent-white-30 text-main-white rounded-full cursor-pointer'
         >
           Contactar
         </button>

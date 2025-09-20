@@ -40,8 +40,8 @@ function ProyectosContainer_2({ seeBoxes }: SeeBoxes) {
         <div className={clsx('pl-10 overflow-clip min-w-full absolute scroll-panel-a', { 'bg-green-500': seeBoxes })}>
           <Proyectos seeBoxes={seeBoxes} />
         </div>
-        <Proyecto className='min-w-full absolute border-l scroll-panel-b' />
-        <Proyecto className='min-w-full absolute border-l scroll-panel-c' />
+        <Proyecto className='min-w-full absolute border-l border-main-black scroll-panel-b' />
+        <Proyecto className='min-w-full absolute border-l border-main-black scroll-panel-c' />
       </div>
     </div>
   )

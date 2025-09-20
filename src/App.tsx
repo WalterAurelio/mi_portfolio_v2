@@ -7,17 +7,13 @@ import Hero from './sections/Hero'
 import SobreMi from './sections/SobreMi'
 import Tecnologias from './sections/Tecnologias'
 import { useGSAP } from '@gsap/react'
-import { ScrollSmoother } from 'gsap/all'
+import { ScrollSmoother, ScrollTrigger } from 'gsap/all'
 import ProyectosContainer_2 from './interfaces/ProyectosContainer_2'
-import SideScroll from './components/temp/SideScroll'
-import Proyectos from './sections/Proyectos'
-import AuxComponent from './components/temp/AuxComponent'
-import AuxComponent_2 from './components/temp/AuxComponent_2'
 import AuxComponent_3 from './components/temp/AuxComponent_3'
-import FloatingShapes from './components/FloatingShapes'
 import CircularText from './components/CircularText'
+import Proyecto from './components/Proyecto'
 
-gsap.registerPlugin(useGSAP, ScrollSmoother)
+gsap.registerPlugin(useGSAP, ScrollSmoother, ScrollTrigger)
 
 function App() {
   /* useGSAP(() => {
@@ -28,23 +24,34 @@ function App() {
       effects: true
     })
   }) */
+
+  useGSAP(() => {
+    gsap.to('.circular-text', {
+      opacity: 0,
+      scale: 0.1,
+      duration: 0.3,
+      scrollTrigger: {
+        trigger: '#contacto-section',
+        start: 'top bottom',
+        toggleActions: 'play none none reverse'
+      }
+    });
+  })
   
   return (
     <div id='smooth-wrapper' className='font-overused-grotesk px-10 overflow-x-hidden text-main-black relative'>
-      <CircularText className='fixed right-10 bottom-10' />
+      <CircularText className='fixed right-10 bottom-10 z-10 circular-text' />
       <div id='smooth-content' className='flex flex-col'>
         
-        <AuxComponent_3 />
-        {/* <div className='absolute right-1/12 -z-10'>
-          <FloatingShapes />
-        </div> */}
-
+        {/* <AuxComponent_3 /> */}
         <Hero />
         <SobreMi />
         <Tecnologias />
         <ProyectosContainer_2 />
         <Contacto />
-        {/* <Footer /> */}
+        <Footer />
+        {/* <Proyecto /> */}
+        
 
       </div>
     </div>

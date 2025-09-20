@@ -6,14 +6,14 @@
   font-family: 'Overused Grotesk';
   src: url('./assets/fonts/OverusedGrotesk/OverusedGrotesk-Medium.ttf');
   font-style: normal;
-  font-weight: 500;
+  font-weight: 500; /* Medium */
 }
 
 @font-face {
   font-family: 'Overused Grotesk';
   src: url('./assets/fonts/OverusedGrotesk/OverusedGrotesk-SemiBold.ttf');
   font-style: normal;
-  font-weight: 600;
+  font-weight: 600; /* SemiBold */
 }
 
 @font-face {
@@ -38,9 +38,13 @@
 
   /* Colours */
   --color-main-black: #171413;
-  --color-main-white: #ffffff;
-  --color-translucent-white: rgba(229, 224, 215, 0.3);
-  --color-translucent-grey: rgba(54, 53, 58, 0.3);
+  --color-main-white: #e5e0d7;
+
+  --color-translucent-white-30: rgba(229, 224, 215, 0.3);
+  --color-translucent-white-60: rgba(229, 224, 215, 0.6);
+  --color-translucent-grey-30: rgba(54, 53, 58, 0.3);
+
+  --color-aux-back: rgba(23, 20, 19, 0.8);
 }
 
 .proyectos-text {
@@ -69,5 +73,26 @@
 }
 
 .animate-spin-slow {
-  animation: spin-slow 20s linear infinite;
+  animation: spin-slow 16s linear infinite;
+}
+
+/* Aurelio */
+
+@keyframes blur-fade-in {
+  /* from {
+    filter: blur(64px);
+    opacity: 0;
+  } */
+
+  to {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+#aurelio {
+  filter: blur(64px);
+  opacity: 0;
+  animation: blur-fade-in 1.6s forwards;
+  animation-delay: 1.6s;
 }
