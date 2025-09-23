@@ -49,8 +49,8 @@ function AuxComponent_3() {
   }, [])
 
   return (
-    <div id='smooth-wrapper' className='w-dvw aux-component absolute -left-10 -z-10'>
-      <div id='smooth-content'>
+    <div /* id='smooth-wrapper' */ className='w-dvw aux-component absolute -left-10 -z-10'>
+      <div /* id='smooth-content' */>
         <div className='font-overused-grotesk overflow-x-hidden text-main-black'>
           <svg width="auto" height={9 * height} viewBox={`0 0 1062 ${9 * height}`} fill="none" xmlns="http://www.w3.org/2000/svg">
             <path id="custom-path" d="M738 0C738 1000 1 664 1 1164C1 1664 1063 1537 1063 2037C1063 2537 1 2472 1 2972C1 3472 1063 3997 532 4997" stroke="none"/>

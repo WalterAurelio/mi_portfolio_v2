@@ -52,6 +52,10 @@
   --color-translucent-white-30: rgba(229, 224, 215, 0.3);
   --color-translucent-white-60: rgba(229, 224, 215, 0.6);
   --color-translucent-grey-30: rgba(54, 53, 58, 0.3);
+
+  /* Gradient */
+  --color-black-gradient: rgba(0, 0, 0, 0.4);
+  --color-white-gradient: rgba(255, 255, 255, 0);
 }
 
 .proyectos-text {
@@ -100,13 +104,15 @@
 }
 
 .polaroid {
-  animation: polaroid-effect 3s reverse;
-  /* filter: contrast(4%) saturate(200%) invert(100%); */
+  filter: contrast(4%) saturate(200%) invert(100%) brightness(200%) hue-rotate(90deg);
+}
 
+.polaroid.inView {
+  animation: polaroid-effect 3s forwards;
 }
 
 @keyframes polaroid-effect {
   to {
-    filter: contrast(4%) saturate(200%) invert(100%) brightness(200%) hue-rotate(90deg);
+    filter: unset;
   }
 }
