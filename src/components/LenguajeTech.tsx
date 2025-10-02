@@ -6,24 +6,17 @@ type LenguajeTechProps = {
   description?: string;
   className?: string;
   imageUrl?: string;
-  imgOptions?: {
-    x?: string;
-    y?: string;
-    rotate?: string;
-  }
 }
 
-function LenguajeTech({ description='Lorem ipsum', className, imageUrl, imgOptions, ...props }: LenguajeTechProps) {
+function LenguajeTech({ description='Lorem ipsum', className, imageUrl, ...props }: LenguajeTechProps) {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.6 });
 
   return (
-    <div ref={ref} className={twMerge('flex w-[283px] h-85 p-5.5 flex-col items-center border border-translucent-grey-30 bg-white scale-[0.8]', className)} {...props}>
-      <div className='flex w-full aspect-square overflow-clip relative'>
-        <div style={{ backgroundImage: `url(${imageUrl})` }} className={clsx('bg-cover absolute w-108 h-108', imgOptions?.x, imgOptions?.y, imgOptions?.rotate, 'polaroid', { 'inView': inView })}></div>
-        <div className={clsx('w-full aspect-square bg-gradient-to-t from-black-gradient to-white-gradient to-10% z-10', { 'polaroid inView': inView })}></div>
-      </div>
-      <div className='flex justify-center items-center self-stretch text-main-black font-gloria-hallelujah text-xl h-full'>
-        {description}
+    <div ref={ref} className={twMerge('flex w-60 h-77.5 flex-col items-center pt-2 border border-translucent-grey-30 bg-translucent-white-20 backdrop-blur-sm rounded-[56px] overflow-clip relative', className)} {...props}>
+      {/* <div className='w-full h-full bg-gradient-to-t from-[#FF007F] to-[rgba(255,255,255,0)] to-[28%]'></div> */}
+
+      <div className='p-3 gap-2 flex items-center rounded-full bg-translucent-black-20 w-fit'>
+        <p className='text-main-white'>JavaScript</p>
       </div>
     </div>
   )

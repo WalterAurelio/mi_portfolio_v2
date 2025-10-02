@@ -44,10 +44,10 @@ function App() {
       {/* <CircularText className='fixed right-10 bottom-10 z-10 circular-text' /> */}
       <div id='smooth-content' className='flex flex-col'>
         
-        {/* <AuxComponent_3 />
+        {/* <AuxComponent_3 /> */}
         <Hero />
-        <SobreMi /> */}
-        <Tecnologias />
+        {/* <SobreMi /> */}
+        {/* <Tecnologias /> */}
         {/* <ProyectosContainer_2 />
         <Contacto />
         <Footer /> */}
