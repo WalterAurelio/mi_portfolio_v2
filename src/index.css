@@ -46,6 +46,9 @@
 
   --color-main-black: #171413;
   --color-main-white: #FFFFFF;
+  --color-radiant-pink: #FF007F;
+
+  --color-transparent-black-20: rgba(0, 0, 0, 0.4);
 
   --color-transparent-white-0: rgba(255, 255, 255, 0);
   --color-transparent-white-20: rgba(255, 255, 255, 0.2);
@@ -53,7 +56,7 @@
   --color-transparent-white-60: rgba(255, 255, 255, 0.6);
 
   --color-transparent-grey-30: rgba(54, 53, 58, 0.3);
-
+  
   /* Boxes */
   --color-red-box: red;
   --color-yellow-box: yellow;
@@ -81,7 +84,7 @@
 
 
 /*************************/
-.proyectos-text {
+.proyectos-title {
   /* animation: left-to-right 12s infinite linear reverse; */
 }
 

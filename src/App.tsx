@@ -45,11 +45,11 @@ function App() {
       <div id='smooth-content' className='flex flex-col'>
         
         {/* <AuxComponent_3 /> */}
-        <Hero />
+        {/* <Hero /> */}
         {/* <SobreMi /> */}
-        {/* <Tecnologias /> */}
-        {/* <ProyectosContainer_2 />
-        <Contacto />
+        <Tecnologias />
+        <ProyectosContainer_2 />
+        {/* <Contacto />
         <Footer /> */}
 
       </div>

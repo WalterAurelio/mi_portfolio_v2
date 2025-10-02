@@ -1,4 +1,4 @@
-import { clsx } from 'clsx';
+import { cn } from '../utils/cn';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import type { ShowBoxes } from '../types/showBoxes';
@@ -16,8 +16,8 @@ function Hero({ showBoxes }: ShowBoxes) {
   });
 
   return (
-    <section className={clsx('h-dvh flex flex-col justify-between py-10', { 'bg-red-box': showBoxes })}>
-      <div className={clsx('flex flex-col', { 'bg-yellow-box': showBoxes })}>
+    <section className={cn('h-dvh flex flex-col justify-between py-10', { 'bg-red-box': showBoxes })}>
+      <div className={cn('flex flex-col', { 'bg-yellow-box': showBoxes })}>
         <h1
           id='nombre-aurelio'
           className='text-[244.16px] uppercase leading-none'
@@ -26,7 +26,7 @@ function Hero({ showBoxes }: ShowBoxes) {
         </h1>
         <p className='font-high-summit text-[61.04px]'>Frontend Developer</p>
       </div>
-      <p className={clsx('text-xl w-130.25', { 'bg-green-box': showBoxes })}>
+      <p className={cn('text-xl w-130.25', { 'bg-green-box': showBoxes })}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non urna id nibh mattis vulputate at at velit.
       </p>
     </section>

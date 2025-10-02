@@ -1,24 +1,30 @@
-import clsx from 'clsx';
-import { twMerge } from 'tailwind-merge';
-import { useInView } from 'react-intersection-observer';
+import { cn } from '../utils/cn';
 
 type LenguajeTechProps = {
-  description?: string;
   className?: string;
-  imageUrl?: string;
-}
+  description?: string;
+};
 
-function LenguajeTech({ description='Lorem ipsum', className, imageUrl, ...props }: LenguajeTechProps) {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.6 });
-
+function LenguajeTech({ className, description = 'Lorem ipsum', ...props }: LenguajeTechProps) {
   return (
-    <div ref={ref} className={twMerge('flex w-60 h-77.5 flex-col items-center pt-2 border border-translucent-grey-30 bg-translucent-white-20 backdrop-blur-sm rounded-[56px] overflow-clip relative', className)} {...props}>
-      {/* <div className='w-full h-full bg-gradient-to-t from-[#FF007F] to-[rgba(255,255,255,0)] to-[28%]'></div> */}
+    <div
+      className={cn(
+        'w-60 h-77.5 flex flex-col items-center border border-transparent-grey-30 backdrop-blur-sm rounded-[56px] overflow-clip bg-transparent-white-20 relative',
+        className
+      )}
+      {...props}
+    >
+      {/* <div className='p-3 gap-2 flex items-center rounded-full bg-transparent-black-20 w-fit'>
+        <div className='h-2 w-2 rounded-full bg-main-white'></div>
+        <p className='text-main-white leading-3'>{description}</p>
+      </div> */}
 
-      <div className='p-3 gap-2 flex items-center rounded-full bg-translucent-black-20 w-fit'>
-        <p className='text-main-white'>JavaScript</p>
+      <div className='flex items-center justify-center h-17.5 text-xl'>
+        <p>{description}</p>
       </div>
+
+      <div className='w-full h-full absolute top-0 bg-linear-to-b from-transparent-white-0 from-72% to-radiant-pink opacity-40'></div>
     </div>
-  )
+  );
 }
-export default LenguajeTech
+export default LenguajeTech;
