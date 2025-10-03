@@ -47,7 +47,7 @@ function App() {
         {/* <AuxComponent_3 /> */}
         {/* <Hero /> */}
         {/* <SobreMi /> */}
-        <Tecnologias />
+        {/* <Tecnologias /> */}
         <ProyectosContainer_2 />
         {/* <Contacto />
         <Footer /> */}

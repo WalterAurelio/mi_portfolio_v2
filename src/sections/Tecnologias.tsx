@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/all';
 import type { ShowBoxes } from '../types/showBoxes';
 import { cn } from '../utils/cn';
 import CursiveTitle from '../components/CursiveTitle';
+import { icons } from '../utils/icons';
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -47,48 +48,57 @@ function Tecnologias({ showBoxes }: ShowBoxes) {
         <LenguajeTech
           data-speed='1'
           description='HTML'
+          icon={icons.html}
           className='absolute left-[calc(100dvw-496px)] top-89'
         />
         <LenguajeTech
           data-speed='1.4'
           description='CSS'
+          icon={icons.css}
           className='absolute left-[calc(100dvw-396px)] top-20'
         />
         <LenguajeTech
           data-speed='0.8'
           description='Tailwind CSS'
+          icon={icons.tailwindCss}
           className='absolute left-[calc(100dvw-777px)] top-204'
         />
         <LenguajeTech
           data-speed='1'
           description='Sass'
+          icon={icons.sass}
           className='absolute left-[calc(100dvw-496px)] top-308'
         />
 
         <LenguajeTech
           data-speed='1.2'
           description='JavaScript'
+          icon={icons.javaScript}
           className='absolute left-27 top-35'
         />
         <LenguajeTech
           data-speed='0.8'
           description='Figma'
+          icon={icons.figma}
           className='absolute left-37 top-455'
         />
         <LenguajeTech
           data-speed='0.6'
           description='TypeScript'
+          icon={icons.typeScript}
           className='absolute left-118 top-373'
         />
         <LenguajeTech
           data-speed='0.8'
           description='Git'
+          icon={icons.git}
           className='absolute left-145 top-475'
         />
 
         <LenguajeTech
           data-speed='1.2'
           description='React'
+          icon={icons.react}
           className='absolute left-10 top-192'
         />
       </div>
