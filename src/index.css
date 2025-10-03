@@ -82,11 +82,7 @@
   animation-delay: 1.6s;
 }
 
-
-/*************************/
-.proyectos-title {
-  /* animation: left-to-right 12s infinite linear reverse; */
-}
+/* Proyectos */
 
 @keyframes left-to-right {
   from {
@@ -97,6 +93,12 @@
     transform: translateX(-25%);
   }
 }
+
+#proyectos-title {
+  animation: left-to-right 12s infinite linear reverse;
+}
+
+/*  */
 
 @keyframes spin-slow {
   to {

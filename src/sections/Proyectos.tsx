@@ -29,7 +29,12 @@ function Proyectos({ showBoxes }: ShowBoxes) {
         id='proyectos-description'
         className={cn('flex flex-col gap-10 max-w-265.5 relative', { 'bg-green-box': showBoxes })}
       >
-        <h2 className={cn('text-[183.12px] uppercase text-nowrap leading-none z-10 w-fit', 'proyectos-title')}>Proyectos • Proyectos • Proyectos • Proyectos • </h2>
+        <h2
+          // id='proyectos-title'
+          className='text-[183.12px] uppercase text-nowrap leading-none z-10 w-fit'
+        >
+          Proyectos • Proyectos • Proyectos • Proyectos •{' '}
+        </h2>
         <p className='text-[25px]'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non urna id nibh mattis vulputate at at velit. Phasellus sed feugiat felis. Suspendisse tristique mollis
           lorem quis ullamcorper. Donec quis nunc consequat, lobortis odio at, ultrices nulla. Duis euismod elit vitae tincidunt faucibus.
