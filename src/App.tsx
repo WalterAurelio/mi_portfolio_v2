@@ -1,6 +1,4 @@
 import gsap from 'gsap'
-import LenguajeTech from './components/LenguajeTech'
-import ProyectosContainer from './interfaces/ProyectosContainer'
 import Contacto from './sections/Contacto'
 import Footer from './sections/Footer'
 import Hero from './sections/Hero'
@@ -10,9 +8,6 @@ import { useGSAP } from '@gsap/react'
 import { ScrollSmoother, ScrollTrigger } from 'gsap/all'
 import ProyectosContainer_2 from './interfaces/ProyectosContainer_2'
 import AuxComponent_3 from './components/temp/AuxComponent_3'
-import CircularText from './components/CircularText'
-import Proyecto from './components/Proyecto'
-import InfoProyecto from './components/InfoProyecto'
 
 gsap.registerPlugin(useGSAP, ScrollSmoother, ScrollTrigger)
 
