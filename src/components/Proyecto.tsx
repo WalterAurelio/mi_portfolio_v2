@@ -20,12 +20,12 @@ function Proyecto({ id, className, nombreProyecto = 'Nombre Proyecto', descripti
       <div className='absolute w-full h-full bg-[url(./assets/img/StockSnap_YPGOEJM7JO.jpg)] bg-cover bg-center opacity-20'></div>
       <InfoProyecto
         setIsOpen={setIsOpen}
-        className={cn('transition-all -translate-y-[calc(100dvh-40px)] opacity-0', { '-translate-y-0 opacity-100': isOpen })}
+        className={cn('transition-all duration-300 -translate-y-[calc(100dvh-40px)] opacity-0', { '-translate-y-0 opacity-100': isOpen })}
       />
 
       <div
         onClick={() => setIsOpen(true)}
-        className={cn('flex flex-col w-fit items-center z-10 cursor-pointer hover:scale-110 transition-all absolute bottom-[50%] translate-y-[50%]', {
+        className={cn('flex flex-col w-fit items-center z-10 cursor-pointer hover:scale-110 transition-all duration-300 absolute bottom-[50%] translate-y-[50%]', {
           'translate-y-[calc(100dvh-40px)] opacity-0': isOpen
         })}
       >

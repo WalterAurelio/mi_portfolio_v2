@@ -1,47 +1,40 @@
+import Proyecto from '../components/Proyecto';
+import ProyectosDescription from '../components/ProyectosDescription';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/all';
 import type { ShowBoxes } from '../types/showBoxes';
 import { cn } from '../utils/cn';
-import CursiveTitle from '../components/CursiveTitle';
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
+gsap.defaults({ ease: 'none', duration: 2 });
 
 function Proyectos({ showBoxes }: ShowBoxes) {
   useGSAP(() => {
-    gsap.from('#proyectos-description', {
-      xPercent: 100,
-      ease: 'power4.out',
-      duration: 1,
-      scrollTrigger: {
-        trigger: '#tecnologias-section',
-        start: 'bottom bottom',
-        toggleActions: 'restart',
-        endTrigger: '.scroll-panel-a',
-        end: 'top top'
-      }
+    const tl = gsap.timeline();
+    tl.from('.scroll-panel-b', { xPercent: 100 }).from('.scroll-panel-c', { xPercent: 100 });
+
+    ScrollTrigger.create({
+      animation: tl,
+      trigger: '.proyectos-section',
+      start: 'top top',
+      end: '+=4000',
+      scrub: true,
+      pin: true,
+      anticipatePin: 1
     });
   });
 
   return (
-    <div className={cn('h-dvh flex flex-col justify-between py-10', { 'bg-yellow-box': showBoxes })}>
-      <div
-        id='proyectos-description'
-        className={cn('flex flex-col gap-10 max-w-265.5 relative', { 'bg-green-box': showBoxes })}
-      >
-        <h2
-          // id='proyectos-title'
-          className='text-[183.12px] uppercase text-nowrap leading-none z-10 w-fit'
-        >
-          Proyectos • Proyectos • Proyectos • Proyectos •{' '}
-        </h2>
-        <p className='text-[25px]'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non urna id nibh mattis vulputate at at velit. Phasellus sed feugiat felis. Suspendisse tristique mollis
-          lorem quis ullamcorper. Donec quis nunc consequat, lobortis odio at, ultrices nulla. Duis euismod elit vitae tincidunt faucibus.
-        </p>
-        <CursiveTitle className='absolute left-27 top-16'>Proyectos</CursiveTitle>
+    <section>
+      <div className={cn('flex -ml-10 w-dvw h-dvh relative', 'proyectos-section')}>
+        <div className={cn('pl-10 overflow-clip min-w-full absolute', 'scroll-panel-a', { 'bg-red-box': showBoxes })}>
+          <ProyectosDescription showBoxes={showBoxes} />
+        </div>
+        <Proyecto className={cn('min-w-full absolute border-l border-main-black', 'scroll-panel-b')} />
+        <Proyecto className={cn('min-w-full absolute border-l border-main-black', 'scroll-panel-c')} />
       </div>
-    </div>
+    </section>
   );
 }
 export default Proyectos;
