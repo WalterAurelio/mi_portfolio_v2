@@ -1,6 +1,6 @@
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { ScrollTrigger, ScrollSmoother } from 'gsap/all';
+import { ScrollTrigger } from 'gsap/all';
 import FloatingShapesOnPath from './components/FloatingShapesOnPath';
 import Hero from './sections/Hero';
 import SobreMi from './sections/SobreMi';
@@ -10,17 +10,10 @@ import Contacto from './sections/Contacto';
 import Footer from './sections/Footer';
 // import CircularText from './components/CircularText';
 
-gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother);
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 function App() {
   useGSAP(() => {
-    ScrollSmoother.create({
-      wrapper: '#smooth-wrapper',
-      content: '#smooth-content',
-      smooth: 2,
-      effects: true
-    });
-
     /* gsap.to('#circular-text', {
       opacity: 0,
       duration: 0.4,

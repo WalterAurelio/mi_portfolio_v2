@@ -4,10 +4,13 @@ import { ScrollTrigger } from 'gsap/all';
 import type { ShowBoxes } from '../types/showBoxes';
 import { cn } from '../utils/cn';
 import CursiveTitle from '../components/CursiveTitle';
+import { useInView } from 'react-intersection-observer';
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 function ProyectosDescription({ showBoxes }: ShowBoxes) {
+  const { ref, inView } = useInView();
+
   useGSAP(() => {
     gsap.from('#proyectos-description', {
       xPercent: 100,
@@ -30,7 +33,8 @@ function ProyectosDescription({ showBoxes }: ShowBoxes) {
         className={cn('flex flex-col gap-10 max-w-265.5 relative', { 'bg-green-box': showBoxes })}
       >
         <h2
-          id='proyectos-title'
+          ref={ref}
+          id={inView ? 'proyectos-title' : undefined}
           className='text-[183.12px] uppercase text-nowrap leading-none z-10 w-fit'
         >
           Proyectos • Proyectos • Proyectos • Proyectos •{' '}

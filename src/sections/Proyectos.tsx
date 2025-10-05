@@ -2,15 +2,22 @@ import Proyecto from '../components/Proyecto';
 import ProyectosDescription from '../components/ProyectosDescription';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from 'gsap/all';
+import { ScrollTrigger, ScrollSmoother } from 'gsap/all';
 import type { ShowBoxes } from '../types/showBoxes';
 import { cn } from '../utils/cn';
 
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother);
 gsap.defaults({ ease: 'none', duration: 2 });
 
 function Proyectos({ showBoxes }: ShowBoxes) {
   useGSAP(() => {
+    ScrollSmoother.create({
+      wrapper: '#smooth-wrapper',
+      content: '#smooth-content',
+      smooth: 2,
+      effects: true
+    });
+
     const tl = gsap.timeline();
     tl.from('.scroll-panel-b', { xPercent: 100 }).from('.scroll-panel-c', { xPercent: 100 });
 
