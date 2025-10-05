@@ -4,6 +4,14 @@ import type { ShowBoxes } from '../types/showBoxes';
 import { cn } from '../utils/cn';
 
 function Contacto({ showBoxes }: ShowBoxes) {
+  const openEmailClient = () => {
+    const destinatario = 'aureliogareca.dev@gmail.com';
+    const asunto = 'Contacto desde tu portfolio';
+    const cuerpo = 'Hola Aurelio, vi tu portfolio y quería consultarte sobre...';
+    const mailto = `mailto:${destinatario}?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
+    window.location.href = mailto;
+  };
+
   return (
     <section
       id='contacto-section'
@@ -21,7 +29,7 @@ function Contacto({ showBoxes }: ShowBoxes) {
           src={email_img}
           alt='email_img'
         />
-        <Button>Contactar</Button>
+        <Button onClick={openEmailClient}>Contactar</Button>
       </div>
     </section>
   );

@@ -10,13 +10,25 @@ function Footer({ showBoxes }: ShowBoxes) {
       </div>
 
       <div className={cn('flex gap-10', { 'bg-yellow-box': showBoxes })}>
-        <div className={cn('text-transparent-white-60 flex flex-col w-21.5', { 'bg-blue-box': showBoxes })}>
+        <div className={cn('text-transparent-white-60 flex flex-col w-21.5 gap-1', { 'bg-blue-box': showBoxes })}>
           <p className='text-main-white font-bold'>Sociales</p>
-          <p className='hover:underline cursor-pointer'>LinkedIn</p>
-          <p className='hover:underline cursor-pointer'>GitHub</p>
+          <a
+            href='https://www.linkedin.com/in/aurelio-gareca/'
+            target='_blank'
+            className='hover:underline cursor-pointer'
+          >
+            LinkedIn
+          </a>
+          <a
+            href='https://github.com/WalterAurelio'
+            target='_blank'
+            className='hover:underline cursor-pointer'
+          >
+            GitHub
+          </a>
           <p className='hover:underline cursor-pointer'>CV</p>
         </div>
-        <div className={cn('text-transparent-white-60 flex flex-col w-21.5', { 'bg-green-box': showBoxes })}>
+        <div className={cn('text-transparent-white-60 flex flex-col w-21.5 gap-1', { 'bg-green-box': showBoxes })}>
           <p className='text-main-white font-bold'>Info</p>
           <p className='hover:underline cursor-pointer'>Sobre mí</p>
           <p className='hover:underline cursor-pointer'>Tecnologías</p>

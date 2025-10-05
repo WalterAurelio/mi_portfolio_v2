@@ -24,6 +24,13 @@
 }
 
 @font-face {
+  font-family: 'Overused Grotesk';
+  src: url('./assets/fonts/OverusedGrotesk/OverusedGrotesk-Bold.ttf');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
   font-family: 'High Summit';
   src: url('./assets/fonts/HighSummit/High\ Summit.ttf');
   font-style: normal;
