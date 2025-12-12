@@ -27,6 +27,17 @@ function FloatingShapesOnPath() {
         scrub: true
       }
     });
+
+    gsap.to('#aux-container', {
+      autoAlpha: 0,
+      filter: 'blur(512px)',
+      duration: 1.6,
+      scrollTrigger: {
+        trigger: '#curvy-path',
+        start: 'bottom center',
+        toggleActions: 'play none play reverse'
+      }
+    });
   });
 
   useEffect(() => {
@@ -56,7 +67,9 @@ function FloatingShapesOnPath() {
           stroke='none'
         />
       </svg>
-      <FloatingShapes />
+      <div id='aux-container'>
+        <FloatingShapes />
+      </div>
     </div>
   );
 }

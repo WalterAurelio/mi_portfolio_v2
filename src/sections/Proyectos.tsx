@@ -5,6 +5,7 @@ import { useGSAP } from '@gsap/react';
 import { ScrollTrigger, ScrollSmoother } from 'gsap/all';
 import type { ShowBoxes } from '../types/showBoxes';
 import { cn } from '../utils/cn';
+import '../styles/Proyectos.css';
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother);
 gsap.defaults({ ease: 'none', duration: 2 });

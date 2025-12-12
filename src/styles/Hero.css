@@ -1,0 +1,14 @@
+#nombre-aurelio,
+#hero-motto {
+  filter: blur(64px);
+  opacity: 0;
+  animation: blur-fade-in 1.6s forwards;
+  animation-delay: 1.6s;
+}
+
+@keyframes blur-fade-in {
+  to {
+    filter: blur(0);
+    opacity: 1;
+  }
+}

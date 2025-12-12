@@ -1,7 +1,6 @@
 @import 'tailwindcss';
 
 /* Custom Fonts */
-
 @font-face {
   font-family: 'Overused Grotesk';
   src: url('./assets/fonts/OverusedGrotesk/OverusedGrotesk-Light.ttf');
@@ -45,7 +44,6 @@
 }
 
 /* Custom Tailwind Classes */
-
 @theme {
   --font-overused-grotesk: 'Overused Grotesk', sans-serif;
   --font-high-summit: 'High Summit', sans-serif;
@@ -73,40 +71,7 @@
   --color-orange-box: orange;
 }
 
-/* Hero */
-
-@keyframes nombre-fade-in {
-  to {
-    filter: blur(0);
-    opacity: 1;
-  }
-}
-
-#nombre-aurelio {
-  filter: blur(64px);
-  opacity: 0;
-  animation: nombre-fade-in 1.6s forwards;
-  animation-delay: 1.6s;
-}
-
-/* Proyectos */
-
-@keyframes left-to-right {
-  from {
-    transform: translateX(-50.2%);
-  }
-
-  to {
-    transform: translateX(-25%);
-  }
-}
-
-#proyectos-title {
-  animation: left-to-right 12s infinite linear reverse;
-}
-
 /* Circular Text */
-
 @keyframes spin-slow {
   to {
     transform: rotate(360deg);

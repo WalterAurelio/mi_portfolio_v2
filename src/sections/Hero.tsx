@@ -2,12 +2,13 @@ import { cn } from '../utils/cn';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import type { ShowBoxes } from '../types/showBoxes';
+import '../styles/Hero.css';
 
 gsap.registerPlugin(useGSAP);
 
 function Hero({ showBoxes }: ShowBoxes) {
   useGSAP(() => {
-    gsap.from('#nombre-aurelio', {
+    gsap.from(['#nombre-aurelio', '#hero-motto'], {
       x: -40,
       duration: 1.6,
       ease: 'expo.out',
@@ -26,8 +27,11 @@ function Hero({ showBoxes }: ShowBoxes) {
         </h1>
         <p className='font-high-summit text-[61.04px]'>Frontend Developer</p>
       </div>
-      <p className={cn('text-xl w-130.25', { 'bg-green-box': showBoxes })}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non urna id nibh mattis vulputate at at velit.
+      <p
+        id='hero-motto'
+        className={cn('text-xl font-thin w-130.25', { 'bg-green-box': showBoxes })}
+      >
+        Transformando ideas en experiencias digitales donde la simplicidad se exprese y sea guía.
       </p>
     </section>
   );

@@ -24,6 +24,19 @@ function ProyectosDescription({ showBoxes }: ShowBoxes) {
         end: 'top top'
       }
     });
+
+    gsap.from('.proyectos-title', {
+      filter: 'blur(64px)',
+      duration: 1.6,
+      ease: 'expo.out',
+      scrollTrigger: {
+        trigger: '#tecnologias-section',
+        start: 'bottom bottom',
+        toggleActions: 'restart',
+        endTrigger: '.scroll-panel-a',
+        end: 'top top'
+      }
+    });
   });
 
   return (
@@ -34,16 +47,18 @@ function ProyectosDescription({ showBoxes }: ShowBoxes) {
       >
         <h2
           ref={ref}
-          id={inView ? 'proyectos-title' : undefined}
-          className='text-[183.12px] uppercase text-nowrap leading-none z-10 w-fit'
+          id={inView ? 'proyectos-heading' : undefined}
+          className='text-[183.12px] uppercase text-nowrap leading-none z-10 w-fit proyectos-title'
         >
           Proyectos • Proyectos • Proyectos • Proyectos •{' '}
         </h2>
-        <p className='text-[25px]'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non urna id nibh mattis vulputate at at velit. Phasellus sed feugiat felis. Suspendisse tristique mollis
-          lorem quis ullamcorper. Donec quis nunc consequat, lobortis odio at, ultrices nulla. Duis euismod elit vitae tincidunt faucibus.
+        <p className='text-xl leading-8 font-thin'>
+          {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non urna id nibh mattis vulputate at at velit. Phasellus sed feugiat felis. Suspendisse tristique mollis
+          lorem quis ullamcorper. Donec quis nunc consequat, lobortis odio at, ultrices nulla. Duis euismod elit vitae tincidunt faucibus. */}
+          Una selección de proyectos que nacen de la curiosidad y de las ganas de construir productos que transmitan <b>claridad</b> y <b>propósito</b>. Cada uno refleja mi manera
+          de trabajar y lo que disfruto hacer en el desarrollo web.
         </p>
-        <CursiveTitle className='absolute left-27 top-16'>Proyectos</CursiveTitle>
+        <CursiveTitle className='absolute left-27 top-16 proyectos-title'>Proyectos</CursiveTitle>
       </div>
     </div>
   );

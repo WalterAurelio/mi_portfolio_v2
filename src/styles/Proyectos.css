@@ -1,0 +1,13 @@
+#proyectos-heading {
+  animation: left-to-right 12s infinite linear reverse;
+}
+
+@keyframes left-to-right {
+  from {
+    transform: translateX(-50.2%);
+  }
+
+  to {
+    transform: translateX(-25%);
+  }
+}

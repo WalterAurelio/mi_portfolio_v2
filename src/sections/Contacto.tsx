@@ -19,9 +19,9 @@ function Contacto({ showBoxes }: ShowBoxes) {
     >
       <div className={cn('flex flex-col', { 'bg-red-box': showBoxes })}>
         <p className='font-steelfish uppercase text-[61.04px] font-bold text-center leading-none text-main-white'>
-          Lorem ipsum
+          Listo para trabajar juntos
           <br />
-          dolor sit amet consectetur
+          Conversemos
         </p>
       </div>
       <div className={cn('flex flex-col items-center gap-20 my-auto', { 'bg-blue-box': showBoxes })}>

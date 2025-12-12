@@ -16,12 +16,12 @@ function LenguajeTech({ className, description = 'Lorem ipsum', icon, ...props }
       )}
       {...props}
     >
-      {/* <div className='p-3 gap-2 flex items-center rounded-full bg-transparent-black-20 w-fit'>
+      {/* <div className='p-3 gap-2 flex items-center rounded-full bg-transparent-black-20 w-fit mt-1'>
         <div className='h-2 w-2 rounded-full bg-main-white'></div>
-        <p className='text-main-white leading-3'>{description}</p>
+        <p className='text-main-white text-xl leading-3 font-thin -translate-y-[1px]'>{description}</p>
       </div> */}
 
-      <div className='flex items-center justify-center h-17.5 text-xl'>
+      <div className='flex items-center justify-center h-17.5 text-xl font-thin'>
         <p>{description}</p>
       </div>
 

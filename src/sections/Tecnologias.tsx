@@ -21,6 +21,18 @@ function Tecnologias({ showBoxes }: ShowBoxes) {
         scrub: 4
       }
     });
+
+    gsap.from('.tecnologias-title', {
+      filter: 'blur(64px)',
+      duration: 1.6,
+      ease: 'expo.out',
+      scrollTrigger: {
+        trigger: '#tecnologias-section',
+        start: 'top top',
+        end: 'bottom bottom',
+        toggleActions: 'play reverse play reverse'
+      }
+    });
   });
 
   return (
@@ -33,11 +45,12 @@ function Tecnologias({ showBoxes }: ShowBoxes) {
         className={cn('flex flex-col justify-center max-w-133.5 h-dvh m-auto', { 'bg-yellow-box': showBoxes })}
       >
         <div className={cn('relative', { 'bg-green-box': showBoxes })}>
-          <h2 className='text-[97.66px]'>Tecnologías.</h2>
-          <p className='text-xl text-center'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non urna id nibh mattis vulputate at at velit. Phasellus sed feugiat felis.
+          <h2 className='text-[97.66px] tecnologias-title'>Tecnologías.</h2>
+          <p className='text-xl font-thin text-center'>
+            {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non urna id nibh mattis vulputate at at velit. Phasellus sed feugiat felis. */}
+            El stack tecnológico que forma parte de mi proceso para<br /> el desarrollo de productos digitales, combinando simplicidad, solidez y calidad.
           </p>
-          <CursiveTitle className='absolute left-27 top-18 -z-10'>Tecnologias</CursiveTitle>
+          <CursiveTitle className='absolute left-27 top-18 -z-10 tecnologias-title'>Tecnologias</CursiveTitle>
         </div>
       </div>
 
