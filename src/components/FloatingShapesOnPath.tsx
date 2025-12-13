@@ -28,16 +28,16 @@ function FloatingShapesOnPath() {
       }
     });
 
-    gsap.to('#aux-container', {
+    /* gsap.to('#aux-container', {
       autoAlpha: 0,
       filter: 'blur(512px)',
       duration: 1.6,
       scrollTrigger: {
         trigger: '#curvy-path',
-        start: 'bottom center',
+        start: 'bottom bottom',
         toggleActions: 'play none play reverse'
       }
-    });
+    }); */
   });
 
   useEffect(() => {

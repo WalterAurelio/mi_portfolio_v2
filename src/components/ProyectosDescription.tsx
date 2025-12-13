@@ -25,7 +25,7 @@ function ProyectosDescription({ showBoxes }: ShowBoxes) {
       }
     });
 
-    gsap.from('.proyectos-title', {
+    gsap.from('.proyectos-animate', {
       filter: 'blur(64px)',
       duration: 1.6,
       ease: 'expo.out',
@@ -48,17 +48,15 @@ function ProyectosDescription({ showBoxes }: ShowBoxes) {
         <h2
           ref={ref}
           id={inView ? 'proyectos-heading' : undefined}
-          className='text-[183.12px] uppercase text-nowrap leading-none z-10 w-fit proyectos-title'
+          className='text-[183.12px] uppercase text-nowrap leading-none z-10 w-fit proyectos-animate'
         >
           Proyectos • Proyectos • Proyectos • Proyectos •{' '}
         </h2>
-        <p className='text-xl leading-8 font-thin'>
-          {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non urna id nibh mattis vulputate at at velit. Phasellus sed feugiat felis. Suspendisse tristique mollis
-          lorem quis ullamcorper. Donec quis nunc consequat, lobortis odio at, ultrices nulla. Duis euismod elit vitae tincidunt faucibus. */}
+        <CursiveTitle className='absolute left-27 top-16 proyectos-animate'>Proyectos</CursiveTitle>
+        <p className='text-xl leading-8 font-thin proyectos-animate'>
           Una selección de proyectos que nacen de la curiosidad y de las ganas de construir productos que transmitan <b>claridad</b> y <b>propósito</b>. Cada uno refleja mi manera
           de trabajar y lo que disfruto hacer en el desarrollo web.
         </p>
-        <CursiveTitle className='absolute left-27 top-16 proyectos-title'>Proyectos</CursiveTitle>
       </div>
     </div>
   );

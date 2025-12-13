@@ -3,6 +3,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import type { ShowBoxes } from '../types/showBoxes';
 import '../styles/Hero.css';
+import FrontEndDev from '../components/FrontEndDev';
 
 gsap.registerPlugin(useGSAP);
 
@@ -25,7 +26,8 @@ function Hero({ showBoxes }: ShowBoxes) {
         >
           Aurelio.
         </h1>
-        <p className='font-high-summit text-[61.04px]'>Frontend Developer</p>
+        {/* <p className='font-high-summit text-[61.04px]'>Frontend Developer</p> */}
+        <FrontEndDev />
       </div>
       <p
         id='hero-motto'
