@@ -7,15 +7,13 @@ import type { ShowBoxes } from '../types/showBoxes';
 import { cn } from '../utils/cn';
 import '../styles/Proyectos.css';
 
-gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother);
-gsap.defaults({ ease: 'none', duration: 2 });
-
 function Proyectos({ showBoxes }: ShowBoxes) {
   useGSAP(() => {
     ScrollSmoother.create({
       wrapper: '#smooth-wrapper',
       content: '#smooth-content',
       smooth: 2,
+      smoothTouch: 0.1,
       effects: true
     });
 
@@ -26,7 +24,7 @@ function Proyectos({ showBoxes }: ShowBoxes) {
       animation: tl,
       trigger: '.proyectos-section',
       start: 'top top',
-      end: '+=4000',
+      end: '+=1200',
       scrub: true,
       pin: true,
       anticipatePin: 1
@@ -35,10 +33,11 @@ function Proyectos({ showBoxes }: ShowBoxes) {
 
   return (
     <section>
-      <div className={cn('flex -ml-10 w-dvw h-dvh relative', 'proyectos-section')}>
-        <div className={cn('pl-10 overflow-clip min-w-full absolute', 'scroll-panel-a', { 'bg-red-box': showBoxes })}>
+      <div className={cn('flex -ml-4 lg:-ml-10 w-dvw h-dvh relative', 'proyectos-section')}>
+        <div className={cn('pl-4 lg:pl-10 overflow-clip w-full', 'scroll-panel-a', { 'bg-red-box': showBoxes })}>
           <ProyectosDescription showBoxes={showBoxes} />
         </div>
+
         <Proyecto className={cn('min-w-full absolute border-l border-main-black', 'scroll-panel-b')} />
         <Proyecto className={cn('min-w-full absolute border-l border-main-black', 'scroll-panel-c')} />
       </div>

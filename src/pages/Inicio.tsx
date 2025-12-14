@@ -1,6 +1,6 @@
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from 'gsap/all';
+import { ScrollSmoother, ScrollTrigger } from 'gsap/all';
 import FloatingShapesOnPath from '../components/FloatingShapesOnPath';
 import Hero from '../sections/Hero';
 import SobreMi from '../sections/SobreMi';
@@ -9,7 +9,8 @@ import Proyectos from '../sections/Proyectos';
 import Contacto from '../sections/Contacto';
 import Footer from '../sections/Footer';
 
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother);
+gsap.defaults({ ease: 'none', duration: 2 });
 
 function Inicio() {
   useGSAP(() => {
@@ -38,9 +39,9 @@ function Inicio() {
         <Hero />
         <SobreMi />
         <Tecnologias />
-        {/* <Proyectos />
+        <Proyectos />
         <Contacto />
-        <Footer /> */}
+        <Footer />
       </div>
     </div>
   );

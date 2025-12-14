@@ -1,15 +1,16 @@
 import type { ShowBoxes } from '../types/showBoxes';
 import { cn } from '../utils/cn';
+import { icons } from '../utils/icons';
 
 function Footer({ showBoxes }: ShowBoxes) {
   return (
-    <footer className='p-10 -ml-10 w-dvw bg-main-black flex justify-between border-t border-transparent-white-30'>
-      <div className={cn('flex flex-col gap-1 text-main-white w-fit', { 'bg-red-box': showBoxes })}>
+    <footer className='p-4 lg:p-10 -ml-4 lg:-ml-10 w-dvw bg-main-black flex justify-between border-t border-transparent-white-30'>
+      <div className={cn('hidden lg:flex flex-col gap-1 text-main-white w-fit', { 'bg-red-box': showBoxes })}>
         <h3 className='text-[61.04px] uppercase leading-none'>Aurelio.</h3>
         <p className='font-high-summit text-[25px]'>Frontend Developer</p>
       </div>
 
-      <div className={cn('flex gap-10', { 'bg-yellow-box': showBoxes })}>
+      <div className={cn('hidden lg:flex gap-10', { 'bg-yellow-box': showBoxes })}>
         <div className={cn('text-transparent-white-60 flex flex-col w-21.5 gap-1', { 'bg-blue-box': showBoxes })}>
           <p className='text-main-white font-bold'>Sociales</p>
           <a
@@ -34,6 +35,27 @@ function Footer({ showBoxes }: ShowBoxes) {
           <p className='hover:underline cursor-pointer'>Tecnologías</p>
           <p className='hover:underline cursor-pointer'>Proyectos</p>
           <p className='hover:underline cursor-pointer'>Contacto</p>
+        </div>
+      </div>
+
+      <div className='flex gap-5 mx-auto'>
+        <div className='w-12.5 aspect-square border border-transparent-white-30 rounded-full flex items-center justify-center'>
+          <a
+            href='https://github.com/WalterAurelio'
+            target='_blank'
+            className='w-5.5 aspect-square text-main-white'
+          >
+            {icons.gitHub}
+          </a>
+        </div>
+        <div className='w-12.5 aspect-square border border-transparent-white-30 rounded-full flex items-center justify-center'>
+          <a
+            href='https://www.linkedin.com/in/aurelio-gareca/'
+            target='_blank'
+            className='w-5.5 aspect-square text-main-white'
+          >
+            {icons.linkedIn}
+          </a>
         </div>
       </div>
     </footer>

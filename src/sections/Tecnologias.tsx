@@ -47,7 +47,7 @@ function Tecnologias({ showBoxes }: ShowBoxes) {
         className={cn('flex flex-col justify-center max-w-133.5 h-dvh m-auto', { 'bg-yellow-box': showBoxes })}
       >
         <div className={cn('relative flex flex-col max-lg:gap-4', { 'bg-green-box': showBoxes })}>
-          <h2 className='text-[52.67px] lg:text-[97.66px] tecnologias-animate'>Tecnologías.</h2>
+          <h2 className='text-[52.67px] lg:text-[97.66px] text-center tecnologias-animate'>Tecnologías.</h2>
           {/* <CursiveTitle className='absolute left-27 top-18 -z-10 tecnologias-animate'>Tecnologias</CursiveTitle> */}
           <CursiveTitle className='absolute left-[50%] -translate-x-[50%] top-12 lg:top-18 -z-10 tecnologias-animate'>Tecnologias</CursiveTitle>
           <p className='lg:text-xl font-thin text-center tecnologias-animate'>

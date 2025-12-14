@@ -15,10 +15,10 @@ function Contacto({ showBoxes }: ShowBoxes) {
   return (
     <section
       id='contacto-section'
-      className='h-dvh w-dvw flex flex-col p-10 -ml-10 bg-main-black'
+      className='h-dvh w-dvw flex flex-col p-4 lg:p-10 -ml-4 lg:-ml-10 bg-main-black'
     >
       <div className={cn('flex flex-col', { 'bg-red-box': showBoxes })}>
-        <p className='font-steelfish uppercase text-[61.04px] font-bold text-center leading-none text-main-white'>
+        <p className='font-steelfish uppercase text-[31.25px] lg:text-[61.04px] font-bold text-center leading-9 lg:leading-none text-main-white'>
           Listo para trabajar juntos.
           <br />
           Conversemos.

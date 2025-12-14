@@ -1,12 +1,9 @@
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from 'gsap/all';
 import type { ShowBoxes } from '../types/showBoxes';
 import { cn } from '../utils/cn';
 import CursiveTitle from '../components/CursiveTitle';
 import { useInView } from 'react-intersection-observer';
-
-gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 function ProyectosDescription({ showBoxes }: ShowBoxes) {
   const { ref, inView } = useInView();
@@ -40,7 +37,7 @@ function ProyectosDescription({ showBoxes }: ShowBoxes) {
   });
 
   return (
-    <div className={cn('h-dvh flex flex-col justify-between py-10', { 'bg-yellow-box': showBoxes })}>
+    <div className={cn('h-dvh flex flex-col justify-between py-4 max-lg:pr-4 lg:py-10', { 'bg-yellow-box': showBoxes })}>
       <div
         id='proyectos-description'
         className={cn('flex flex-col gap-10 max-w-265.5 relative', { 'bg-green-box': showBoxes })}
@@ -48,12 +45,12 @@ function ProyectosDescription({ showBoxes }: ShowBoxes) {
         <h2
           ref={ref}
           id={inView ? 'proyectos-heading' : undefined}
-          className='text-[183.12px] uppercase text-nowrap leading-none z-10 w-fit proyectos-animate'
+          className='text-[122.08px] lg:text-[183.12px] uppercase text-nowrap leading-none z-10 w-fit proyectos-animate'
         >
           Proyectos • Proyectos • Proyectos • Proyectos •{' '}
         </h2>
         <CursiveTitle className='absolute left-27 top-16 proyectos-animate'>Proyectos</CursiveTitle>
-        <p className='text-xl leading-8 font-thin proyectos-animate'>
+        <p className='lg:text-xl leading-8 font-thin proyectos-animate'>
           Una selección de proyectos que nacen de la curiosidad y de las ganas de construir productos que transmitan <b>claridad</b> y <b>propósito</b>. Cada uno refleja mi manera
           de trabajar y lo que disfruto hacer en el desarrollo web.
         </p>

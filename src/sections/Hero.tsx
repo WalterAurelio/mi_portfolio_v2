@@ -5,8 +5,6 @@ import type { ShowBoxes } from '../types/showBoxes';
 import '../styles/Hero.css';
 import FrontEndDev from '../components/FrontEndDev';
 
-gsap.registerPlugin(useGSAP);
-
 function Hero({ showBoxes }: ShowBoxes) {
   useGSAP(() => {
     gsap.from(['#nombre-aurelio', '#hero-motto'], {

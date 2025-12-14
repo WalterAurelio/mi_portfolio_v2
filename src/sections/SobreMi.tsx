@@ -3,9 +3,6 @@ import gsap from 'gsap';
 import type { ShowBoxes } from '../types/showBoxes';
 import CursiveTitle from '../components/CursiveTitle';
 import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from 'gsap/all';
-
-gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 function SobreMi({ showBoxes }: ShowBoxes) {
   useGSAP(() => {
