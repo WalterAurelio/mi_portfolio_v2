@@ -6,6 +6,6 @@ type CursiveTitle = PropsWithChildren & {
 };
 
 function CursiveTitle({ className, children }: CursiveTitle) {
-  return <p className={cn('font-high-summit text-[61.04px] text-transparent-grey-30', className)}>{children}</p>;
+  return <p className={cn('font-high-summit text-[31.25px] lg:text-[61.04px] text-transparent-grey-30', className)}>{children}</p>;
 }
 export default CursiveTitle;

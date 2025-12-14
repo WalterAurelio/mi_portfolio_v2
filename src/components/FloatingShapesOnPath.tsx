@@ -27,17 +27,6 @@ function FloatingShapesOnPath() {
         scrub: true
       }
     });
-
-    /* gsap.to('#aux-container', {
-      autoAlpha: 0,
-      filter: 'blur(512px)',
-      duration: 1.6,
-      scrollTrigger: {
-        trigger: '#curvy-path',
-        start: 'bottom bottom',
-        toggleActions: 'play none play reverse'
-      }
-    }); */
   });
 
   useEffect(() => {
@@ -57,19 +46,19 @@ function FloatingShapesOnPath() {
       <svg
         width='auto'
         height={height * 9}
-        viewBox={`0 0 1062 ${height * 9}`}
+        // viewBox={`0 0 1062 ${height * 9}`}
+        viewBox='0 0 1063 6001'
         fill='none'
         xmlns='http://www.w3.org/2000/svg'
       >
         <path
           id='curvy-path'
-          d='M738 0C738 1000 1 664 1 1164C1 1664 1063 1537 1063 2037C1063 2537 1 2472 1 2972C1 3472 1063 3997 532 4997'
+          d='M737.5 0C737.5 1000 0.5 664 0.5 1164C0.5 1664 1062.5 1537 1062.5 2037C1062.5 2537 0.5 2472 0.5 2972C0.5 3472 1062.5 3997 531.5 4997C0.5 5997 531.5 6000 531.5 6000'
           stroke='none'
         />
       </svg>
-      <div id='aux-container'>
-        <FloatingShapes />
-      </div>
+
+      <FloatingShapes />
     </div>
   );
 }

@@ -11,11 +11,18 @@ function LenguajeTech({ className, description = 'Lorem ipsum', icon, ...props }
   return (
     <div
       className={cn(
-        'w-60 h-77.5 flex flex-col items-center border border-transparent-grey-30 backdrop-blur-sm rounded-[56px] bg-transparent-white-20 relative overflow-clip scale-75',
+        'w-60 h-77.5 flex flex-col items-center border border-transparent-grey-30 backdrop-blur-sm rounded-lg bg-transparent-white-20 relative overflow-clip scale-75',
         className
       )}
       {...props}
     >
+      {/* <div
+      className={cn(
+        'w-60 h-77.5 flex flex-col items-center border border-transparent-grey-30 backdrop-blur-sm rounded-[56px] bg-transparent-white-20 relative overflow-clip scale-75',
+        className
+      )}
+      {...props}
+    > */}
       {/* <div className='p-3 gap-2 flex items-center rounded-full bg-transparent-black-20 w-fit mt-1'>
         <div className='h-2 w-2 rounded-full bg-main-white'></div>
         <p className='text-main-white text-xl leading-3 font-thin -translate-y-[1px]'>{description}</p>

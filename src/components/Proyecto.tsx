@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import InfoProyecto from './InfoProyecto';
 import { cn } from '../utils/cn';
+import { Link } from 'react-router-dom';
 
 type ProyectoProps = {
   id?: string;
@@ -24,13 +25,15 @@ function Proyecto({ id, className, nombreProyecto = 'Nombre Proyecto', descripti
       />
 
       <div
-        onClick={() => setIsOpen(true)}
+        // onClick={() => setIsOpen(true)}
         className={cn('flex flex-col w-fit items-center z-10 cursor-pointer hover:scale-110 transition-all duration-300 absolute bottom-[50%] translate-y-[50%]', {
           'translate-y-[calc(100dvh-40px)] opacity-0': isOpen
         })}
       >
-        <h3 className='text-[39.06px] text-main-white font-semibold text-center'>{nombreProyecto}</h3>
-        <p className='text-xl text-transparent-white-60 -mt-2'>{description ?? 'Mauris non urna id nibh mattis vulputate at at velit.'}</p>
+        <Link to='/proyecto'>
+          <h3 className='text-[39.06px] text-main-white font-semibold text-center'>{nombreProyecto}</h3>
+          <p className='text-xl text-transparent-white-60 -mt-2'>{description ?? 'Mauris non urna id nibh mattis vulputate at at velit.'}</p>
+        </Link>
       </div>
     </div>
   );

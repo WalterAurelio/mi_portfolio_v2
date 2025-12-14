@@ -18,11 +18,11 @@ function Hero({ showBoxes }: ShowBoxes) {
   });
 
   return (
-    <section className={cn('h-dvh flex flex-col justify-between py-10', { 'bg-red-box': showBoxes })}>
-      <div className={cn('flex flex-col', { 'bg-yellow-box': showBoxes })}>
+    <section className={cn('h-dvh flex flex-col justify-between py-4 lg:py-10', { 'bg-red-box': showBoxes })}>
+      <div className={cn('flex flex-col max-lg:gap-1 max-lg:my-auto', { 'bg-yellow-box': showBoxes })}>
         <h1
           id='nombre-aurelio'
-          className='text-[244.16px] uppercase leading-none'
+          className='text-[74.65px] lg:text-[244.16px] uppercase leading-none'
         >
           Aurelio.
         </h1>
@@ -31,7 +31,7 @@ function Hero({ showBoxes }: ShowBoxes) {
       </div>
       <p
         id='hero-motto'
-        className={cn('text-xl font-thin w-130.25', { 'bg-green-box': showBoxes })}
+        className={cn('lg:text-xl font-thin lg:w-130.25', { 'bg-green-box': showBoxes })}
       >
         Transformando ideas en experiencias digitales donde la simplicidad se exprese y sea guía.
       </p>

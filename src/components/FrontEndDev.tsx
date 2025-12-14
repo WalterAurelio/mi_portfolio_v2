@@ -28,7 +28,7 @@ function FrontEndDev() {
   });
 
   return (
-    <div className='w-120'>
+    <div className='max-lg:max-w-62 lg:w-120'>
       <svg
         className='handwritten-text'
         width='100%'
