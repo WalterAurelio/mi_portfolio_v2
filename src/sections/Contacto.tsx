@@ -15,7 +15,7 @@ function Contacto({ showBoxes }: ShowBoxes) {
   return (
     <section
       id='contacto-section'
-      className='h-svh lg:h-screen w-screen flex flex-col p-4 lg:p-10 -ml-4 lg:-ml-10 bg-main-black'
+      className='h-lvh lg:h-screen w-screen flex flex-col p-4 lg:p-10 -ml-4 lg:-ml-10 bg-main-black'
     >
       <div className={cn('flex flex-col', { 'bg-red-box': showBoxes })}>
         <p className='font-steelfish uppercase text-[31.25px] lg:text-[61.04px] font-bold text-center leading-9 lg:leading-none text-main-white'>

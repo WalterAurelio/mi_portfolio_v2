@@ -2,14 +2,11 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger, MotionPathPlugin } from 'gsap/all';
 import { pathEase } from '../utils/pathEaseFn';
-import { useEffect, useState } from 'react';
 import FloatingShapes from './FloatingShapes';
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, MotionPathPlugin);
 
 function FloatingShapesOnPath() {
-  const [height, setHeight] = useState(window.innerHeight);
-
   useGSAP(() => {
     gsap.to('#floating-shapes', {
       motionPath: {
@@ -29,25 +26,12 @@ function FloatingShapesOnPath() {
     });
   });
 
-  useEffect(() => {
-    window.addEventListener('resize', () => {
-      setHeight(window.innerHeight);
-    });
-
-    return () => {
-      window.removeEventListener('resize', () => {
-        setHeight(window.innerHeight);
-      });
-    };
-  }, []);
-
   return (
     <div className='w-dvw absolute -left-10 -z-10'>
       <svg
-        width='auto'
-        height={height * 9}
-        // viewBox={`0 0 1062 ${height * 9}`}
-        viewBox='0 0 1063 6001'
+        className='block w-screen h-[calc(100vh*8)]' /* w-[78.2%] */
+        viewBox='0 0 1062 6000'
+        preserveAspectRatio='none'
         fill='none'
         xmlns='http://www.w3.org/2000/svg'
       >

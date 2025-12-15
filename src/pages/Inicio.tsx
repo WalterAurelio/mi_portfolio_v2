@@ -1,7 +1,7 @@
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollSmoother, ScrollTrigger } from 'gsap/all';
-// import FloatingShapesOnPath from '../components/FloatingShapesOnPath';
+import FloatingShapesOnPath from '../components/FloatingShapesOnPath';
 import Hero from '../sections/Hero';
 import SobreMi from '../sections/SobreMi';
 import Tecnologias from '../sections/Tecnologias';
@@ -35,7 +35,7 @@ function Inicio() {
         id='smooth-content'
         className='flex flex-col'
       >
-        {/* <FloatingShapesOnPath /> */}
+        <FloatingShapesOnPath />
         <Hero />
         <SobreMi />
         <Tecnologias />
