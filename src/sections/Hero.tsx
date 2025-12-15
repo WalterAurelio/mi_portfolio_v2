@@ -16,7 +16,7 @@ function Hero({ showBoxes }: ShowBoxes) {
   });
 
   return (
-    <section className={cn('h-dvh flex flex-col justify-between py-4 lg:py-10', { 'bg-red-box': showBoxes })}>
+    <section className={cn('h-svh lg:h-screen flex flex-col justify-between py-4 lg:py-10', { 'bg-red-box': showBoxes })}>
       <div className={cn('flex flex-col max-lg:gap-1 max-lg:my-auto', { 'bg-yellow-box': showBoxes })}>
         <h1
           id='nombre-aurelio'

@@ -25,7 +25,7 @@ function SobreMi({ showBoxes }: ShowBoxes) {
   return (
     <section
       id='sobre-mi-section'
-      className={clsx('h-dvh flex flex-col justify-between py-4 lg:py-10', { 'bg-red-box': showBoxes })}
+      className={clsx('h-svh lg:h-screen flex flex-col justify-between py-4 lg:py-10', { 'bg-red-box': showBoxes })}
     >
       <div className={clsx('flex flex-col gap-10 max-w-265.5 relative', { 'bg-yellow-box': showBoxes })}>
         <h2 className='text-[61.04px] lg:text-[97.66px] sobre-mi-animate'>Sobre mí.</h2>
