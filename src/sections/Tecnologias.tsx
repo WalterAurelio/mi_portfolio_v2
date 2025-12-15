@@ -59,7 +59,7 @@ function Tecnologias({ showBoxes }: ShowBoxes) {
 
       <div
         id='languages-container'
-        className='relative h-[calc(100dvh*5)]'
+        className='relative h-[calc(100svh*5)]'
       >
         <LenguajeTech
           data-speed='1'
