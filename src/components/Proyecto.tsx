@@ -12,7 +12,7 @@ function Proyecto({ id, className, nombreProyecto = 'Nombre Proyecto', descripti
   return (
     <div
       id={id ?? undefined}
-      className={cn('h-full lg:h-screen w-full flex items-center justify-center px-4 lg:px-64 bg-main-black relative', className)}
+      className={cn('h-lvh lg:h-screen w-full flex items-center justify-center px-4 lg:px-64 bg-main-black relative', className)}
     >
       <div className='absolute w-full h-full bg-[url(./assets/img/StockSnap_YPGOEJM7JO.jpg)] bg-cover bg-center opacity-20'></div>
       <Link
