@@ -37,7 +37,7 @@ function ProyectosDescription({ showBoxes }: ShowBoxes) {
   });
 
   return (
-    <div className={cn('h-svh lg:h-screen flex flex-col justify-between py-4 max-lg:pr-4 lg:py-10', { 'bg-yellow-box': showBoxes })}>
+    <div className={cn('h-lvh lg:h-screen flex flex-col justify-between py-4 max-lg:pr-4 lg:py-10', { 'bg-yellow-box': showBoxes })}>
       <div
         id='proyectos-description'
         className={cn('flex flex-col gap-10 max-w-265.5 relative', { 'bg-green-box': showBoxes })}

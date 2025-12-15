@@ -33,7 +33,7 @@ function Proyectos({ showBoxes }: ShowBoxes) {
 
   return (
     <section>
-      <div className={cn('flex -ml-4 lg:-ml-10 w-screen h-svh lg:h-screen relative', 'proyectos-section')}>
+      <div className={cn('flex -ml-4 lg:-ml-10 w-screen h-lvh lg:h-screen relative', 'proyectos-section')}>
         <div className={cn('pl-4 lg:pl-10 overflow-clip w-full', 'scroll-panel-a', { 'bg-red-box': showBoxes })}>
           <ProyectosDescription showBoxes={showBoxes} />
         </div>
