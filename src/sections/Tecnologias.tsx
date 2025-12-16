@@ -11,30 +11,41 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 function Tecnologias({ showBoxes }: ShowBoxes) {
   useGSAP(() => {
-    gsap.to('#tecnologias-description', {
-      scrollTrigger: {
-        trigger: '#tecnologias-description',
-        endTrigger: '#languages-container',
-        start: 'center center',
-        end: 'bottom bottom',
-        pin: true,
-        scrub: 4
-      }
-    });
+    const mm = gsap.matchMedia();
+    mm.add(
+      {
+        isDesktop: '(min-width: 1024px)',
+        isMobile: '(max-width: 1023px)'
+      },
+      context => {
+        const { isMobile } = context.conditions as gsap.Conditions;
 
-    gsap.from('.tecnologias-animate', {
-      autoAlpha: 0,
-      filter: 'blur(64px)',
-      duration: 1.6,
-      ease: 'expo.out',
-      stagger: 0.1,
-      scrollTrigger: {
-        trigger: '#tecnologias-section',
-        start: 'top top',
-        end: 'bottom bottom',
-        toggleActions: 'play none none reverse'
+        gsap.to('#tecnologias-description', {
+          scrollTrigger: {
+            trigger: '#tecnologias-description',
+            endTrigger: '#languages-container',
+            start: 'center center',
+            end: 'bottom bottom',
+            pin: true,
+            scrub: 4
+          }
+        });
+
+        gsap.from('.tecnologias-animate', {
+          autoAlpha: 0,
+          filter: isMobile ? undefined : 'blur(64px)',
+          duration: 1.6,
+          ease: 'expo.out',
+          stagger: 0.1,
+          scrollTrigger: {
+            trigger: '#tecnologias-section',
+            start: 'top top',
+            end: 'bottom bottom',
+            toggleActions: 'play none none reverse'
+          }
+        });
       }
-    });
+    );
   });
 
   return (

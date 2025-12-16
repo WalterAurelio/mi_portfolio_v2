@@ -2,13 +2,14 @@ import { cn } from '../utils/cn';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import type { ShowBoxes } from '../types/showBoxes';
-import '../styles/Hero.css';
 import FrontEndDev from '../components/FrontEndDev';
 
 function Hero({ showBoxes }: ShowBoxes) {
   useGSAP(() => {
     gsap.from(['#nombre-aurelio', '#hero-motto'], {
+      autoAlpha: 0,
       x: -40,
+      filter: 'blur(64px)',
       duration: 1.6,
       ease: 'expo.out',
       delay: 2

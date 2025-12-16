@@ -9,31 +9,42 @@ function ProyectosDescription({ showBoxes }: ShowBoxes) {
   const { ref, inView } = useInView();
 
   useGSAP(() => {
-    gsap.from('#proyectos-description', {
-      xPercent: 100,
-      ease: 'power4.out',
-      duration: 1,
-      scrollTrigger: {
-        trigger: '#tecnologias-section',
-        start: 'bottom bottom',
-        toggleActions: 'restart',
-        endTrigger: '.scroll-panel-a',
-        end: 'top top'
-      }
-    });
+    const mm = gsap.matchMedia();
+    mm.add(
+      {
+        isDesktop: '(min-width: 1024px)',
+        isMobile: '(max-width: 1023px)'
+      },
+      context => {
+        const { isMobile } = context.conditions as gsap.Conditions;
 
-    gsap.from('.proyectos-animate', {
-      filter: 'blur(64px)',
-      duration: 1.6,
-      ease: 'expo.out',
-      scrollTrigger: {
-        trigger: '#tecnologias-section',
-        start: 'bottom bottom',
-        toggleActions: 'restart',
-        endTrigger: '.scroll-panel-a',
-        end: 'top top'
+        gsap.from('#proyectos-description', {
+          xPercent: 100,
+          ease: 'power4.out',
+          duration: 1,
+          scrollTrigger: {
+            trigger: '#tecnologias-section',
+            start: 'bottom bottom',
+            toggleActions: 'restart',
+            endTrigger: '.scroll-panel-a',
+            end: 'top top'
+          }
+        });
+
+        gsap.from('.proyectos-animate', {
+          filter: isMobile ? undefined : 'blur(64px)',
+          duration: 1.6,
+          ease: 'expo.out',
+          scrollTrigger: {
+            trigger: '#tecnologias-section',
+            start: 'bottom bottom',
+            toggleActions: 'restart',
+            endTrigger: '.scroll-panel-a',
+            end: 'top top'
+          }
+        });
       }
-    });
+    );
   });
 
   return (

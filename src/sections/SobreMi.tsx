@@ -6,20 +6,31 @@ import { useGSAP } from '@gsap/react';
 
 function SobreMi({ showBoxes }: ShowBoxes) {
   useGSAP(() => {
-    gsap.from('.sobre-mi-animate', {
-      x: -40,
-      autoAlpha: 0,
-      filter: 'blur(64px)',
-      duration: 1.6,
-      ease: 'expo.out',
-      stagger: 0.1,
-      scrollTrigger: {
-        trigger: '#sobre-mi-section',
-        start: 'top center',
-        end: 'bottom center',
-        toggleActions: 'play none none reverse'
+    const mm = gsap.matchMedia();
+    mm.add(
+      {
+        isDesktop: '(min-width: 1024px)',
+        isMobile: '(max-width: 1023px)'
+      },
+      context => {
+        const { isMobile } = context.conditions as gsap.Conditions;
+
+        gsap.from('.sobre-mi-animate', {
+          x: -40,
+          autoAlpha: 0,
+          filter: isMobile ? undefined : 'blur(64px)',
+          duration: 1.6,
+          ease: 'expo.out',
+          stagger: 0.1,
+          scrollTrigger: {
+            trigger: '#sobre-mi-section',
+            start: 'top center',
+            end: 'bottom center',
+            toggleActions: 'play none none reverse'
+          }
+        });
       }
-    });
+    );
   });
 
   return (
