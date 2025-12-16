@@ -4,7 +4,7 @@ import { icons } from '../utils/icons';
 
 function Footer({ showBoxes }: ShowBoxes) {
   return (
-    <footer className='p-4 lg:p-10 -ml-4 lg:-ml-10 w-screen bg-main-black flex justify-between border-t border-transparent-white-30'>
+    <footer className='p-4 lg:p-10 -ml-4 lg:-ml-10 w-screen bg-main-black flex justify-between border-t border-transparent-white-30 -mt-[26.25vh]'>
       <div className={cn('hidden lg:flex flex-col gap-1 text-main-white w-fit', { 'bg-red-box': showBoxes })}>
         <h3 className='text-[61.04px] uppercase leading-none'>Aurelio.</h3>
         <p className='font-high-summit text-[25px]'>Frontend Developer</p>

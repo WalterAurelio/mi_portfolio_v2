@@ -33,7 +33,7 @@ function Inicio() {
       {/* <CircularText className='fixed right-10 bottom-10 z-10' /> */}
       <div
         id='smooth-content'
-        className='flex flex-col'
+        className='flex flex-col gap-[26.25vh]'
       >
         <FloatingShapesOnPath />
         <Hero />

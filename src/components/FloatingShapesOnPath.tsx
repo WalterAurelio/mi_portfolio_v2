@@ -29,7 +29,7 @@ function FloatingShapesOnPath() {
   return (
     <div className='w-dvw absolute -left-10 -z-10'>
       <svg
-        className='block w-screen h-[calc(100vh*8)]' /* w-[78.2%] */
+        className='block w-screen h-[678.75vh] lg:h-[878.75vh]' /* w-[78.2%] */
         viewBox='0 0 1062 6000'
         preserveAspectRatio='none'
         fill='none'

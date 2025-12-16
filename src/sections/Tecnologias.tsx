@@ -55,7 +55,7 @@ function Tecnologias({ showBoxes }: ShowBoxes) {
     >
       <div
         id='tecnologias-description'
-        className={cn('flex flex-col justify-center max-w-133.5 h-svh lg:h-screen m-auto', { 'bg-yellow-box': showBoxes })}
+        className={cn('flex flex-col justify-center max-w-133.5 min-h-[50vh] h-fit lg:h-screen m-auto', { 'bg-yellow-box': showBoxes })}
       >
         <div className={cn('relative flex flex-col max-lg:gap-4', { 'bg-green-box': showBoxes })}>
           <h2 className='text-[52.67px] lg:text-[97.66px] text-center tecnologias-animate'>Tecnologías.</h2>
@@ -70,7 +70,7 @@ function Tecnologias({ showBoxes }: ShowBoxes) {
 
       <div
         id='languages-container'
-        className='relative h-[calc(100vh*4)] lg:h-[calc(100vh*4)]'
+        className='relative h-[300vh] lg:h-[400vh]'
       >
         <LenguajeTech
           data-speed='1.4'

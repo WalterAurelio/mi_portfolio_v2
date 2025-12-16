@@ -15,8 +15,7 @@ function Contacto({ showBoxes }: ShowBoxes) {
   return (
     <section
       id='contacto-section'
-      /* className='min-h-[50vh] h-fit lg:h-screen w-screen flex flex-col max-lg:gap-20 p-4 py-10 lg:p-10 -ml-4 lg:-ml-10 bg-main-black' */
-      className='min-h-[50vh] h-fit w-screen flex flex-col gap-20 p-4 py-10 lg:p-10 -ml-4 lg:-ml-10 bg-main-black'
+      className='min-h-[50vh] h-fit w-screen flex flex-col gap-20 p-4 py-10 lg:p-10 -ml-4 lg:-ml-10 bg-main-black -mt-[26.25vh]'
     >
       <div className={cn('flex flex-col', { 'bg-red-box': showBoxes })}>
         <p className='font-steelfish uppercase text-[31.25px] lg:text-[61.04px] font-bold text-center leading-9 lg:leading-none text-main-white'>
