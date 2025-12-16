@@ -39,7 +39,7 @@ function Tecnologias({ showBoxes }: ShowBoxes) {
           stagger: 0.1,
           scrollTrigger: {
             trigger: '#tecnologias-section',
-            start: 'top top',
+            start: isMobile ? 'top center' : 'top top',
             end: 'bottom bottom',
             toggleActions: 'play none none reverse'
           }
