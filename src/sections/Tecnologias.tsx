@@ -76,55 +76,55 @@ function Tecnologias({ showBoxes }: ShowBoxes) {
           data-speed='1.4'
           description='CSS'
           icon={icons.css}
-          className='absolute max-lg:right-0 lg:left-[calc(100dvw-396px)] top-[2.1%]'
+          className='absolute right-0 md:right-[calc(23.83%-180px)] top-[2.1%]'
         />
         <LenguajeTech
           data-speed='1.2'
           description='JavaScript'
           icon={icons.javaScript}
-          className='absolute lg:left-27 top-[3.67%]'
+          className='absolute md:left-[8.55%] top-[3.67%]'
         />
         <LenguajeTech
           data-speed='1'
           description='HTML'
           icon={icons.html}
-          className='absolute left-[41px] lg:left-[calc(100dvw-496px)] top-[9.34%]'
+          className='absolute right-[14.24%] md:right-[calc(31.75%-180px)] top-[9.34%]'
         />
         <LenguajeTech
           data-speed='1.2'
           description='React'
           icon={icons.react}
-          className='absolute lg:left-10 top-[20.16%]'
+          className='absolute md:left-[3.17%] top-[20.16%]'
         />
         <LenguajeTech
           data-speed='0.8'
           description='Tailwind CSS'
           icon={icons.tailwindCss}
-          className='absolute left-[53px] lg:left-[calc(100dvw-777px)] top-[21.42%]'
+          className='absolute left-[46%] top-[21.42%]'
         />
         <LenguajeTech
           data-speed='1'
           description='Sass'
           icon={icons.sass}
-          className='absolute max-lg:right-0 lg:left-[calc(100dvw-496px)] top-[32.34%]'
+          className='absolute right-0 md:right-[calc(31.75%-180px)] top-[32.34%]'
         />
         <LenguajeTech
           data-speed='0.6'
           description='TypeScript'
           icon={icons.typeScript}
-          className='absolute left-[37px] lg:left-118 top-[49.16%]'
+          className='absolute left-[37.37%] top-[49.16%]'
         />
         <LenguajeTech
           data-speed='1.2'
           description='Figma'
           icon={icons.figma}
-          className='absolute lg:left-37 top-[57.77%]'
+          className='absolute md:left-[11.72%] top-[57.77%]'
         />
         <LenguajeTech
           data-speed='0.8'
           description='Git'
           icon={icons.git}
-          className='absolute left-[57px] lg:left-145 top-[59.87%]'
+          className='absolute left-[45.92%] top-[59.87%]'
         />
       </div>
     </section>
