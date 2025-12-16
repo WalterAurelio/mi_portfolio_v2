@@ -8,6 +8,8 @@ import { useInView } from 'react-intersection-observer';
 function ProyectosDescription({ showBoxes }: ShowBoxes) {
   const { ref, inView } = useInView();
 
+  const vh = (coef: number) => window.innerHeight * (coef / 100);
+
   useGSAP(() => {
     const mm = gsap.matchMedia();
     mm.add(
@@ -24,7 +26,7 @@ function ProyectosDescription({ showBoxes }: ShowBoxes) {
           duration: 1,
           scrollTrigger: {
             trigger: '#tecnologias-section',
-            start: 'bottom bottom',
+            start: `bottom+=${vh(26.25)} bottom`,
             toggleActions: 'restart',
             endTrigger: '.scroll-panel-a',
             end: 'top top'
@@ -37,7 +39,7 @@ function ProyectosDescription({ showBoxes }: ShowBoxes) {
           ease: 'expo.out',
           scrollTrigger: {
             trigger: '#tecnologias-section',
-            start: 'bottom bottom',
+            start: `bottom+=${vh(26.25)} bottom`,
             toggleActions: 'restart',
             endTrigger: '.scroll-panel-a',
             end: 'top top'
