@@ -8,6 +8,7 @@ import Tecnologias from '../sections/Tecnologias';
 import Proyectos from '../sections/Proyectos';
 import Contacto from '../sections/Contacto';
 import Footer from '../sections/Footer';
+import HamburgerMenu from '../components/HamburgerMenu';
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother);
 gsap.defaults({ ease: 'none', duration: 2 });
@@ -28,7 +29,7 @@ function Inicio() {
   return (
     <div
       id='smooth-wrapper'
-      className='font-overused-grotesk px-4 lg:px-10 overflow-x-hidden text-main-black relative'
+      className='font-overused-grotesk px-4 lg:px-10 overflow-x-hidden text-main-black relative bg-smart-white'
     >
       {/* <CircularText className='fixed right-10 bottom-10 z-10' /> */}
       <div
@@ -36,6 +37,7 @@ function Inicio() {
         className='flex flex-col gap-[26.25vh]'
       >
         <FloatingShapesOnPath />
+        <HamburgerMenu className='lg:hidden absolute top-4 right-0 z-10' />
         <Hero />
         <SobreMi />
         <Tecnologias />

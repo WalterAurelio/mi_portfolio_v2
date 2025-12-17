@@ -1378,5 +1378,33 @@ export const icons = {
         fill='currentColor'
       />
     </svg>
+  ),
+  hamburgerMenu: (
+    <svg
+      width='100%'
+      height='100%'
+      viewBox='0 0 23 20'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+    >
+      <path
+        d='M5.44957e-07 0V3.42857H22.8571V0H5.44957e-07ZM5.44957e-07 8.28572V11.7143H22.8571V8.28572H5.44957e-07ZM5.44957e-07 16.5714V20H22.8571V16.5714H5.44957e-07Z'
+        fill='currentColor'
+      />
+    </svg>
+  ),
+  hamburgerClose: (
+    <svg
+      width='100%'
+      height='100%'
+      viewBox='0 0 23 23'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+    >
+      <path
+        d='M13.9429 11.5006L23 20.5576L20.5576 23L11.5006 13.9429L2.44349 23.0011L0.00110559 20.5587L9.05817 11.5006L0 2.44349L2.44239 0.00110559L11.5006 9.05817L20.5576 0L23 2.44239L13.9429 11.5006Z'
+        fill='currentColor'
+      />
+    </svg>
   )
 };
