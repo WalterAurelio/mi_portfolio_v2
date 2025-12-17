@@ -3,6 +3,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import type { ShowBoxes } from '../types/showBoxes';
 import FrontEndDev from '../components/FrontEndDev';
+import { icons } from '../utils/icons';
 
 function Hero({ showBoxes }: ShowBoxes) {
   useGSAP(() => {
@@ -18,14 +19,14 @@ function Hero({ showBoxes }: ShowBoxes) {
 
   return (
     <section className={cn('h-svh lg:h-screen flex flex-col justify-between py-4 lg:py-10', { 'bg-red-box': showBoxes })}>
-      <div className={cn('flex flex-col max-lg:gap-1 max-lg:my-auto', { 'bg-yellow-box': showBoxes })}>
-        <h1
+      <div className={cn('flex flex-col gap-2 lg:gap-10 my-auto', { 'bg-yellow-box': showBoxes })}>
+        <h1 className='sr-only'>Aurelio</h1>
+        <div
           id='nombre-aurelio'
-          className='text-[74.65px] lg:text-[244.16px] uppercase leading-none'
+          className='text-main-black md:max-w-[68.04vw]'
         >
-          Aurelio.
-        </h1>
-        {/* <p className='font-high-summit text-[61.04px]'>Frontend Developer</p> */}
+          {icons.miNombre}
+        </div>
         <FrontEndDev />
       </div>
       <p
