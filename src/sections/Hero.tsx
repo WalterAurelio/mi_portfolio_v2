@@ -2,12 +2,12 @@ import { cn } from '../utils/cn';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import type { ShowBoxes } from '../types/showBoxes';
-import FrontEndDev from '../components/FrontEndDev';
+import FrontendDeveloper from '../components/FrontendDeveloper';
 import { icons } from '../utils/icons';
 
 function Hero({ showBoxes }: ShowBoxes) {
   useGSAP(() => {
-    gsap.from(['#nombre-aurelio', '#hero-motto'], {
+    gsap.from(['#aurelio', '#motto'], {
       autoAlpha: 0,
       x: -40,
       filter: 'blur(64px)',
@@ -22,15 +22,15 @@ function Hero({ showBoxes }: ShowBoxes) {
       <div className={cn('flex flex-col gap-2 lg:gap-10 my-auto', { 'bg-yellow-box': showBoxes })}>
         <h1 className='sr-only'>Aurelio</h1>
         <div
-          id='nombre-aurelio'
+          id='aurelio'
           className='text-main-black md:max-w-[68.04vw]'
         >
-          {icons.miNombre}
+          {icons.nombreAurelio}
         </div>
-        <FrontEndDev />
+        <FrontendDeveloper />
       </div>
       <p
-        id='hero-motto'
+        id='motto'
         className={cn('lg:text-xl font-thin lg:w-130.25', { 'bg-green-box': showBoxes })}
       >
         Transformando ideas en experiencias digitales donde la simplicidad se exprese y sea guía.
