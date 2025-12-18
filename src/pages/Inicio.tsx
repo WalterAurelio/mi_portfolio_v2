@@ -9,6 +9,7 @@ import Proyectos from '../sections/Proyectos';
 import Contacto from '../sections/Contacto';
 import Footer from '../sections/Footer';
 import HamburgerMenu from '../components/HamburgerMenu';
+import Navbar from '../components/Navbar';
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother);
 gsap.defaults({ ease: 'none', duration: 2 });
@@ -38,6 +39,7 @@ function Inicio() {
       >
         <FloatingShapesOnPath />
         <HamburgerMenu className='lg:hidden absolute top-4 right-0 z-10' />
+        <Navbar className='max-lg:hidden h-3 absolute top-10' />
         <Hero />
         <SobreMi />
         <Tecnologias />

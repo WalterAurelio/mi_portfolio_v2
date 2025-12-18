@@ -63,7 +63,7 @@ function ProyectosDescription({ showBoxes }: ShowBoxes) {
           Proyectos • Proyectos • Proyectos • Proyectos •{' '}
         </h2>
         <CursiveTitle className='absolute left-27 top-16 proyectos-animate'>Proyectos</CursiveTitle>
-        <p className='lg:text-xl leading-8 font-thin proyectos-animate'>
+        <p className='lg:text-xl leading-8 font-light proyectos-animate'>
           Una selección de proyectos que nacen de la curiosidad y de las ganas de construir productos que transmitan <b>claridad</b> y <b>propósito</b>. Cada uno refleja mi manera
           de trabajar y lo que disfruto hacer en el desarrollo web.
         </p>

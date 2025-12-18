@@ -16,7 +16,7 @@ function LenguajeTech({ className, description = 'Lorem ipsum', icon, ...props }
       )}
       {...props}
     >
-      <div className='flex items-center justify-center h-[39px] lg:h-13 font-thin'>
+      <div className='flex items-center justify-center h-[39px] lg:h-13 font-light'>
         <p>{description}</p>
       </div>
 

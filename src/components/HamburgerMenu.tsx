@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import Button from './Button';
 import { cn } from '../utils/cn';
 import { icons } from '../utils/icons';
+import NavLinks from './NavLinks';
 
 type HamburgerMenuProps = {
   className?: string;
@@ -29,15 +29,7 @@ function HamburgerMenu({ className }: HamburgerMenuProps) {
           {isOpen ? <div className='h-[23px] aspect-square'>{icons.hamburgerClose}</div> : <div className='h-5'>{icons.hamburgerMenu}</div>}
         </button>
       </div>
-
-      <div className={cn('flex flex-col gap-10 p-5 opacity-100 transition-opacity duration-400', { 'opacity-0 -z-10': !isOpen })}>
-        <div className='flex flex-col gap-5'>
-          <p>Sobre mí</p>
-          <p>Tecnologías</p>
-          <p>Proyectos</p>
-        </div>
-        <Button variant='solid'>Contactar</Button>
-      </div>
+      <NavLinks isOpen={isOpen} />
     </nav>
   );
 }

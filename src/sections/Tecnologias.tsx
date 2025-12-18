@@ -59,9 +59,8 @@ function Tecnologias({ showBoxes }: ShowBoxes) {
       >
         <div className={cn('relative flex flex-col max-lg:gap-4', { 'bg-green-box': showBoxes })}>
           <h2 className='text-[52.67px] lg:text-[97.66px] text-center tecnologias-animate'>Tecnologías.</h2>
-          {/* <CursiveTitle className='absolute left-27 top-18 -z-10 tecnologias-animate'>Tecnologias</CursiveTitle> */}
           <CursiveTitle className='absolute left-[50%] -translate-x-[50%] top-12 lg:top-18 -z-10 tecnologias-animate'>Tecnologias</CursiveTitle>
-          <p className='lg:text-xl font-thin text-center tecnologias-animate'>
+          <p className='lg:text-xl font-light text-center tecnologias-animate'>
             El stack tecnológico que forma parte de mi proceso para
             <br className='hidden' /> el desarrollo de productos digitales, combinando simplicidad, solidez y calidad.
           </p>

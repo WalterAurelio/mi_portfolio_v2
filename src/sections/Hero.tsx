@@ -31,7 +31,7 @@ function Hero({ showBoxes }: ShowBoxes) {
       </div>
       <p
         id='motto'
-        className={cn('lg:text-xl font-thin lg:w-130.25', { 'bg-green-box': showBoxes })}
+        className={cn('lg:text-xl font-light lg:w-130.25', { 'bg-green-box': showBoxes })}
       >
         Transformando ideas en experiencias digitales donde la simplicidad se exprese y sea guía.
       </p>
