@@ -1,5 +1,5 @@
 import { cva, type VariantProps } from 'class-variance-authority';
-import { twMerge } from 'tailwind-merge';
+import { cn } from '../utils/cn';
 
 const variants = cva(['flex w-40 h-15 justify-center items-center lg:text-lg font-medium text-main-white cursor-pointer leading-normal lg:hover:scale-110 transition-all'], {
   variants: {
@@ -16,10 +16,10 @@ const variants = cva(['flex w-40 h-15 justify-center items-center lg:text-lg fon
 
 type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & VariantProps<typeof variants>;
 
-function Button({ variant, children, ...props }: ButtonProps) {
+function Button({ variant, children, className, ...props }: ButtonProps) {
   return (
     <button
-      className={twMerge(variants({ variant }))}
+      className={cn(variants({ variant }), className)}
       {...props}
     >
       {children}
