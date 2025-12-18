@@ -21,7 +21,8 @@ function FloatingShapesOnPath() {
         trigger: '#curvy-path',
         start: 'top center',
         end: () => '+=' + document.querySelector('#curvy-path')?.getBoundingClientRect().height,
-        scrub: true
+        scrub: true,
+        invalidateOnRefresh: true
       }
     });
   });
