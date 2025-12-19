@@ -5,6 +5,7 @@ import NavLinks from './NavLinks';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
+import ag_logo from '../assets/img/ag_logo.png';
 
 type HamburgerMenuProps = {
   className?: string;
@@ -73,7 +74,11 @@ function HamburgerMenu({ className }: HamburgerMenuProps) {
       })}
     >
       <div className='px-5 flex justify-between items-center h-15'>
-        <p className={cn('opacity-100 transition-opacity duration-400', { 'opacity-0 -z-10': !isOpen })}>Logo</p>
+        <img
+          src={ag_logo}
+          alt='ag-logo'
+          className={cn('opacity-40 transition-opacity duration-400', { 'opacity-0 -z-10': !isOpen })}
+        />
         <button
           onClick={handleClick}
           className='w-[75px] h-15 flex justify-center items-center rounded-[64px] text-main-black absolute right-0 top-0'

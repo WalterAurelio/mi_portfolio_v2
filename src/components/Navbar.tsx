@@ -3,6 +3,7 @@ import { cn } from '../utils/cn';
 import NavLinks from './NavLinks';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import ag_logo from '../assets/img/ag_logo.png';
 
 type NavbarProps = {
   className?: string;
@@ -37,7 +38,11 @@ function Navbar({ className }: NavbarProps) {
       id='navbar'
       className={cn('flex w-full justify-between items-center text-lg', className)}
     >
-      <p>Logo</p>
+      <img
+        src={ag_logo}
+        alt='ag-logo'
+        className='h-10 opacity-40'
+      />
       <NavLinks isOpen />
     </nav>
   );
