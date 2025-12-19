@@ -11,6 +11,13 @@ type NavbarProps = {
 
 function Navbar({ className }: NavbarProps) {
   useGSAP(() => {
+    gsap.from('#navbar div', {
+      y: -80,
+      delay: 4.8,
+      ease: 'expo',
+      duration: 1.6
+    });
+
     const showAnimation = gsap
       .from('#navbar', {
         y: -80,
@@ -38,11 +45,13 @@ function Navbar({ className }: NavbarProps) {
       id='navbar'
       className={cn('flex w-full justify-between items-center text-lg', className)}
     >
-      <img
-        src={ag_logo}
-        alt='ag-logo'
-        className='h-10 opacity-40'
-      />
+      <div className=' bg-smart-white mask-[url(./assets/img/ag_logo.png)] mask-center mask-contain mask-no-repeat'>
+        <img
+          src={ag_logo}
+          alt='ag-logo'
+          className='h-10 opacity-40'
+        />
+      </div>
       <NavLinks isOpen />
     </nav>
   );

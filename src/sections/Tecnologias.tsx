@@ -33,6 +33,7 @@ function Tecnologias({ showBoxes }: ShowBoxes) {
 
         gsap.from('.tecnologias-animate', {
           autoAlpha: 0,
+          y: isMobile ? -40 : undefined,
           filter: isMobile ? undefined : 'blur(64px)',
           duration: 1.6,
           ease: 'expo.out',
