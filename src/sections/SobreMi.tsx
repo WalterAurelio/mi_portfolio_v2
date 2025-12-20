@@ -16,10 +16,9 @@ function SobreMi({ showBoxes }: ShowBoxes) {
         // const { isMobile } = context.conditions as gsap.Conditions;
 
         gsap.from('.sobre-mi-animate', {
-          x: -40,
-          autoAlpha: 0,
-          // filter: isMobile ? undefined : 'blur(64px)',
-          filter: 'blur(64px)',
+          translateX: -40,
+          opacity: 0,
+          scale: 1.04,
           duration: 1.6,
           ease: 'expo.out',
           stagger: 0.2,

@@ -8,9 +8,10 @@ import { icons } from '../utils/icons';
 function Hero({ showBoxes }: ShowBoxes) {
   useGSAP(() => {
     gsap.from(['#aurelio', '#motto'], {
-      x: -40,
-      autoAlpha: 0,
-      filter: 'blur(64px)',
+      translateX: -40,
+      opacity: 0,
+      scale: 1.04,
+      filter: 'blur(12px)',
       duration: 1.6,
       ease: 'expo.out',
       delay: 2,
@@ -19,7 +20,7 @@ function Hero({ showBoxes }: ShowBoxes) {
   });
 
   return (
-    <section className={cn('h-svh lg:h-screen flex flex-col justify-between py-4 lg:py-10', { 'bg-red-box': showBoxes })}>
+    <section className={cn('h-svh lg:h-screen flex flex-col justify-between py-4 lg:py-10 translate-z-0', { 'bg-red-box': showBoxes })}>
       <div className={cn('flex flex-col gap-2 lg:gap-10 my-auto', { 'bg-yellow-box': showBoxes })}>
         <h1 className='sr-only'>Aurelio</h1>
         <div

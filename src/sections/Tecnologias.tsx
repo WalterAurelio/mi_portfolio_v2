@@ -29,13 +29,11 @@ function Tecnologias({ showBoxes }: ShowBoxes) {
         });
 
         gsap.from('.tecnologias-animate', {
-          autoAlpha: 0,
-          // y: isMobile ? -40 : undefined,
-          // filter: isMobile ? undefined : 'blur(64px)',
-          filter: 'blur(64px)',
+          opacity: 0,
+          scale: 1.04,
           duration: 1.6,
           ease: 'expo.out',
-          stagger: 0.1,
+          stagger: 0.2,
           scrollTrigger: {
             trigger: '#tecnologias-section',
             start: isMobile ? 'top center' : 'top top',
