@@ -1,6 +1,8 @@
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { ScrollSmoother, ScrollTrigger } from 'gsap/all';
+import { DrawSVGPlugin, MotionPathPlugin, ScrollSmoother, ScrollToPlugin, ScrollTrigger } from 'gsap/all';
+import Navbar from '../components/Navbar';
+import HamburgerMenu from '../components/HamburgerMenu';
 import FloatingShapesOnPath from '../components/FloatingShapesOnPath';
 import Hero from '../sections/Hero';
 import SobreMi from '../sections/SobreMi';
@@ -8,26 +10,11 @@ import Tecnologias from '../sections/Tecnologias';
 import Proyectos from '../sections/Proyectos';
 import Contacto from '../sections/Contacto';
 import Footer from '../sections/Footer';
-import HamburgerMenu from '../components/HamburgerMenu';
-import Navbar from '../components/Navbar';
 // import CircularText from '../components/CircularText';
 
-gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother);
-gsap.defaults({ ease: 'none', duration: 2 });
+gsap.registerPlugin(useGSAP, DrawSVGPlugin, MotionPathPlugin, ScrollSmoother, ScrollToPlugin, ScrollTrigger);
 
 function Inicio() {
-  useGSAP(() => {
-    /* gsap.to('#circular-text', {
-      opacity: 0,
-      duration: 0.4,
-      scrollTrigger: {
-        trigger: '#contacto-section',
-        start: 'top bottom',
-        toggleActions: 'play none none reverse'
-      }
-    }); */
-  });
-
   return (
     <div
       id='smooth-wrapper'

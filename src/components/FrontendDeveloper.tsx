@@ -1,9 +1,6 @@
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-import { DrawSVGPlugin } from 'gsap/all';
 import { icons } from '../utils/icons';
-
-gsap.registerPlugin(DrawSVGPlugin);
 
 function FrontendDeveloper() {
   useGSAP(() => {

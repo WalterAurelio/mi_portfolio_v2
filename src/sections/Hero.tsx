@@ -8,12 +8,13 @@ import { icons } from '../utils/icons';
 function Hero({ showBoxes }: ShowBoxes) {
   useGSAP(() => {
     gsap.from(['#aurelio', '#motto'], {
-      autoAlpha: 0,
       x: -40,
+      autoAlpha: 0,
       filter: 'blur(64px)',
       duration: 1.6,
       ease: 'expo.out',
-      delay: 2
+      delay: 2,
+      stagger: 0.2
     });
   });
 

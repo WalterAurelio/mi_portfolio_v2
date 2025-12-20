@@ -1,28 +1,31 @@
+import { useGSAP } from '@gsap/react';
 import { cn } from '../utils/cn';
 import Button from './Button';
 import gsap from 'gsap';
-import { ScrollToPlugin } from 'gsap/all';
 
-gsap.registerPlugin(ScrollToPlugin);
-
-type NavLinksProps = {
+type Props = {
   isOpen: boolean;
   setIsOpen?: (value: boolean) => void;
 };
 
-function NavLinks({ isOpen, setIsOpen }: NavLinksProps) {
-  const navLinks = [
-    { section: 'Sobre mí', id: '#sobre-mi-section' },
-    { section: 'Tecnologías', id: '#tecnologias-section' },
-    { section: 'Proyectos', id: '#proyectos-section' }
-  ];
+const navLinks = [
+  { section: 'Sobre mí', id: '#sobre-mi-section' },
+  { section: 'Tecnologías', id: '#tecnologias-section' },
+  { section: 'Proyectos', id: '#proyectos-section' }
+];
 
-  const scrollTo = (sectionId: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+function NavLinks({ isOpen, setIsOpen }: Props) {
+  const { contextSafe } = useGSAP();
+
+  const scrollToSection = (id: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     if (setIsOpen) setIsOpen(false);
     gsap.to(window, {
       duration: 0.4,
-      scrollTo: sectionId
+      scrollTo: {
+        y: id,
+        offsetY: id === '#tecnologias-section' && window.innerWidth >= 1024 ? -120 : 0
+      }
     });
   };
 
@@ -34,7 +37,7 @@ function NavLinks({ isOpen, setIsOpen }: NavLinksProps) {
             key={index}
             href={e.id}
             className='lg:cursor-pointer w-fit select-none lg:text-transparent-black-20 lg:hover:text-main-black transition-colors'
-            onClick={scrollTo(e.id)}
+            onClick={contextSafe(scrollToSection(e.id))}
           >
             {e.section}
           </a>

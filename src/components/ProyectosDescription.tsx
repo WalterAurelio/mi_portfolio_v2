@@ -17,8 +17,8 @@ function ProyectosDescription({ showBoxes }: ShowBoxes) {
         isDesktop: '(min-width: 1024px)',
         isMobile: '(max-width: 1023px)'
       },
-      context => {
-        const { isMobile } = context.conditions as gsap.Conditions;
+      (/* context */) => {
+        // const { isMobile } = context.conditions as gsap.Conditions;
 
         gsap.from('#proyectos-description', {
           xPercent: 100,
@@ -34,7 +34,8 @@ function ProyectosDescription({ showBoxes }: ShowBoxes) {
         });
 
         gsap.from('.proyectos-animate', {
-          filter: isMobile ? undefined : 'blur(64px)',
+          // filter: isMobile ? undefined : 'blur(64px)',
+          filter: 'blur(64px)',
           duration: 1.6,
           ease: 'expo.out',
           scrollTrigger: {

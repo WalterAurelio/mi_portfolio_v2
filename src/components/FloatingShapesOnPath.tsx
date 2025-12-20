@@ -1,10 +1,7 @@
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { ScrollTrigger, MotionPathPlugin } from 'gsap/all';
 import { pathEase } from '../utils/pathEaseFn';
 import FloatingShapes from './FloatingShapes';
-
-gsap.registerPlugin(useGSAP, ScrollTrigger, MotionPathPlugin);
 
 function FloatingShapesOnPath() {
   useGSAP(() => {

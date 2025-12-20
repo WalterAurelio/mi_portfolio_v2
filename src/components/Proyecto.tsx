@@ -1,5 +1,6 @@
 import { cn } from '../utils/cn';
 import { Link } from 'react-router-dom';
+import bg_img from '../assets/img/StockSnap_YPGOEJM7JO.webp';
 
 type ProyectoProps = {
   id?: string;
@@ -12,9 +13,14 @@ function Proyecto({ id, className, nombreProyecto = 'Nombre Proyecto', descripti
   return (
     <div
       id={id ?? undefined}
-      className={cn('h-lvh lg:h-screen w-full flex items-center justify-center px-4 lg:px-64 bg-main-black relative', className)}
+      className={cn('h-lvh lg:h-screen w-full flex items-center justify-center px-4 lg:px-64 bg-main-black relative overflow-clip', className)}
     >
-      <div className='absolute w-full h-full bg-[url(./assets/img/StockSnap_YPGOEJM7JO.jpg)] bg-cover bg-center opacity-20'></div>
+      <img
+        src={bg_img}
+        alt='fondo-placeholder'
+        decoding='async'
+        className='absolute size-full object-cover opacity-20'
+      />
       <Link
         to='/proyecto'
         className='flex flex-col w-fit items-center z-10 lg:cursor-pointer lg:hover:scale-110 transition-all duration-300 text-center'

@@ -1,13 +1,10 @@
 import LenguajeTech from '../components/LenguajeTech';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from 'gsap/all';
 import type { ShowBoxes } from '../types/showBoxes';
 import { cn } from '../utils/cn';
 import CursiveTitle from '../components/CursiveTitle';
 import { icons } from '../utils/icons';
-
-gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 function Tecnologias({ showBoxes }: ShowBoxes) {
   useGSAP(() => {
@@ -33,8 +30,9 @@ function Tecnologias({ showBoxes }: ShowBoxes) {
 
         gsap.from('.tecnologias-animate', {
           autoAlpha: 0,
-          y: isMobile ? -40 : undefined,
-          filter: isMobile ? undefined : 'blur(64px)',
+          // y: isMobile ? -40 : undefined,
+          // filter: isMobile ? undefined : 'blur(64px)',
+          filter: 'blur(64px)',
           duration: 1.6,
           ease: 'expo.out',
           stagger: 0.1,

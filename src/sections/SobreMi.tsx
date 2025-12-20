@@ -12,16 +12,17 @@ function SobreMi({ showBoxes }: ShowBoxes) {
         isDesktop: '(min-width: 1024px)',
         isMobile: '(max-width: 1023px)'
       },
-      context => {
-        const { isMobile } = context.conditions as gsap.Conditions;
+      (/* context */) => {
+        // const { isMobile } = context.conditions as gsap.Conditions;
 
         gsap.from('.sobre-mi-animate', {
           x: -40,
           autoAlpha: 0,
-          filter: isMobile ? undefined : 'blur(64px)',
+          // filter: isMobile ? undefined : 'blur(64px)',
+          filter: 'blur(64px)',
           duration: 1.6,
           ease: 'expo.out',
-          stagger: 0.1,
+          stagger: 0.2,
           scrollTrigger: {
             trigger: '#sobre-mi-section',
             start: 'top center',

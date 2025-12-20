@@ -1,9 +1,6 @@
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { MotionPathPlugin } from 'gsap/all';
 import { cn } from '../utils/cn';
-
-gsap.registerPlugin(useGSAP, MotionPathPlugin);
 
 type GradientShapeProps = {
   id: string;
