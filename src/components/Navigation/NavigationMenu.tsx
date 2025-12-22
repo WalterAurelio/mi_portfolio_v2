@@ -53,7 +53,7 @@ function NavigationMenu() {
   return (
     <div
       id='navigation-menu'
-      className='z-10 absolute top-4 max-lg:right-4 flex justify-end lg:h-2.5 lg:top-10 lg:w-[calc(100%-80px)]'
+      className='z-10 absolute top-4 max-lg:right-4 flex justify-end w-[calc(100%-32px)] lg:h-2.5 lg:top-10 lg:w-[calc(100%-80px)]'
     >
       <HamburgerMenu
         isOpen={isOpen}

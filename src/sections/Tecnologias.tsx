@@ -31,7 +31,7 @@ function Tecnologias({ showBoxes }: ShowBoxes) {
         gsap.from('.tecnologias-animate', {
           opacity: 0,
           scale: 1.04,
-          filter: 'blur(8px)',
+          filter: isMobile ? undefined : 'blur(8px)',
           duration: 1.6,
           ease: 'expo.out',
           stagger: 0.2,
@@ -39,7 +39,7 @@ function Tecnologias({ showBoxes }: ShowBoxes) {
             trigger: '#tecnologias-section',
             start: isMobile ? 'top center' : 'top top',
             end: 'bottom bottom',
-            toggleActions: 'play none none reverse'
+            toggleActions: isMobile ? 'play none none none' : 'play none none reverse'
           }
         });
       }

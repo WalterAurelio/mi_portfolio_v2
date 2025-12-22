@@ -11,43 +11,18 @@ function ProyectosDescription({ showBoxes }: ShowBoxes) {
   const vh = (coef: number) => window.innerHeight * (coef / 100);
 
   useGSAP(() => {
-    const mm = gsap.matchMedia();
-    mm.add(
-      {
-        isDesktop: '(min-width: 1024px)',
-        isMobile: '(max-width: 1023px)'
-      },
-      (/* context */) => {
-        // const { isMobile } = context.conditions as gsap.Conditions;
-
-        gsap.from('#proyectos-description', {
-          xPercent: 100,
-          ease: 'power4.out',
-          duration: 1,
-          scrollTrigger: {
-            trigger: '#tecnologias-section',
-            start: `bottom+=${vh(26.25)} bottom`,
-            toggleActions: 'restart',
-            endTrigger: '.scroll-panel-a',
-            end: 'top top'
-          }
-        });
-
-        gsap.from('.proyectos-animate', {
-          filter: 'blur(8px)',
-          duration: 1.6,
-          delay: 0.2,
-          ease: 'expo.out',
-          scrollTrigger: {
-            trigger: '#tecnologias-section',
-            start: `bottom+=${vh(26.25)} bottom`,
-            toggleActions: 'restart',
-            endTrigger: '.scroll-panel-a',
-            end: 'top top'
-          }
-        });
+    gsap.from('#proyectos-description', {
+      xPercent: 100,
+      ease: 'power4.out',
+      duration: 1,
+      scrollTrigger: {
+        trigger: '#tecnologias-section',
+        start: `bottom+=${vh(26.25)} bottom`,
+        toggleActions: 'restart',
+        endTrigger: '.scroll-panel-a',
+        end: 'top top'
       }
-    );
+    });
   });
 
   return (
