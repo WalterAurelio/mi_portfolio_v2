@@ -2,7 +2,7 @@ import Proyecto from '../components/Proyecto';
 import ProyectosDescription from '../components/ProyectosDescription';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { ScrollTrigger, ScrollSmoother } from 'gsap/all';
+import { ScrollTrigger } from 'gsap/all';
 import type { ShowBoxes } from '../types/showBoxes';
 import { cn } from '../utils/cn';
 import '../styles/Proyectos.css';
