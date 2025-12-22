@@ -1,4 +1,4 @@
-import email_img from '../assets/img/email_image.png';
+import email_img from '../assets/img/email_image.webp';
 import Button from '../components/Button';
 import type { ShowBoxes } from '../types/showBoxes';
 import { cn } from '../utils/cn';

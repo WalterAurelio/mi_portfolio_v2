@@ -28,7 +28,7 @@ function GradientShape({ id, className, options, variant }: GradientShapeProps) 
   });
 
   return (
-    <div className={`w-fit ${className}`}>
+    <div className={cn('w-fit', className)}>
       <div
         id={id}
         className={cn('w-60 aspect-square rounded-full blur-xl', {

@@ -11,7 +11,7 @@ function Hero({ showBoxes }: ShowBoxes) {
       translateX: -40,
       opacity: 0,
       scale: 1.04,
-      filter: 'blur(12px)',
+      filter: 'blur(8px)',
       duration: 1.6,
       ease: 'expo.out',
       delay: 2,

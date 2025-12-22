@@ -5,7 +5,7 @@ import { useGSAP } from '@gsap/react';
 function FloatingShapes() {
   useGSAP(() => {
     gsap.from('#floating-shapes', {
-      autoAlpha: 0,
+      opacity: 0,
       duration: 2,
       ease: 'power1.in'
     });

@@ -34,9 +34,10 @@ function ProyectosDescription({ showBoxes }: ShowBoxes) {
         });
 
         gsap.from('.proyectos-animate', {
+          filter: 'blur(8px)',
           duration: 1.6,
+          delay: 0.2,
           ease: 'expo.out',
-          stagger: 0.2,
           scrollTrigger: {
             trigger: '#tecnologias-section',
             start: `bottom+=${vh(26.25)} bottom`,
