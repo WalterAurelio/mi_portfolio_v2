@@ -9,14 +9,6 @@ import '../styles/Proyectos.css';
 
 function Proyectos({ showBoxes }: ShowBoxes) {
   useGSAP(() => {
-    ScrollSmoother.create({
-      wrapper: '#smooth-wrapper',
-      content: '#smooth-content',
-      smooth: 2,
-      smoothTouch: 0.1,
-      effects: true
-    });
-
     const tl = gsap.timeline();
     tl.from('.scroll-panel-b', { xPercent: 100 }).from('.scroll-panel-c', { xPercent: 100 });
 

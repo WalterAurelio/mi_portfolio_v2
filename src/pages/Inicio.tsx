@@ -15,6 +15,20 @@ import Footer from '../sections/Footer';
 gsap.registerPlugin(useGSAP, DrawSVGPlugin, MotionPathPlugin, ScrollSmoother, ScrollToPlugin, ScrollTrigger);
 
 function Inicio() {
+  useGSAP(() => {
+    ScrollSmoother.create({
+      wrapper: '#smooth-wrapper',
+      content: '#smooth-content',
+      smooth: 2,
+      smoothTouch: 0.1,
+      effects: true,
+      ignoreMobileResize: true,
+      normalizeScroll: true
+    });
+
+    ScrollTrigger.refresh();
+  });
+
   return (
     <div
       id='smooth-wrapper'
