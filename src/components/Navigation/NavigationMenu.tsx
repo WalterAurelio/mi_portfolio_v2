@@ -1,6 +1,6 @@
 import { useGSAP } from '@gsap/react';
-import HamburgerMenu from '../HamburgerMenu';
-import Navbar from '../Navbar';
+// import HamburgerMenu from '../HamburgerMenu';
+import NavBar from '../NavBar';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import { useEffect, useRef, useState } from 'react';
@@ -55,12 +55,10 @@ function NavigationMenu() {
       id='navigation-menu'
       className='z-10 absolute top-4 max-lg:right-4 flex justify-end w-[calc(100%-32px)] lg:h-2.5 lg:top-10 lg:w-[calc(100%-80px)]'
     >
-      <HamburgerMenu
-        isOpen={isOpen}
-        setIsOpen={setIsOpen}
+      {/* <HamburgerMenu
         className='lg:hidden'
-      />
-      <Navbar className='max-lg:hidden' />
+      /> */}
+      <NavBar className='max-lg:hidden' />
     </div>
   );
 }

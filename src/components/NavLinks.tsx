@@ -30,13 +30,13 @@ function NavLinks({ isOpen, setIsOpen }: Props) {
   };
 
   return (
-    <div className={cn('flex flex-col lg:flex-row max-lg:gap-10 max-lg:p-5 opacity-100 transition-opacity duration-400', { 'opacity-0 -z-10': !isOpen })}>
-      <div className='flex flex-col lg:flex-row lg:items-center gap-5 lg:gap-10 lg:text-lg lg:px-10 lg:rounded-full lg:bg-transparent-white-20 lg:backdrop-blur-sm'>
+    <div className={cn('flex flex-col max-lg:gap-10 max-lg:p-5 opacity-100 transition-opacity duration-400 lg:flex-row', { 'opacity-0 -z-10': !isOpen })}>
+      <div className='flex flex-col gap-5 lg:text-lg lg:flex-row lg:items-center'>
         {navLinks.map((e, index) => (
           <a
             key={index}
             href={e.id}
-            className='lg:cursor-pointer w-fit select-none lg:text-transparent-black-20 lg:hover:text-main-black transition-colors'
+            className='w-fit select-none transition-colors lg:text-transparent-black-20 lg:hover:text-main-black lg:cursor-pointer'
             onClick={contextSafe(scrollToSection(e.id))}
           >
             {e.section}

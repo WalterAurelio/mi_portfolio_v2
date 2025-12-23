@@ -1,29 +1,58 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { cn } from '../utils/cn';
 import { icons } from '../utils/icons';
 import NavLinks from './NavLinks';
 import ag_logo from '../assets/img/ag_logo.webp';
+import type { WithClassName } from '../types/WithClassName';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
 
-type HamburgerMenuProps = {
-  isOpen: boolean;
-  setIsOpen: (value: boolean) => void;
-  className?: string;
-};
-
-function HamburgerMenu({ className, isOpen, setIsOpen }: HamburgerMenuProps) {
+function HamburgerMenu({ className }: WithClassName) {
+  const [isOpen, setIsOpen] = useState(false);
+  const isOpenRef = useRef(isOpen);
   const navRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
+    isOpenRef.current = isOpen;
+  }, [isOpen]);
+
+  useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
-      const target = e.target as Node;
-      if (isOpen && !navRef?.current?.contains(target)) {
+      if (isOpen && !navRef?.current?.contains(e.target as Node)) {
         setIsOpen(false);
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
-
     return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, [isOpen, setIsOpen]);
+  }, [isOpen]);
+
+  useGSAP(() => {
+    const showAnimation = gsap
+      .from('#hamburger-menu', {
+        y: -80,
+        paused: true,
+        ease: 'sine',
+        duration: 0.4
+      })
+      .progress(1);
+    const trigger = ScrollTrigger.create({
+      start: 'top top',
+      end: 'max',
+      onUpdate: self => {
+        if (!isOpenRef.current) {
+          if (self.direction === -1) {
+            showAnimation.play();
+          } else {
+            showAnimation.reverse();
+          }
+        }
+      }
+    });
+    return () => {
+      trigger.kill();
+    };
+  });
 
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -33,7 +62,7 @@ function HamburgerMenu({ className, isOpen, setIsOpen }: HamburgerMenuProps) {
     <nav
       id='hamburger-menu'
       ref={navRef}
-      className={cn('w-full max-h-78 flex flex-col rounded-4xl bg-main-white overflow-clip transition-all duration-400 relative', className, {
+      className={cn('w-full max-w-full lg:max-w-81 max-h-81 flex flex-col rounded-4xl bg-main-white overflow-clip transition-all duration-400 relative', className, {
         'w-[75px] max-h-15': !isOpen
       })}
     >
@@ -45,11 +74,12 @@ function HamburgerMenu({ className, isOpen, setIsOpen }: HamburgerMenuProps) {
         />
         <button
           onClick={handleClick}
-          className='w-[75px] h-15 flex justify-center items-center rounded-[64px] text-main-black absolute right-0 top-0'
+          className='w-[75px] h-15 flex justify-center items-center rounded-[64px] text-main-black absolute right-0 top-0 lg:cursor-pointer'
         >
           {isOpen ? <div className='h-[23px] aspect-square'>{icons.hamburgerClose}</div> : <div className='h-5'>{icons.hamburgerMenu}</div>}
         </button>
       </div>
+
       <NavLinks
         isOpen={isOpen}
         setIsOpen={setIsOpen}

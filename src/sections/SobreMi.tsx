@@ -19,7 +19,7 @@ function SobreMi({ showBoxes }: ShowBoxes) {
           translateX: -40,
           opacity: 0,
           scale: 1.04,
-          filter: isMobile ? undefined : 'blur(8px)',
+          filter: isMobile ? undefined : 'blur(16px)',
           duration: 1.6,
           ease: 'expo.out',
           stagger: 0.2,
@@ -27,7 +27,8 @@ function SobreMi({ showBoxes }: ShowBoxes) {
             trigger: '#sobre-mi-section',
             start: 'top center',
             end: 'bottom center',
-            toggleActions: isMobile ? 'play none none none' : 'play none none reverse'
+            // toggleActions: isMobile ? 'play none none none' : 'play none none reverse',
+            toggleActions: 'play none none reverse'
           }
         });
       }

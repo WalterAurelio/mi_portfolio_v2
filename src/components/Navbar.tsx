@@ -1,26 +1,15 @@
+// import ag_logo from '../assets/img/ag_logo.webp';
+import type { WithClassName } from '../types/WithClassName';
 import { cn } from '../utils/cn';
-import NavLinks from './NavLinks';
-import ag_logo from '../assets/img/ag_logo.webp';
+import NavigationLinks from './NavigationLinks';
 
-type NavbarProps = {
-  className?: string;
-};
-
-function Navbar({ className }: NavbarProps) {
+function NavBar({ className }: WithClassName) {
   return (
-    <nav
-      id='navbar'
-      className={cn('flex w-full justify-between items-center text-lg', className)}
-    >
-      <div className=' bg-smart-white mask-[url(./assets/img/ag_logo.webp)] mask-center mask-contain mask-no-repeat'>
-        <img
-          src={ag_logo}
-          alt='ag-logo'
-          className='h-10 opacity-40'
-        />
-      </div>
-      <NavLinks isOpen />
+    <nav className={cn('flex items-center justify-between', className)}>
+      <span></span>
+
+      <NavigationLinks />
     </nav>
   );
 }
-export default Navbar;
+export default NavBar;
