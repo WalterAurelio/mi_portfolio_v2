@@ -10,9 +10,9 @@ type Props = {
     runBackwards?: boolean;
   };
   variant: 1 | 2;
-};
+} & WithClassName;
 
-function GradientShape({ id, options, variant, className }: Props & WithClassName) {
+function GradientShape({ id, options, variant, className }: Props) {
   useGSAP(() => {
     gsap.to(`#${id}`, {
       duration: 12,

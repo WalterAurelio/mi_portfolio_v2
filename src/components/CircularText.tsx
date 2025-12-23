@@ -1,8 +1,8 @@
-import type { ShowBoxes } from '../types/showBoxes';
+import type { WithBoxes } from '../types/WithBoxes';
 import type { WithClassName } from '../types/WithClassName';
 import { cn } from '../utils/cn';
 
-function CircularText({ showBoxes, className }: ShowBoxes & WithClassName) {
+function CircularText({ showBoxes, className }: WithBoxes & WithClassName) {
   return (
     <div className={cn('flex items-center justify-center w-fit aspect-square', className, { 'bg-red-box': showBoxes })}>
       <svg

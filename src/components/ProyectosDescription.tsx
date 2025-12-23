@@ -1,11 +1,11 @@
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import type { ShowBoxes } from '../types/showBoxes';
 import { cn } from '../utils/cn';
 import CursiveTitle from '../components/CursiveTitle';
 import { useInView } from 'react-intersection-observer';
+import type { WithBoxes } from '../types/WithBoxes';
 
-function ProyectosDescription({ showBoxes }: ShowBoxes) {
+function ProyectosDescription({ showBoxes }: WithBoxes) {
   const { ref, inView } = useInView();
 
   const vh = (coef: number) => window.innerHeight * (coef / 100);

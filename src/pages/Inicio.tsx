@@ -40,6 +40,7 @@ function Inicio() {
         className='flex flex-col gap-[26.25vh]'
       >
         <FloatingShapesOnPath />
+
         <Hero />
         <SobreMi />
         <Tecnologias />

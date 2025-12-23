@@ -3,11 +3,11 @@ import ProyectosDescription from '../components/ProyectosDescription';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/all';
-import type { ShowBoxes } from '../types/showBoxes';
+import type { WithBoxes } from '../types/WithBoxes';
 import { cn } from '../utils/cn';
 import '../styles/Proyectos.css';
 
-function Proyectos({ showBoxes }: ShowBoxes) {
+function Proyectos({ showBoxes }: WithBoxes) {
   useGSAP(() => {
     const tl = gsap.timeline();
     tl.from('.scroll-panel-b', { xPercent: 100 }).from('.scroll-panel-c', { xPercent: 100 });

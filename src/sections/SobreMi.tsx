@@ -1,10 +1,10 @@
 import { clsx } from 'clsx';
 import gsap from 'gsap';
-import type { ShowBoxes } from '../types/showBoxes';
+import type { WithBoxes } from '../types/WithBoxes';
 import CursiveTitle from '../components/CursiveTitle';
 import { useGSAP } from '@gsap/react';
 
-function SobreMi({ showBoxes }: ShowBoxes) {
+function SobreMi({ showBoxes }: WithBoxes) {
   useGSAP(() => {
     const mm = gsap.matchMedia();
     mm.add(

@@ -5,9 +5,9 @@ import type { WithClassName } from '../types/WithClassName';
 type Props = {
   description: string;
   icon: React.JSX.Element;
-};
+} & WithClassName;
 
-function LenguajeTech({ description, icon, className, ...props }: Props & WithClassName) {
+function LenguajeTech({ description, icon, className, ...props }: Props) {
   return (
     <div
       className={cn(

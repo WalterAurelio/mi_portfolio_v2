@@ -1,9 +1,9 @@
 import email_img from '../assets/img/email_image.webp';
 import Button from '../components/Button';
-import type { ShowBoxes } from '../types/showBoxes';
+import type { WithBoxes } from '../types/WithBoxes';
 import { cn } from '../utils/cn';
 
-function Contacto({ showBoxes }: ShowBoxes) {
+function Contacto({ showBoxes }: WithBoxes) {
   const openEmailClient = () => {
     const destinatario = 'aureliogareca.dev@gmail.com';
     const asunto = 'Contacto desde tu portfolio';

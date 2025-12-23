@@ -1,8 +1,8 @@
-import type { ShowBoxes } from '../types/showBoxes';
+import type { WithBoxes } from '../types/WithBoxes';
 import { cn } from '../utils/cn';
 import { icons } from '../utils/icons';
 
-function Footer({ showBoxes }: ShowBoxes) {
+function Footer({ showBoxes }: WithBoxes) {
   return (
     <footer className='p-4 lg:p-10 -ml-4 lg:-ml-10 w-screen bg-main-black flex justify-between border-t border-transparent-white-30 -mt-[26.25vh]'>
       <div className={cn('hidden lg:flex flex-col gap-1 text-main-white w-fit', { 'bg-red-box': showBoxes })}>

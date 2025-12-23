@@ -1,11 +1,11 @@
 import { cn } from '../utils/cn';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import type { ShowBoxes } from '../types/showBoxes';
 import FrontendDeveloper from '../components/FrontendDeveloper';
 import { icons } from '../utils/icons';
+import type { WithBoxes } from '../types/WithBoxes';
 
-function Hero({ showBoxes }: ShowBoxes) {
+function Hero({ showBoxes }: WithBoxes) {
   useGSAP(() => {
     const mm = gsap.matchMedia();
     mm.add(

@@ -7,9 +7,9 @@ type Props = {
   id?: string;
   nombreProyecto?: string;
   description?: string;
-};
+} & WithClassName;
 
-function Proyecto({ id, nombreProyecto = 'Nombre Proyecto', description, className }: Props & WithClassName) {
+function Proyecto({ id, nombreProyecto = 'Nombre Proyecto', description, className }: Props) {
   return (
     <div
       id={id ?? undefined}

@@ -1,12 +1,12 @@
 import LenguajeTech from '../components/LenguajeTech';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import type { ShowBoxes } from '../types/showBoxes';
+import type { WithBoxes } from '../types/WithBoxes';
 import { cn } from '../utils/cn';
 import CursiveTitle from '../components/CursiveTitle';
 import { icons } from '../utils/icons';
 
-function Tecnologias({ showBoxes }: ShowBoxes) {
+function Tecnologias({ showBoxes }: WithBoxes) {
   useGSAP(() => {
     const mm = gsap.matchMedia();
     mm.add(
