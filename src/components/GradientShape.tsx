@@ -1,10 +1,10 @@
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { cn } from '../utils/cn';
+import type { WithClassName } from '../types/WithClassName';
 
-type GradientShapeProps = {
+type Props = {
   id: string;
-  className?: string;
   options?: {
     delay?: number;
     runBackwards?: boolean;
@@ -12,7 +12,7 @@ type GradientShapeProps = {
   variant: 1 | 2;
 };
 
-function GradientShape({ id, className, options, variant }: GradientShapeProps) {
+function GradientShape({ id, options, variant, className }: Props & WithClassName) {
   useGSAP(() => {
     gsap.to(`#${id}`, {
       duration: 12,

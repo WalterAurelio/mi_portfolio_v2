@@ -1,23 +1,29 @@
+import { useRef } from 'react';
 import ag_logo from '../assets/img/ag_logo.webp';
 import { useHamburgerStore } from '../store/hamburgerStore';
 import type { WithClassName } from '../types/WithClassName';
 import { cn } from '../utils/cn';
 import { icons } from '../utils/icons';
 import NavigationLinks from './NavigationLinks';
+import { useHandleClickOutside } from '../hooks/useHandleClickOutside';
 
 function Hamburger({ className }: WithClassName) {
   const isOpen = useHamburgerStore(state => state.isOpen);
   const setIsOpen = useHamburgerStore(state => state.setIsOpen);
+  const navRef = useRef<HTMLElement>(null);
+
+  useHandleClickOutside(navRef);
 
   return (
     <nav
-      className={cn('bg-main-white w-full max-h-78 flex flex-col rounded-4xl overflow-clip transition-all duration-300 relative z-10', className, { 'w-[75px] max-h-15': !isOpen })}
+      ref={navRef}
+      className={cn('bg-main-white w-full max-h-78 flex flex-col rounded-4xl overflow-clip transition-all duration-400 relative', className, { 'w-[75px] max-h-15': !isOpen })}
     >
       <div className='px-5 flex justify-between items-center h-15'>
         <img
           src={ag_logo}
           alt='ag_logo'
-          className={cn('opacity-40 -z-10 transition-opacity duration-300', { 'opacity-0': !isOpen })}
+          className={cn('opacity-40 transition-opacity duration-400', { 'opacity-0': !isOpen })}
         />
         <button
           type='button'

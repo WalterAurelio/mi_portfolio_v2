@@ -1,13 +1,13 @@
 import type React from 'react';
 import { cn } from '../utils/cn';
+import type { WithClassName } from '../types/WithClassName';
 
-type LenguajeTechProps = {
-  className?: string;
-  description?: string;
+type Props = {
+  description: string;
   icon: React.JSX.Element;
 };
 
-function LenguajeTech({ className, description = 'Lorem ipsum', icon, ...props }: LenguajeTechProps) {
+function LenguajeTech({ description, icon, className, ...props }: Props & WithClassName) {
   return (
     <div
       className={cn(

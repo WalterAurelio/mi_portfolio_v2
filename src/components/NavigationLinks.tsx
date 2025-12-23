@@ -25,7 +25,7 @@ function NavigationLinks() {
   };
 
   return (
-    <div className={cn('flex flex-col lg:flex-row max-lg:gap-10 max-lg:p-5 opacity-100 transition-opacity duration-300', { 'max-lg:opacity-0 max-lg:-z-10': !isOpen })}>
+    <div className={cn('flex flex-col lg:flex-row max-lg:gap-10 max-lg:p-5 opacity-100 transition-opacity duration-400', { 'max-lg:opacity-0 max-lg:-z-10': !isOpen })}>
       <ul className='flex flex-col lg:flex-row gap-5 lg:gap-10 lg:bg-transparent-white-20 lg:px-5 lg:rounded-full lg:backdrop-blur-sm'>
         {navigationInfo.map((e, index) => (
           <li

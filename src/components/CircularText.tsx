@@ -1,13 +1,10 @@
 import type { ShowBoxes } from '../types/showBoxes';
+import type { WithClassName } from '../types/WithClassName';
 import { cn } from '../utils/cn';
 
-type CircularTextProps = ShowBoxes & {
-  className?: string;
-};
-
-function CircularText({ className, showBoxes }: CircularTextProps) {
+function CircularText({ showBoxes, className }: ShowBoxes & WithClassName) {
   return (
-    <div className={cn('flex items-center justify-center w-fit aspect-square', { 'bg-red-box': showBoxes }, className)}>
+    <div className={cn('flex items-center justify-center w-fit aspect-square', className, { 'bg-red-box': showBoxes })}>
       <svg
         id='circular-text'
         viewBox='0 0 200 200'

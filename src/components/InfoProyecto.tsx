@@ -1,15 +1,11 @@
 import { icons } from '../utils/icons';
 import Button from './Button';
 import { cn } from '../utils/cn';
+import type { WithClassName } from '../types/WithClassName';
 
 const checkItems = [{ description: 'Phasellus sed feugiat' }, { description: 'Donec quis nunc' }, { description: 'Suspendisse tristique' }, { description: 'Duis euismod elit' }];
 
-type InfoProyectoProps = {
-  className?: string;
-  setIsOpen: (v: boolean) => void;
-};
-
-function InfoProyecto({ className, setIsOpen }: InfoProyectoProps) {
+function InfoProyecto({ className }: WithClassName) {
   return (
     <div className={cn('flex flex-col h-[calc(100dvh-80px)] justify-between text-main-white relative', className)}>
       <div className='flex flex-col items-start font-semibold uppercase'>
@@ -42,7 +38,6 @@ function InfoProyecto({ className, setIsOpen }: InfoProyectoProps) {
 
         <button
           type='button'
-          onClick={() => setIsOpen(false)}
           className='absolute top-4.5 right-0 flex w-[53px] aspect-square p-3.5 justify-center items-center border rounded-full border-transparent-white-30 cursor-pointer hover:scale-110 transition-all'
         >
           {icons.close}
