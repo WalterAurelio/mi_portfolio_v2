@@ -1,17 +1,17 @@
 import { useGSAP } from '@gsap/react';
 // import HamburgerMenu from '../HamburgerMenu';
 import NavBar from '../NavBar';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/all';
-import { useEffect, useRef, useState } from 'react';
+// import gsap from 'gsap';
+// import { ScrollTrigger } from 'gsap/all';
+// import { useEffect, useRef, useState } from 'react';
 
 function NavigationMenu() {
-  const [isOpen, setIsOpen] = useState(false);
-  const isOpenRef = useRef(isOpen);
+  // const [isOpen, setIsOpen] = useState(false);
+  // const isOpenRef = useRef(isOpen);
 
-  useEffect(() => {
+  /* useEffect(() => {
     isOpenRef.current = isOpen;
-  }, [isOpen]);
+  }, [isOpen]); */
 
   useGSAP(() => {
     /* gsap.from('#navigation-menu', {
@@ -22,7 +22,7 @@ function NavigationMenu() {
       delay: 4.8
     }); */
 
-    const showAnimation = gsap
+    /* const showAnimation = gsap
       .from('#navigation-menu', {
         y: -80,
         paused: true,
@@ -43,11 +43,11 @@ function NavigationMenu() {
           }
         }
       }
-    });
+    }); */
 
-    return () => {
+    /* return () => {
       trigger.kill();
-    };
+    }; */
   });
 
   return (
