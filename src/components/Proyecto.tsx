@@ -1,6 +1,6 @@
 import { cn } from '../utils/cn';
 import { Link } from 'react-router-dom';
-import bg_img from '../assets/img/StockSnap_YPGOEJM7JO.webp';
+import stockSnap from '../assets/imgs/StockSnap_YPGOEJM7JO.webp';
 import type { WithClassName } from '../types/WithClassName';
 
 type Props = {
@@ -16,8 +16,8 @@ function Proyecto({ id, nombreProyecto = 'Nombre Proyecto', description, classNa
       className={cn('h-lvh lg:h-screen w-full flex items-center justify-center px-4 lg:px-64 bg-main-black relative overflow-clip', className)}
     >
       <img
-        src={bg_img}
-        alt='fondo-placeholder'
+        src={stockSnap}
+        alt=''
         className='absolute size-full object-cover opacity-20'
       />
       <Link

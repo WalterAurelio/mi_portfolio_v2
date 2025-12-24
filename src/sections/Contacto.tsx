@@ -1,7 +1,7 @@
-import email_img from '../assets/img/email_image.webp';
 import Button from '../components/Button';
 import type { WithBoxes } from '../types/WithBoxes';
 import { cn } from '../utils/cn';
+import miEmail from '../assets/svgs/MiEmail.svg';
 
 function Contacto({ showBoxes }: WithBoxes) {
   const openEmailClient = () => {
@@ -26,8 +26,8 @@ function Contacto({ showBoxes }: WithBoxes) {
       </div>
       <div className={cn('flex flex-col items-center gap-10 lg:gap-20 my-auto', { 'bg-blue-box': showBoxes })}>
         <img
-          src={email_img}
-          alt='email_img'
+          src={miEmail}
+          alt='Email de contacto'
         />
         <Button onClick={openEmailClient}>Contactar</Button>
       </div>

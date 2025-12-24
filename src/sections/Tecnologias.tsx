@@ -4,7 +4,15 @@ import { useGSAP } from '@gsap/react';
 import type { WithBoxes } from '../types/WithBoxes';
 import { cn } from '../utils/cn';
 import CursiveTitle from '../components/CursiveTitle';
-import { icons } from '../utils/icons';
+import css from '../assets/svgs/icons/CSS.svg';
+import javaScript from '../assets/svgs/icons/JavaScript.svg';
+import html from '../assets/svgs/icons/HTML.svg';
+import react from '../assets/svgs/icons/React.svg';
+import tailwindCSS from '../assets/svgs/icons/Tailwind CSS.svg';
+import sass from '../assets/svgs/icons/Sass.svg';
+import typeScript from '../assets/svgs/icons/TypeScript.svg';
+import figma from '../assets/svgs/icons/Figma.svg';
+import git from '../assets/svgs/icons/Git.svg';
 
 function Tecnologias({ showBoxes }: WithBoxes) {
   useGSAP(() => {
@@ -73,55 +81,55 @@ function Tecnologias({ showBoxes }: WithBoxes) {
         <LenguajeTech
           data-speed='1.4'
           description='CSS'
-          icon={icons.css}
+          icon={css}
           className='absolute right-0 md:right-[calc(23.83%-180px)] top-[2.1%]'
         />
         <LenguajeTech
           data-speed='1.2'
           description='JavaScript'
-          icon={icons.javaScript}
+          icon={javaScript}
           className='absolute md:left-[8.55%] top-[3.67%]'
         />
         <LenguajeTech
           data-speed='1'
           description='HTML'
-          icon={icons.html}
+          icon={html}
           className='absolute right-[14.24%] md:right-[calc(31.75%-180px)] top-[9.34%]'
         />
         <LenguajeTech
           data-speed='1.2'
           description='React'
-          icon={icons.react}
+          icon={react}
           className='absolute md:left-[3.17%] top-[20.16%]'
         />
         <LenguajeTech
           data-speed='0.8'
           description='Tailwind CSS'
-          icon={icons.tailwindCss}
+          icon={tailwindCSS}
           className='absolute left-[46%] top-[21.42%]'
         />
         <LenguajeTech
           data-speed='1'
           description='Sass'
-          icon={icons.sass}
+          icon={sass}
           className='absolute right-0 md:right-[calc(31.75%-180px)] top-[32.34%]'
         />
         <LenguajeTech
           data-speed='0.6'
           description='TypeScript'
-          icon={icons.typeScript}
+          icon={typeScript}
           className='absolute left-[37.37%] top-[49.16%]'
         />
         <LenguajeTech
           data-speed='1.2'
           description='Figma'
-          icon={icons.figma}
+          icon={figma}
           className='absolute md:left-[11.72%] top-[57.77%]'
         />
         <LenguajeTech
           data-speed='0.8'
           description='Git'
-          icon={icons.git}
+          icon={git}
           className='absolute left-[45.92%] top-[59.87%]'
         />
       </div>

@@ -1,4 +1,4 @@
-import { icons } from '../utils/icons';
+// import { icons } from '../utils/icons';
 import Button from './Button';
 import { cn } from '../utils/cn';
 import type { WithClassName } from '../types/WithClassName';
@@ -25,7 +25,7 @@ function InfoProyecto({ className }: WithClassName) {
               key={index}
               className='flex items-center gap-4'
             >
-              <div className='flex h-3.5 justify-center items-center'>{icons.check}</div>
+              {/* <div className='flex h-3.5 justify-center items-center'>{icons.check}</div> */}
               <p>{item.description}</p>
             </div>
           ))}
@@ -36,12 +36,12 @@ function InfoProyecto({ className }: WithClassName) {
           <Button variant='minimal'>Ver repositorio</Button>
         </div>
 
-        <button
+        {/* <button
           type='button'
           className='absolute top-4.5 right-0 flex w-[53px] aspect-square p-3.5 justify-center items-center border rounded-full border-transparent-white-30 cursor-pointer hover:scale-110 transition-all'
         >
           {icons.close}
-        </button>
+        </button> */}
       </div>
     </div>
   );

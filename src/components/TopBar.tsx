@@ -5,7 +5,7 @@ import NavigationLinks from './NavigationLinks';
 function TopBar({ className }: WithClassName) {
   return (
     <nav className={cn('flex items-center justify-between', className)}>
-      <span></span>
+      <div className='h-15 aspect-square rounded-full border border-transparent-grey-30'></div>
       <NavigationLinks />
     </nav>
   );

@@ -1,12 +1,12 @@
 import { useGSAP } from '@gsap/react';
-import Hamburger from './Hamburger';
+import HamburgerMenu from './HamburgerMenu';
 import TopBar from './TopBar';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import { useHamburgerStore } from '../store/hamburgerStore';
 import { useEffect, useRef } from 'react';
 
-function NavigationBar() {
+function NavBar() {
   const isOpen = useHamburgerStore(state => state.isOpen);
   const isOpenRef = useRef(isOpen);
 
@@ -46,9 +46,9 @@ function NavigationBar() {
       id='navigation-bar'
       className='absolute top-4 lg:top-10 w-[calc(100%-32px)] lg:w-[calc(100%-80px)] z-10'
     >
-      <Hamburger className='lg:hidden ml-auto' />
+      <HamburgerMenu className='lg:hidden ml-auto' />
       <TopBar className='max-lg:hidden h-2.5' />
     </div>
   );
 }
-export default NavigationBar;
+export default NavBar;

@@ -1,6 +1,7 @@
 import type { WithBoxes } from '../types/WithBoxes';
 import { cn } from '../utils/cn';
-import { icons } from '../utils/icons';
+import gitHub from '../assets/svgs/icons/GitHub.svg';
+import linkedIn from '../assets/svgs/icons/LinkedIn.svg';
 
 function Footer({ showBoxes }: WithBoxes) {
   return (
@@ -43,9 +44,12 @@ function Footer({ showBoxes }: WithBoxes) {
           <a
             href='https://github.com/WalterAurelio'
             target='_blank'
-            className='w-5.5 aspect-square text-main-white'
           >
-            {icons.gitHub}
+            <img
+              src={gitHub}
+              alt=''
+              className='w-5.5 aspect-square'
+            />
           </a>
         </div>
         <div className='w-12.5 aspect-square border border-transparent-white-30 rounded-full flex items-center justify-center'>
@@ -54,7 +58,11 @@ function Footer({ showBoxes }: WithBoxes) {
             target='_blank'
             className='w-5.5 aspect-square text-main-white'
           >
-            {icons.linkedIn}
+            <img
+              src={linkedIn}
+              alt=''
+              className='w-5.5 aspect-square'
+            />
           </a>
         </div>
       </div>
