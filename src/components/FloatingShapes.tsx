@@ -17,12 +17,12 @@ function FloatingShapes() {
       className='w-90 aspect-square relative'
     >
       <GradientShape
-        className='max-md:scale-50'
+        className='max-lg:scale-50'
         id='shape-a'
         variant={1}
       />
       <GradientShape
-        className='rotate-90 absolute left-30 top-30 max-md:scale-50'
+        className='rotate-90 absolute left-30 top-30 max-lg:scale-50'
         id='shape-b'
         options={{ runBackwards: true, delay: 5 }}
         variant={2}

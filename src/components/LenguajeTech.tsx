@@ -11,7 +11,7 @@ function LenguajeTech({ description, icon, className, ...props }: Props) {
   return (
     <div
       className={cn(
-        'w-[137px] lg:w-45 aspect-[1/1.3] flex flex-col items-center backdrop-blur-sm rounded-[40px] lg:rounded-[52px] bg-transparent-white-20 relative overflow-clip',
+        'w-[137px] lg:w-45 aspect-[1/1.3] flex flex-col items-center backdrop-blur-sm rounded-[40px] lg:rounded-[52px] bg-transparent-white-20 relative overflow-clip border border-transparent-grey-30',
         className
       )}
       {...props}

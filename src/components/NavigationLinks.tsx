@@ -20,7 +20,10 @@ function NavigationLinks() {
     setIsOpen(false);
     gsap.to(window, {
       duration: 0.4,
-      scrollTo: sectionId
+      scrollTo: {
+        y: sectionId,
+        offsetY: sectionId === '#tecnologias-section' && window.innerWidth >= 1024 ? -120 : 0
+      }
     });
   };
 
