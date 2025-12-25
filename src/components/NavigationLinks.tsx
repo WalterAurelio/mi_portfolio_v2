@@ -15,6 +15,20 @@ function NavigationLinks() {
   const setIsOpen = useHamburgerStore(state => state.setIsOpen);
   const { contextSafe } = useGSAP();
 
+  useGSAP(() => {
+    const mm = gsap.matchMedia();
+    mm.add('(min-width: 1024px)', () => {
+      gsap.to('.nav-anchor', {
+        color: '#F5F5F5',
+        scrollTrigger: {
+          trigger: '#proyectos-description',
+          start: 'top top',
+          scrub: true
+        }
+      });
+    });
+  });
+
   const scrollTo = (sectionId: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     setIsOpen(false);
@@ -38,7 +52,7 @@ function NavigationLinks() {
             <a
               href={e.sectionId}
               onClick={contextSafe(scrollTo(e.sectionId))}
-              className='lg:text-lg lg:hover:underline lg:text-transparent-black-20'
+              className='lg:text-lg lg:hover:underline lg:text-transparent-black-20 nav-anchor'
             >
               {e.description}
             </a>

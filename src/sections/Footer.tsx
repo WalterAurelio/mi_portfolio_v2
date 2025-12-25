@@ -1,7 +1,7 @@
 import type { WithBoxes } from '../types/WithBoxes';
 import { cn } from '../utils/cn';
-import gitHub from '../assets/svgs/icons/GitHub.svg';
-import linkedIn from '../assets/svgs/icons/LinkedIn.svg';
+import GitHub from '../assets/svgs/icons/GitHub.svg?react';
+import LinkedIn from '../assets/svgs/icons/LinkedIn.svg?react';
 
 function Footer({ showBoxes }: WithBoxes) {
   return (
@@ -45,24 +45,15 @@ function Footer({ showBoxes }: WithBoxes) {
             href='https://github.com/WalterAurelio'
             target='_blank'
           >
-            <img
-              src={gitHub}
-              alt=''
-              className='w-5.5 aspect-square'
-            />
+            <GitHub className='w-5.5 aspect-square' />
           </a>
         </div>
         <div className='w-12.5 aspect-square border border-transparent-white-30 rounded-full flex items-center justify-center'>
           <a
             href='https://www.linkedin.com/in/aurelio-gareca/'
             target='_blank'
-            className='w-5.5 aspect-square text-main-white'
           >
-            <img
-              src={linkedIn}
-              alt=''
-              className='w-5.5 aspect-square'
-            />
+            <LinkedIn className='w-5.5 aspect-square' />
           </a>
         </div>
       </div>
