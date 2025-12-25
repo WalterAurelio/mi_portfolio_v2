@@ -5,8 +5,8 @@ import { cn } from '../utils/cn';
 import NavigationLinks from './NavigationLinks';
 import { useHandleClickOutside } from '../hooks/useHandleClickOutside';
 import miLogo from '../assets/svgs/MiLogo.svg';
-import hamburger from '../assets/svgs/icons/Hamburger.svg';
-import close from '../assets/svgs/icons/Close.svg';
+import Hamburger from '../assets/svgs/icons/Hamburger.svg?react';
+import Close from '../assets/svgs/icons/Close.svg?react';
 
 function HamburgerMenu({ className }: WithClassName) {
   const isOpen = useHamburgerStore(state => state.isOpen);
@@ -31,11 +31,7 @@ function HamburgerMenu({ className }: WithClassName) {
           onClick={() => setIsOpen(!isOpen)}
           className='w-[75px] h-15 flex justify-center items-center rounded-[64px] absolute top-0 right-0'
         >
-          <img
-            src={isOpen ? close : hamburger}
-            alt=''
-            className={cn('h-5', { 'h-[23px] aspect-square': isOpen })}
-          />
+          {isOpen ? <Close className='h-[23px] aspect-square' /> : <Hamburger className='h-5' />}
         </button>
       </div>
 
