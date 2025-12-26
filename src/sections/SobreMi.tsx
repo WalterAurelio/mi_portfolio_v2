@@ -24,7 +24,7 @@ function SobreMi({ showBoxes }: WithBoxes) {
           ease: 'expo.out',
           stagger: 0.2,
           scrollTrigger: {
-            trigger: '#sobre-mi-section',
+            trigger: '#sobreMiSection',
             start: 'top center',
             end: 'bottom center',
             // toggleActions: isMobile ? 'play none none none' : 'play none none reverse',
@@ -37,7 +37,7 @@ function SobreMi({ showBoxes }: WithBoxes) {
 
   return (
     <section
-      id='sobre-mi-section'
+      id='sobreMiSection'
       className={clsx('min-h-[50vh] h-fit lg:h-screen flex flex-col justify-between py-4 lg:py-10', { 'bg-red-box': showBoxes })}
     >
       <div className={clsx('flex flex-col gap-10 max-w-265.5 relative', { 'bg-yellow-box': showBoxes })}>

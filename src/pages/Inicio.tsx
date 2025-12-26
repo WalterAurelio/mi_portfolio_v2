@@ -1,7 +1,7 @@
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { DrawSVGPlugin, MotionPathPlugin, ScrollSmoother, ScrollToPlugin, ScrollTrigger } from 'gsap/all';
-// import CircularText from '../components/CircularText';
+// import CircleText from '../components/CircleText';
 import NavBar from '../components/NavBar';
 import FloatingShapesOnPath from '../components/FloatingShapesOnPath';
 import Hero from '../sections/Hero';
@@ -33,7 +33,7 @@ function Inicio() {
       id='smooth-wrapper'
       className='font-overused-grotesk px-4 lg:px-10 overflow-x-hidden text-main-black bg-smart-white relative'
     >
-      {/* <CircularText className='fixed right-10 bottom-10 z-10' /> */}
+      {/* <CircleText className='fixed right-10 bottom-10 z-10' /> */}
       <NavBar />
       <div
         id='smooth-content'

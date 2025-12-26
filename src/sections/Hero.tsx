@@ -16,7 +16,7 @@ function Hero({ showBoxes }: WithBoxes) {
       context => {
         const { isMobile } = context.conditions as gsap.Conditions;
 
-        gsap.from(['#aurelio', '#motto'], {
+        gsap.from(['#nombreAurelio', '#heroMotto'], {
           translateX: -40,
           opacity: 0,
           scale: 1.04,
@@ -27,18 +27,18 @@ function Hero({ showBoxes }: WithBoxes) {
           delay: 2
         });
 
-        tl.set('#frontendDeveloper path', {
+        tl.set('#frontendDev path', {
           strokeWidth: '1px',
           stroke: '#171413'
         })
-          .from('#frontendDeveloper path', {
+          .from('#frontendDev path', {
             delay: 2.8,
             drawSVG: 0,
             duration: 2,
             ease: 'expo.out',
             stagger: 0.1
           })
-          .to('#frontendDeveloper path', {
+          .to('#frontendDev path', {
             delay: -3.5,
             fill: '#171413',
             duration: 0.1,
@@ -53,13 +53,13 @@ function Hero({ showBoxes }: WithBoxes) {
       <div className={cn('flex flex-col gap-2 lg:gap-10 my-auto', { 'bg-yellow-box': showBoxes })}>
         <h1 className='sr-only'>Aurelio</h1>
         <img
-          id='aurelio'
+          id='nombreAurelio'
           src={aurelio}
           alt=''
           className='md:max-w-[68.04vw]'
         />
         <svg
-          id='frontendDeveloper'
+          id='frontendDev'
           className='w-[76.88vw] md:w-[35.2vw]'
           viewBox='0 0 478 83'
           fill='none'
@@ -85,7 +85,7 @@ function Hero({ showBoxes }: WithBoxes) {
         </svg>
       </div>
       <p
-        id='motto'
+        id='heroMotto'
         className={cn('lg:text-xl font-light lg:w-130.25', { 'bg-green-box': showBoxes })}
       >
         Transformando ideas en experiencias digitales donde la simplicidad se exprese y sea guía.

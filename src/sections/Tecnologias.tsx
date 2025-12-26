@@ -25,10 +25,10 @@ function Tecnologias({ showBoxes }: WithBoxes) {
       context => {
         const { isMobile } = context.conditions as gsap.Conditions;
 
-        gsap.to('#tecnologias-description', {
+        gsap.to('#tecnologiasDescription', {
           scrollTrigger: {
-            trigger: '#tecnologias-description',
-            endTrigger: '#languages-container',
+            trigger: '#tecnologiasDescription',
+            endTrigger: '#languagesContainer',
             start: 'center center',
             end: 'bottom bottom',
             pin: true,
@@ -44,7 +44,7 @@ function Tecnologias({ showBoxes }: WithBoxes) {
           ease: 'expo.out',
           stagger: 0.2,
           scrollTrigger: {
-            trigger: '#tecnologias-section',
+            trigger: '#tecnologiasSection',
             start: isMobile ? 'top center' : 'top top',
             end: 'bottom bottom',
             // toggleActions: isMobile ? 'play none none none' : 'play none none reverse',
@@ -57,11 +57,11 @@ function Tecnologias({ showBoxes }: WithBoxes) {
 
   return (
     <section
-      id='tecnologias-section'
+      id='tecnologiasSection'
       className={cn('flex flex-col justify-between', { 'bg-red-box': showBoxes })}
     >
       <div
-        id='tecnologias-description'
+        id='tecnologiasDescription'
         className={cn('flex flex-col justify-center max-w-133.5 min-h-[50vh] h-fit lg:h-screen m-auto', { 'bg-yellow-box': showBoxes })}
       >
         <div className={cn('relative flex flex-col max-lg:gap-4', { 'bg-green-box': showBoxes })}>
@@ -75,7 +75,7 @@ function Tecnologias({ showBoxes }: WithBoxes) {
       </div>
 
       <div
-        id='languages-container'
+        id='languagesContainer'
         className='relative h-[300vh] lg:h-[400vh]'
       >
         <LenguajeTech

@@ -5,9 +5,9 @@ import { cn } from '../utils/cn';
 import { useHamburgerStore } from '../store/hamburgerStore';
 
 const navigationInfo = [
-  { description: 'Sobre mí', sectionId: '#sobre-mi-section' },
-  { description: 'Tecnologías', sectionId: '#tecnologias-section' },
-  { description: 'Proyectos', sectionId: '#proyectos-section' }
+  { description: 'Sobre mí', sectionId: '#sobreMiSection' },
+  { description: 'Tecnologías', sectionId: '#tecnologiasSection' },
+  { description: 'Proyectos', sectionId: '#proyectosSection' }
 ];
 
 function NavigationLinks() {
@@ -21,7 +21,7 @@ function NavigationLinks() {
       gsap.to('.nav-anchor', {
         color: '#F5F5F5',
         scrollTrigger: {
-          trigger: '#proyectos-description',
+          trigger: '#proyectosDescription',
           start: 'top top',
           scrub: true
         }
@@ -36,7 +36,7 @@ function NavigationLinks() {
       duration: 0.4,
       scrollTo: {
         y: sectionId,
-        offsetY: sectionId === '#tecnologias-section' && window.innerWidth >= 1024 ? -120 : 0
+        offsetY: sectionId === '#tecnologiasSection' && window.innerWidth >= 1024 ? -120 : 0
       }
     });
   };

@@ -14,7 +14,7 @@ function Contacto({ showBoxes }: WithBoxes) {
 
   return (
     <section
-      id='contacto-section'
+      id='contactoSection'
       className='min-h-[50vh] h-fit w-screen flex flex-col gap-20 p-4 py-10 lg:p-10 -ml-4 lg:-ml-10 bg-main-black -mt-[26.25vh]'
     >
       <div className={cn('flex flex-col', { 'bg-red-box': showBoxes })}>

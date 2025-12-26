@@ -16,7 +16,7 @@ function NavBar() {
 
   useGSAP(() => {
     const showAnimation = gsap
-      .from('#navigation-bar', {
+      .from('#navBar', {
         y: -80,
         paused: true,
         ease: 'sine',
@@ -43,7 +43,7 @@ function NavBar() {
 
   return (
     <div
-      id='navigation-bar'
+      id='navBar'
       className='absolute top-4 lg:top-10 w-[calc(100%-32px)] lg:w-[calc(100%-80px)] z-10'
     >
       <HamburgerMenu className='lg:hidden ml-auto' />

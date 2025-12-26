@@ -11,12 +11,12 @@ function ProyectosDescription({ showBoxes }: WithBoxes) {
   const vh = (coef: number) => window.innerHeight * (coef / 100);
 
   useGSAP(() => {
-    gsap.from('#proyectos-description', {
+    gsap.from('#proyectosDescription', {
       xPercent: 100,
       ease: 'power4.out',
       duration: 1,
       scrollTrigger: {
-        trigger: '#tecnologias-section',
+        trigger: '#tecnologiasSection',
         start: `bottom+=${vh(26.25)} bottom`,
         toggleActions: 'restart',
         endTrigger: '.scroll-panel-a',
@@ -28,12 +28,12 @@ function ProyectosDescription({ showBoxes }: WithBoxes) {
   return (
     <div className={cn('h-lvh lg:h-screen flex flex-col justify-between py-4 max-lg:pr-4 lg:py-10', { 'bg-yellow-box': showBoxes })}>
       <div
-        id='proyectos-description'
+        id='proyectosDescription'
         className={cn('flex flex-col gap-10 max-w-265.5 relative', { 'bg-green-box': showBoxes })}
       >
         <h2
           ref={ref}
-          id={inView ? 'proyectos-heading' : undefined}
+          id={inView ? 'proyectosHeading' : undefined}
           className='text-[122.08px] lg:text-[183.12px] uppercase text-nowrap leading-none z-10 w-fit proyectos-animate'
         >
           Proyectos • Proyectos • Proyectos • Proyectos •{' '}

@@ -21,7 +21,7 @@ function GradientShape({ id, options, variant, className }: Props) {
       runBackwards: options?.runBackwards ?? false,
       ease: 'power1.inOut',
       motionPath: {
-        path: `#circle-path-${id}`,
+        path: `#circlePath-${id}`,
         align: `#${id}`
       }
     });
@@ -44,7 +44,7 @@ function GradientShape({ id, options, variant, className }: Props) {
         xmlns='http://www.w3.org/2000/svg'
       >
         <path
-          id={`circle-path-${id}`}
+          id={`circlePath-${id}`}
           d='M120 120 m -120,0 a 120,120 0 1,0 240,0 a 120,120 0 1,0 -240,0'
           fill='none'
           stroke='black'

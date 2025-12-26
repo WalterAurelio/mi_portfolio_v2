@@ -2,17 +2,17 @@ import type { WithBoxes } from '../types/WithBoxes';
 import type { WithClassName } from '../types/WithClassName';
 import { cn } from '../utils/cn';
 
-function CircularText({ showBoxes, className }: WithBoxes & WithClassName) {
+function CircleText({ showBoxes, className }: WithBoxes & WithClassName) {
   return (
     <div className={cn('flex items-center justify-center w-fit aspect-square', className, { 'bg-red-box': showBoxes })}>
       <svg
-        id='circular-text'
+        id='circleText'
         viewBox='0 0 200 200'
         className='w-36 h-36'
       >
         <defs>
           <path
-            id='circle-path-for-text'
+            id='circlePath'
             d='M100,100 m-75,0 a75,75 0 1,1 150,0 a75,75 0 1,1 -150,0'
           />
         </defs>
@@ -21,7 +21,7 @@ function CircularText({ showBoxes, className }: WithBoxes & WithClassName) {
           className='text-[19px] font-medium tracking-widest'
         >
           <textPath
-            href='#circle-path-for-text'
+            href='#circlePath'
             startOffset='0%'
           >
             • SCROLL • SCROLL • SCROLL • SCROLL • SCROLL
@@ -31,4 +31,4 @@ function CircularText({ showBoxes, className }: WithBoxes & WithClassName) {
     </div>
   );
 }
-export default CircularText;
+export default CircleText;

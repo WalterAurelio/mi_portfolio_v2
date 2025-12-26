@@ -5,19 +5,19 @@ import FloatingShapes from './FloatingShapes';
 
 function FloatingShapesOnPath() {
   useGSAP(() => {
-    gsap.to('#floating-shapes', {
+    gsap.to('#floatingShapes', {
       motionPath: {
-        path: '#curvy-path',
-        align: '#curvy-path',
+        path: '#curvyPath',
+        align: '#curvyPath',
         autoRotate: true,
         alignOrigin: [0.5, 0.5]
       },
       immediateRender: true,
-      ease: pathEase('#curvy-path'),
+      ease: pathEase('#curvyPath'),
       scrollTrigger: {
-        trigger: '#curvy-path',
+        trigger: '#curvyPath',
         start: 'top center',
-        end: () => '+=' + document.querySelector('#curvy-path')?.getBoundingClientRect().height,
+        end: () => '+=' + document.querySelector('#curvyPath')?.getBoundingClientRect().height,
         scrub: true,
         invalidateOnRefresh: true
       }
@@ -34,7 +34,7 @@ function FloatingShapesOnPath() {
         xmlns='http://www.w3.org/2000/svg'
       >
         <path
-          id='curvy-path'
+          id='curvyPath'
           d='M737.5 0C737.5 1000 0.5 664 0.5 1164C0.5 1664 1062.5 1537 1062.5 2037C1062.5 2537 0.5 2472 0.5 2972C0.5 3472 1062.5 3997 531.5 4997C0.5 5997 531.5 6000 531.5 6000'
           stroke='none'
         />
