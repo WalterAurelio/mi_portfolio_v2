@@ -1,4 +1,4 @@
-import { cn } from '../../utils/cn';
+/* import { cn } from '../../utils/cn';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import aurelio from '../assets/svgs/Aurelio.svg';
@@ -94,3 +94,4 @@ function Hero({ showBoxes }: WithBoxes) {
   );
 }
 export default Hero;
+ */

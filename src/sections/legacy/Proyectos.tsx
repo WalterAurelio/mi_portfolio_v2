@@ -1,4 +1,4 @@
-import Proyecto from '../components/Proyecto';
+/* import Proyecto from '../components/Proyecto';
 import ProyectosDescription from '../components/ProyectosDescription';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
@@ -37,3 +37,4 @@ function Proyectos({ showBoxes }: WithBoxes) {
   );
 }
 export default Proyectos;
+ */

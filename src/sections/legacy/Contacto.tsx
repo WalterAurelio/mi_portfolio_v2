@@ -1,4 +1,4 @@
-import Button from '../../components/Button';
+/* import Button from '../../components/Button';
 import type { WithBoxes } from '../../types/WithBoxes';
 import { cn } from '../../utils/cn';
 import miEmail from '../assets/svgs/MiEmail.svg';
@@ -35,3 +35,4 @@ function Contacto({ showBoxes }: WithBoxes) {
   );
 }
 export default Contacto;
+ */

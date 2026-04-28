@@ -1,6 +1,6 @@
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { pathEase } from '../utils/pathEaseFn';
+import { pathEase } from '../../utils/pathEaseFn';
 import FloatingShapesL from './FloatingShapes';
 
 function FloatingShapesOnPath() {

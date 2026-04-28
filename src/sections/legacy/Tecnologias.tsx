@@ -1,4 +1,4 @@
-import LenguajeTech from '../../components/legacy/LenguajeTech';
+/* import LenguajeTech from '../../components/legacy/LenguajeTech';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import type { WithBoxes } from '../../types/WithBoxes';
@@ -137,3 +137,4 @@ function Tecnologias({ showBoxes }: WithBoxes) {
   );
 }
 export default Tecnologias;
+ */

@@ -1,4 +1,4 @@
-import { useGSAP } from '@gsap/react';
+/* import { useGSAP } from '@gsap/react';
 import HamburgerMenu from './HamburgerMenu';
 import TopBar from './TopBar';
 import gsap from 'gsap';
@@ -52,3 +52,4 @@ function NavBar() {
   );
 }
 export default NavBar;
+ */

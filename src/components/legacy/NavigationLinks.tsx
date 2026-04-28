@@ -1,4 +1,4 @@
-import { useGSAP } from '@gsap/react';
+/* import { useGSAP } from '@gsap/react';
 import Button from './Button';
 import gsap from 'gsap';
 import { cn } from '../utils/cn';
@@ -64,3 +64,4 @@ function NavigationLinks() {
   );
 }
 export default NavigationLinks;
+ */

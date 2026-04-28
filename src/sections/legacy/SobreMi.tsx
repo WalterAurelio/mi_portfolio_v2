@@ -1,4 +1,4 @@
-import { clsx } from 'clsx';
+/* import { clsx } from 'clsx';
 import gsap from 'gsap';
 import type { WithBoxes } from '../../types/WithBoxes';
 import CursiveTitle from '../components/CursiveTitle';
@@ -53,3 +53,4 @@ function SobreMi({ showBoxes }: WithBoxes) {
   );
 }
 export default SobreMi;
+ */

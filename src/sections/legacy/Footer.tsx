@@ -1,4 +1,4 @@
-import type { WithBoxes } from '../../types/WithBoxes';
+/* import type { WithBoxes } from '../../types/WithBoxes';
 import { cn } from '../../utils/cn';
 import GitHub from '../assets/svgs/icons/GitHub.svg?react';
 import LinkedIn from '../assets/svgs/icons/LinkedIn.svg?react';
@@ -61,3 +61,4 @@ function Footer({ showBoxes }: WithBoxes) {
   );
 }
 export default Footer;
+ */
