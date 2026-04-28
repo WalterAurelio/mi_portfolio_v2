@@ -6,13 +6,27 @@ import DownloadSimple from '../assets/svg/DownloadSimple.svg?react';
 
 function Hero() {
   return (
-    <section className='w-full h-screen s-px s-pt lg:pb-5 flex flex-col justify-between'>
+    <section
+      id='hero-section'
+      className='w-full h-screen s-px s-pt lg:pb-5 flex flex-col justify-between'
+    >
       <div className='flex flex-col max-lg:my-auto gap-m lg:gap-5 w-fit'>
         <h1 className='font-bold lowercase leading-[0.73] text-[26.796875vw] lg:text-[14.251841vw]'>Aurelio</h1>
         <FrontendDeveloper className='w-[63.85vw] lg:w-[33.905vw]' />
         <div className='max-lg:hidden flex items-start gap-s'>
-          <NetworkPill Icon={LinkedinLogo}>LinkedIn</NetworkPill>
-          <NetworkPill>GitHub</NetworkPill>
+          <NetworkPill
+            href='https://www.linkedin.com/in/aurelio-gareca/'
+            target='_blank'
+            Icon={LinkedinLogo}
+          >
+            LinkedIn
+          </NetworkPill>
+          <NetworkPill
+            href='https://github.com/WalterAurelio'
+            target='_blank'
+          >
+            GitHub
+          </NetworkPill>
           <NetworkPill Icon={DownloadSimple}>CV</NetworkPill>
         </div>
       </div>

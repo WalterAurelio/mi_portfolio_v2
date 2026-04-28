@@ -3,7 +3,10 @@ import MiscTitle from '../components/MiscTitle';
 
 function Contacto() {
   return (
-    <section className='h-96 lg:h-screen p-l s-px bg-neutral-inverse-primary flex flex-col items-center'>
+    <section
+      id='contact-section'
+      className='h-96 lg:h-screen p-l s-px bg-neutral-inverse-primary flex flex-col items-center'
+    >
       <MiscTitle>
         Lorem ipsum dolor sit
         <br /> amet consectetur

@@ -36,7 +36,10 @@ function Tecnologias() {
   });
 
   return (
-    <section className='h-fit'>
+    <section
+      id='technologies-section'
+      className='h-fit'
+    >
       <div className='w-full h-screen s-p lg:flex items-center justify-center'>
         <SectionCompound
           id='technologies-description'

@@ -1,10 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
 import gsap from 'gsap';
-import { ScrollTrigger, ScrollSmoother, MotionPathPlugin } from 'gsap/all';
+import { ScrollTrigger, ScrollSmoother, MotionPathPlugin, ScrollToPlugin } from 'gsap/all';
 import { useGSAP } from '@gsap/react';
 import Inicio from './pages/Inicio';
 
-gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother, MotionPathPlugin);
+gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother, MotionPathPlugin, ScrollToPlugin);
 
 function App() {
   useGSAP(() => {
@@ -13,7 +13,9 @@ function App() {
       content: '#smooth-content',
       smooth: 2,
       smoothTouch: 0.1,
-      effects: true
+      effects: true,
+      ignoreMobileResize: true,
+      normalizeScroll: true
     });
   });
 
