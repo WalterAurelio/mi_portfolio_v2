@@ -1,25 +1,25 @@
 import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '../utils/cn';
 
-const variants = cva(['flex w-40 h-15 justify-center items-center lg:text-lg font-medium text-main-white cursor-pointer leading-normal lg:hover:scale-110 transition-all'], {
+const variants = cva(['flex', 'w-32', 'lg:w-40', 'h-12', 'lg:h-15', 'justify-center', 'items-center', 'rounded-full', 'text-neutral-inverse-primary', 'font-bold'], {
   variants: {
-    variant: {
-      outlined: ['rounded-full border border-transparent-white-30'],
-      minimal: ['hover:underline'],
-      solid: ['bg-main-black rounded-full']
+    buttonStyle: {
+      fill: 'bg-neutral-inverse-primary lg:hover:bg-neutral-inverse-secondary',
+      outline: 'border border-neutral-inverse-secondary lg:hover:border-width-m',
+      minimal: 'lg:hover:border-b-width-s border-neutral-inverse-secondary'
     }
   },
   defaultVariants: {
-    variant: 'outlined'
+    buttonStyle: 'fill'
   }
 });
 
-type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & VariantProps<typeof variants>;
+type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & VariantProps<typeof variants>;
 
-function Button({ variant, children, className, ...props }: ButtonProps) {
+function Button({ className, buttonStyle, children, ...props }: Props) {
   return (
     <button
-      className={cn(variants({ variant }), className)}
+      className={cn(variants({ buttonStyle, className }))}
       {...props}
     >
       {children}

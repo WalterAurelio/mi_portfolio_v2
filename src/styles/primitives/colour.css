@@ -1,0 +1,35 @@
+:root {
+  --greyscale-0: #ffffff;
+  --greyscale-10: #f3f2f2;
+  --greyscale-20: #f2ecec;
+  --greyscale-30: #dbd2d3;
+  --greyscale-40: #c4b9ba;
+  --greyscale-50: #aea0a1;
+  --greyscale-60: #97888a;
+  --greyscale-70: #807273;
+  --greyscale-80: #6a5c5d;
+  --greyscale-90: #534748;
+  --greyscale-100: #3c3233;
+  --greyscale-999: #000000;
+
+  --white-vista: #f5f5f5;
+  --black-neo: #171413;
+}
+
+.dark {
+  --greyscale-0: #000000;
+  --greyscale-10: #3c3233;
+  --greyscale-20: #534748;
+  --greyscale-30: #6a5c5d;
+  --greyscale-40: #807273;
+  --greyscale-50: #97888a;
+  --greyscale-60: #aea0a1;
+  --greyscale-70: #c4b9ba;
+  --greyscale-80: #dbd2d3;
+  --greyscale-90: #f2ecec;
+  --greyscale-100: #f3f2f2;
+  --greyscale-999: #ffffff;
+
+  --white-vista: #3d3535;
+  --black-neo: #171413;
+}

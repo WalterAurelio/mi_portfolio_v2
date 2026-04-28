@@ -1,137 +1,59 @@
-import LenguajeTech from '../components/LenguajeTech';
-import gsap from 'gsap';
+import TechCard from '../components/TechCard';
+import SectionCompound from '../interfaces/SectionCompound';
+import JavaScriptLogo from '../assets/svg/JavaScriptLogo.svg?react';
+import CSSLogo from '../assets/svg/CSSLogo.svg?react';
+import HTMLLogo from '../assets/svg/HTMLLogo.svg?react';
+import TailwindCSSLogo from '../assets/svg/TailwindCSSLogo.svg?react';
+import SassLogo from '../assets/svg/SassLogo.svg?react';
+import TypeScriptLogo from '../assets/svg/TypeScriptLogo.svg?react';
+import FigmaLogo from '../assets/svg/FigmaLogo.svg?react';
+import GitLogo from '../assets/svg/GitLogo.svg?react';
+import ReactLogo from '../assets/svg/ReactLogo.svg?react';
 import { useGSAP } from '@gsap/react';
-import type { WithBoxes } from '../types/WithBoxes';
-import { cn } from '../utils/cn';
-import CursiveTitle from '../components/CursiveTitle';
-import css from '../assets/svgs/icons/CSS.svg';
-import javaScript from '../assets/svgs/icons/JavaScript.svg';
-import html from '../assets/svgs/icons/HTML.svg';
-import react from '../assets/svgs/icons/React.svg';
-import tailwindCSS from '../assets/svgs/icons/Tailwind CSS.svg';
-import sass from '../assets/svgs/icons/Sass.svg';
-import typeScript from '../assets/svgs/icons/TypeScript.svg';
-import figma from '../assets/svgs/icons/Figma.svg';
-import git from '../assets/svgs/icons/Git.svg';
+import { ScrollTrigger } from 'gsap/all';
 
-function Tecnologias({ showBoxes }: WithBoxes) {
+function Tecnologias() {
+  const techs = [
+    { dataSpeed: 1.0, position: 'top-[5.744%] left-[25.184%]', description: 'JavaScript', icon: <JavaScriptLogo /> },
+    { dataSpeed: 1.2, position: 'top-[15.926%] lg:top-[15.404%] right-[9.720%]', description: 'CSS', icon: <CSSLogo /> },
+    { dataSpeed: 0.8, position: 'top-[26.109%] lg:top-[25.065%] right-[32.916%]', description: 'HTML', icon: <HTMLLogo /> },
+    { dataSpeed: 0.6, position: 'top-[36.292%] lg:top-[34.725%] left-[17.452%]', description: 'React', icon: <ReactLogo /> },
+    { dataSpeed: 0.8, position: 'top-[46.475%] lg:top-[44.386%] left-[40.648%]', description: 'Tailwind CSS', icon: <TailwindCSSLogo /> },
+    { dataSpeed: 1.0, position: 'top-[56.657%] lg:top-[54.046%] right-[17.452%]', description: 'Sass', icon: <SassLogo /> },
+    { dataSpeed: 0.6, position: 'top-[66.840%] lg:top-[63.707%] left-[32.916%]', description: 'TypeScript', icon: <TypeScriptLogo /> },
+    { dataSpeed: 1.0, position: 'top-[77.023%] lg:top-[73.368%] left-[9.720%]', description: 'Figma', icon: <FigmaLogo /> },
+    { dataSpeed: 1.2, position: 'top-[87.206%] lg:top-[83.028%] right-[25.184%]', description: 'Git', icon: <GitLogo /> }
+  ];
+
   useGSAP(() => {
-    const mm = gsap.matchMedia();
-    mm.add(
-      {
-        isDesktop: '(min-width: 1024px)',
-        isMobile: '(max-width: 1023px)'
-      },
-      context => {
-        const { isMobile } = context.conditions as gsap.Conditions;
-
-        gsap.to('#tecnologiasDescription', {
-          scrollTrigger: {
-            trigger: '#tecnologiasDescription',
-            endTrigger: '#languagesContainer',
-            start: 'center center',
-            end: 'bottom bottom',
-            pin: true,
-            scrub: 4
-          }
-        });
-
-        gsap.from('.tecnologias-animate', {
-          opacity: 0,
-          scale: 1.04,
-          filter: isMobile ? undefined : 'blur(8px)',
-          duration: 1.6,
-          ease: 'expo.out',
-          stagger: 0.2,
-          scrollTrigger: {
-            trigger: '#tecnologiasSection',
-            start: isMobile ? 'top center' : 'top top',
-            end: 'bottom bottom',
-            // toggleActions: isMobile ? 'play none none none' : 'play none none reverse',
-            toggleActions: 'play none none reverse'
-          }
-        });
-      }
-    );
+    ScrollTrigger.create({
+      trigger: '#technologies-description',
+      start: 'center center',
+      endTrigger: '#projects-section',
+      end: 'top bottom',
+      pin: true
+    });
   });
 
   return (
-    <section
-      id='tecnologiasSection'
-      className={cn('flex flex-col justify-between', { 'bg-red-box': showBoxes })}
-    >
-      <div
-        id='tecnologiasDescription'
-        className={cn('flex flex-col justify-center max-w-133.5 min-h-[50vh] h-fit lg:h-screen m-auto', { 'bg-yellow-box': showBoxes })}
-      >
-        <div className={cn('relative flex flex-col max-lg:gap-4', { 'bg-green-box': showBoxes })}>
-          <h2 className='text-[52.67px] lg:text-[97.66px] text-center tecnologias-animate'>Tecnologías.</h2>
-          <CursiveTitle className='absolute left-[50%] -translate-x-[50%] top-12 lg:top-18 -z-10 tecnologias-animate'>Tecnologias</CursiveTitle>
-          <p className='lg:text-xl font-light text-center tecnologias-animate'>
-            El stack tecnológico que forma parte de mi proceso para
-            <br className='hidden' /> el desarrollo de productos digitales, combinando simplicidad, solidez y calidad.
-          </p>
-        </div>
+    <section className='h-fit'>
+      <div className='w-full h-screen s-p lg:flex items-center justify-center'>
+        <SectionCompound
+          id='technologies-description'
+          title='Tecnologías'
+          handwritten='Tecnologias'
+        />
       </div>
-
-      <div
-        id='languagesContainer'
-        className='relative h-[300vh] lg:h-[400vh]'
-      >
-        <LenguajeTech
-          data-speed='1.4'
-          description='CSS'
-          icon={css}
-          className='absolute right-0 md:right-[calc(23.83%-180px)] top-[2.1%]'
-        />
-        <LenguajeTech
-          data-speed='1.2'
-          description='JavaScript'
-          icon={javaScript}
-          className='absolute md:left-[8.55%] top-[3.67%]'
-        />
-        <LenguajeTech
-          data-speed='1'
-          description='HTML'
-          icon={html}
-          className='absolute right-[14.24%] md:right-[calc(31.75%-180px)] top-[9.34%]'
-        />
-        <LenguajeTech
-          data-speed='1.2'
-          description='React'
-          icon={react}
-          className='absolute md:left-[3.17%] top-[20.16%]'
-        />
-        <LenguajeTech
-          data-speed='0.8'
-          description='Tailwind CSS'
-          icon={tailwindCSS}
-          className='absolute left-[46%] top-[21.42%]'
-        />
-        <LenguajeTech
-          data-speed='1'
-          description='Sass'
-          icon={sass}
-          className='absolute right-0 md:right-[calc(31.75%-180px)] top-[32.34%]'
-        />
-        <LenguajeTech
-          data-speed='0.6'
-          description='TypeScript'
-          icon={typeScript}
-          className='absolute left-[37.37%] top-[49.16%]'
-        />
-        <LenguajeTech
-          data-speed='1.2'
-          description='Figma'
-          icon={figma}
-          className='absolute md:left-[11.72%] top-[57.77%]'
-        />
-        <LenguajeTech
-          data-speed='0.8'
-          description='Git'
-          icon={git}
-          className='absolute left-[45.92%] top-[59.87%]'
-        />
+      <div className='w-full h-[500vh] relative'>
+        {techs.map((tech, index) => (
+          <TechCard
+            key={index}
+            data-speed={tech.dataSpeed}
+            className={`absolute ${tech.position}`}
+            description={tech.description}
+            icon={tech.icon}
+          />
+        ))}
       </div>
     </section>
   );

@@ -1,45 +1,32 @@
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
-import { DrawSVGPlugin, MotionPathPlugin, ScrollSmoother, ScrollToPlugin, ScrollTrigger } from 'gsap/all';
-// import CircleText from '../components/CircleText';
-import NavBar from '../components/NavBar';
-import FloatingShapesOnPath from '../components/FloatingShapesOnPath';
 import Hero from '../sections/Hero';
 import SobreMi from '../sections/SobreMi';
 import Tecnologias from '../sections/Tecnologias';
 import Proyectos from '../sections/Proyectos';
 import Contacto from '../sections/Contacto';
 import Footer from '../sections/Footer';
-
-gsap.registerPlugin(useGSAP, DrawSVGPlugin, MotionPathPlugin, ScrollSmoother, ScrollToPlugin, ScrollTrigger);
+// import { useThemeStore } from '../store/themeStore';
+// import FloatingShapesOnPath from '../components/FloatingShapesOnPath';
+import MenuButton from '../components/MenuButton';
+import NavigationMenu from '../interfaces/NavigationMenu';
+import { useHamburgerStore } from '../store/hamburgerStore';
+import { cn } from '../utils/cn';
 
 function Inicio() {
-  useGSAP(() => {
-    ScrollSmoother.create({
-      wrapper: '#smooth-wrapper',
-      content: '#smooth-content',
-      smooth: 2,
-      smoothTouch: 0.1,
-      effects: true,
-      ignoreMobileResize: true,
-      normalizeScroll: true
-    });
-
-    ScrollTrigger.refresh();
-  });
+  // const { theme, toggleTheme } = useThemeStore();
+  const isOpen = useHamburgerStore(state => state.isOpen);
 
   return (
-    <div
-      id='smooth-wrapper'
-      className='font-overused-grotesk px-4 lg:px-10 overflow-x-hidden text-main-black bg-smart-white relative'
-    >
-      {/* <CircleText className='fixed right-10 bottom-10 z-10' /> */}
-      <NavBar />
-      <div
-        id='smooth-content'
-        className='flex flex-col gap-[26.25vh]'
-      >
-        <FloatingShapesOnPath />
+    <>
+      <MenuButton className='fixed right-5 top-5 z-20' />
+      <NavigationMenu
+        className={cn('fixed top-0 z-10 transition-all duration-300', {
+          'right-0': isOpen,
+          '-right-80 opacity-0': !isOpen
+        })}
+      />
+      <main id='smooth-content'>
+        {/* <button onClick={toggleTheme}>{theme === 'dark' ? '🌙 Dark' : '☀️ Light'}</button> */}
+        {/* <FloatingShapesOnPath /> */}
 
         <Hero />
         <SobreMi />
@@ -47,8 +34,8 @@ function Inicio() {
         <Proyectos />
         <Contacto />
         <Footer />
-      </div>
-    </div>
+      </main>
+    </>
   );
 }
 export default Inicio;

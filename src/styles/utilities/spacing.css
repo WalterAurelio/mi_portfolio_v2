@@ -1,0 +1,57 @@
+@utility s-p {
+  @apply p-l;
+
+  @variant desktop {
+    padding: 17.232376vh 9.720176vw;
+  }
+}
+
+@utility s-py {
+  @apply py-l;
+
+  @variant desktop {
+    padding-top: 17.232376vh;
+    padding-bottom: 17.232376vh;
+  }
+}
+
+@utility s-px {
+  @apply px-l;
+
+  @variant desktop {
+    padding-left: 9.720176vw;
+    padding-right: 9.720176vw;
+  }
+}
+
+@utility s-pt {
+  @apply pt-l;
+
+  @variant desktop {
+    padding-top: 17.232376vh;
+  }
+}
+
+@utility s-pb {
+  @apply pb-l;
+
+  @variant desktop {
+    padding-bottom: 17.232376vh;
+  }
+}
+
+@utility s-pl {
+  @apply pl-l;
+
+  @variant desktop {
+    padding-left: 9.720176vw;
+  }
+}
+
+@utility s-pr {
+  @apply pr-l;
+
+  @variant desktop {
+    padding-right: 9.720176vw;
+  }
+}

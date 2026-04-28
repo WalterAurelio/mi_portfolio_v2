@@ -1,0 +1,38 @@
+@import '../primitives/colour.css';
+
+@theme {
+  /* --color-*: initial; */
+
+  /* Background */
+  --background-color-neutral-primary: var(--greyscale-0);
+  --background-color-neutral-secondary: var(--greyscale-10);
+  --background-color-neutral-tertiary: var(--greyscale-20);
+  --background-color-neutral-disabled: var(--greyscale-30);
+
+  --background-color-neutral-inverse-primary: var(--greyscale-100);
+  --background-color-neutral-inverse-secondary: var(--greyscale-90);
+  --background-color-neutral-inverse-tertiary: var(--greyscale-80);
+
+  --background-color-miscellaneous-primary: var(--white-vista);
+  --background-color-miscellaneous-secondary: var(--black-neo);
+
+  /* Text */
+  --text-color-neutral-primary: var(--greyscale-100);
+  --text-color-neutral-secondary: var(--greyscale-80);
+  --text-color-neutral-tertiary: var(--greyscale-70);
+  --text-color-neutral-disabled: var(--greyscale-50);
+
+  --text-color-neutral-inverse-primary: var(--greyscale-10);
+  --text-color-neutral-inverse-secondary: var(--greyscale-20);
+  --text-color-neutral-inverse-tertiary: var(--greyscale-30);
+
+  --text-color-miscellaneous-primary: rgba(174, 160, 161, 0.28);
+  --text-color-miscellaneous-secondary: rgba(243, 242, 242, 0.56);
+
+  /* Border */
+  --border-color-neutral-primary: var(--greyscale-90);
+  --border-color-neutral-secondary: var(--greyscale-70);
+
+  --border-color-neutral-inverse-primary: var(--greyscale-30);
+  --border-color-neutral-inverse-secondary: var(--greyscale-50);
+}

@@ -1,60 +1,36 @@
-import type { WithBoxes } from '../types/WithBoxes';
-import { cn } from '../utils/cn';
-import GitHub from '../assets/svgs/icons/GitHub.svg?react';
-import LinkedIn from '../assets/svgs/icons/LinkedIn.svg?react';
+import FrontendDeveloper from '../assets/svg/FrontendDeveloper.svg?react';
+import Contact from '../components/Contact';
+import LinkedinLogo from '../assets/svg/LinkedinLogo.svg?react';
+import GithubLogo from '../assets/svg/GithubLogo.svg?react';
+import ReadCvLogo from '../assets/svg/ReadCvLogo.svg?react';
 
-function Footer({ showBoxes }: WithBoxes) {
+function Footer() {
   return (
-    <footer className='p-4 lg:p-10 -ml-4 lg:-ml-10 w-screen bg-main-black flex justify-between border-t border-transparent-white-30 -mt-[26.25vh]'>
-      <div className={cn('hidden lg:flex flex-col gap-1 text-main-white w-fit', { 'bg-red-box': showBoxes })}>
-        <h3 className='text-[61.04px] uppercase leading-none'>Aurelio.</h3>
-        <p className='font-high-summit text-[25px]'>Frontend Developer</p>
-      </div>
+    <footer className='bg-neutral-inverse-primary h-28 lg:h-39 flex flex-col'>
+      <div className='w-full h-0.25 bg-neutral-inverse-tertiary'></div>
 
-      <div className={cn('hidden lg:flex gap-10', { 'bg-yellow-box': showBoxes })}>
-        <div className={cn('text-transparent-white-60 flex flex-col w-21.5 gap-1', { 'bg-blue-box': showBoxes })}>
-          <p className='text-main-white font-bold'>Sociales</p>
-          <a
-            href='https://www.linkedin.com/in/aurelio-gareca/'
-            target='_blank'
-            className='hover:underline cursor-pointer'
-          >
-            LinkedIn
-          </a>
-          <a
-            href='https://github.com/WalterAurelio'
-            target='_blank'
-            className='hover:underline cursor-pointer'
-          >
-            GitHub
-          </a>
-          <p className='hover:underline cursor-pointer'>CV</p>
+      <div className='s-px my-auto flex justify-between'>
+        <div className='flex flex-col gap-xs'>
+          <p className='text-neutral-inverse-tertiary h3-bold leading-[0.72] lowercase'>Aurelio</p>
+          <FrontendDeveloper className='w-26.25 lg:w-32.75' />
         </div>
-        <div className={cn('text-transparent-white-60 flex flex-col w-21.5 gap-1', { 'bg-green-box': showBoxes })}>
-          <p className='text-main-white font-bold'>Info</p>
-          <p className='hover:underline cursor-pointer'>Sobre mí</p>
-          <p className='hover:underline cursor-pointer'>Tecnologías</p>
-          <p className='hover:underline cursor-pointer'>Proyectos</p>
-          <p className='hover:underline cursor-pointer'>Contacto</p>
-        </div>
-      </div>
 
-      <div className='flex lg:hidden gap-5 mx-auto'>
-        <div className='w-12.5 aspect-square border border-transparent-white-30 rounded-full flex items-center justify-center'>
-          <a
-            href='https://github.com/WalterAurelio'
-            target='_blank'
-          >
-            <GitHub className='w-5.5 aspect-square' />
-          </a>
-        </div>
-        <div className='w-12.5 aspect-square border border-transparent-white-30 rounded-full flex items-center justify-center'>
-          <a
+        <div className='flex gap-s lg:gap-m'>
+          <Contact
             href='https://www.linkedin.com/in/aurelio-gareca/'
             target='_blank'
           >
-            <LinkedIn className='w-5.5 aspect-square' />
-          </a>
+            <LinkedinLogo />
+          </Contact>
+          <Contact
+            href='https://github.com/WalterAurelio'
+            target='_blank'
+          >
+            <GithubLogo />
+          </Contact>
+          <Contact>
+            <ReadCvLogo />
+          </Contact>
         </div>
       </div>
     </footer>

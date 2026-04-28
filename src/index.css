@@ -1,87 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 @import 'tailwindcss';
+@import './styles/themeVariables/breakpoint.css';
+@import './styles/themeVariables/colour.css';
+@import './styles/themeVariables/radius.css';
+@import './styles/themeVariables/spacing.css';
+@import './styles/themeVariables/stroke.css';
+@import './styles/utilities/spacing.css';
+@import './styles/utilities/typography.css';
 
-/* Custom Fonts */
-@font-face {
-  font-family: 'Overused Grotesk';
-  src: url('./assets/fonts/OverusedGrotesk/OverusedGrotesk-Light.ttf');
-  font-style: normal;
-  font-weight: 300;
-}
+@custom-variant dark (&:where(.dark, .dark *));
 
-@font-face {
-  font-family: 'Overused Grotesk';
-  src: url('./assets/fonts/OverusedGrotesk/OverusedGrotesk-Medium.ttf');
-  font-style: normal;
-  font-weight: 500;
-}
+@layer base {
+  @variant desktop {
+    button {
+      cursor: pointer;
+    }
+  }
 
-@font-face {
-  font-family: 'Overused Grotesk';
-  src: url('./assets/fonts/OverusedGrotesk/OverusedGrotesk-SemiBold.ttf');
-  font-style: normal;
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: 'Overused Grotesk';
-  src: url('./assets/fonts/OverusedGrotesk/OverusedGrotesk-Bold.ttf');
-  font-style: normal;
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: 'High Summit';
-  src: url('./assets/fonts/HighSummit/High\ Summit.ttf');
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: 'Steelfish';
-  src: url('./assets/fonts/Steelfish/Steelfish\ Bd.otf');
-  font-style: normal;
-  font-weight: bold;
-}
-
-/* Custom Tailwind Classes */
-@theme {
-  --font-overused-grotesk: 'Overused Grotesk', sans-serif;
-  --font-high-summit: 'High Summit', sans-serif;
-  --font-steelfish: 'Steelfish', sans-serif;
-
-  --color-main-black: #171413;
-  --color-main-white: #ffffff;
-  --color-smart-white: #f5f5f5;
-  --color-radiant-pink: #ff007f;
-
-  --color-transparent-black-20: rgba(0, 0, 0, 0.4);
-
-  --color-transparent-white-0: rgba(255, 255, 255, 0);
-  --color-transparent-white-20: rgba(255, 255, 255, 0.2);
-  --color-transparent-white-30: rgba(255, 255, 255, 0.3);
-  --color-transparent-white-60: rgba(255, 255, 255, 0.6);
-
-  --color-transparent-grey-30: rgba(54, 53, 58, 0.3);
-
-  /* Shadow */
-  --shadow-custom-shadow: 4px 4px 44px 0 rgba(0, 0, 0, 0.25);
-
-  /* Boxes */
-  --color-red-box: red;
-  --color-yellow-box: yellow;
-  --color-green-box: green;
-  --color-blue-box: blue;
-  --color-pink-box: pink;
-  --color-orange-box: orange;
-}
-
-/* Circular Text */
-@keyframes spin-slow {
-  to {
-    transform: rotate(360deg);
+  h2,
+  p,
+  button,
+  a {
+    line-height: 120%;
   }
 }
-
-/* #circleText {
-  animation: spin-slow 16s linear infinite;
-} */

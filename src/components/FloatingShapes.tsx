@@ -1,31 +1,24 @@
 import GradientShape from './GradientShape';
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
 
-function FloatingShapes() {
-  useGSAP(() => {
-    gsap.from('#floatingShapes', {
-      opacity: 0,
-      duration: 2,
-      ease: 'power1.in'
-    });
-  });
+type Props = React.ComponentPropsWithoutRef<'div'>;
 
+function FloatingShapes({ ...props }: Props) {
   return (
     <div
-      id='floatingShapes'
-      className='w-90 aspect-square relative'
+      className='w-58.5 aspect-square relative bg-yellow-200'
+      {...props}
     >
       <GradientShape
-        className='max-lg:scale-50'
-        id='shapeA'
-        variant={1}
+        id='warm-shape'
+        variant='warm'
+        className='absolute top-0 left-0 z-10'
       />
       <GradientShape
-        className='rotate-90 absolute left-30 top-30 max-lg:scale-50'
-        id='shapeB'
-        options={{ runBackwards: true, delay: 5 }}
-        variant={2}
+        id='cold-shape'
+        variant='cold'
+        className='absolute bottom-0 right-0'
+        reverseAnimation
+        delay={4}
       />
     </div>
   );
