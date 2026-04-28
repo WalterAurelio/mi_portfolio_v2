@@ -1,13 +1,13 @@
 @font-face {
   font-family: 'High Summit';
-  src: url('./assets/font/High\ Summit.ttf');
+  src: url('/fonts/HighSummit.ttf') format('truetype');
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: 'Steelfish';
-  src: url('./assets/font/Steelfish\ Bd.otf');
+  src: url('/fonts/SteelfishBd.otf') format('opentype');
   font-style: normal;
   font-weight: bold;
 }
@@ -15,11 +15,11 @@
 @theme {
   --font-*: initial;
   --text-*: initial;
-  
+
   --font-sans: 'Raleway', sans-serif;
   --font-serif: 'High Summit', serif;
   --font-misc: 'Steelfish', sans-serif;
-  
+
   --text-h1: 61.04px;
   --text-h2: 48.83px;
   --text-h3: 39.06px;
