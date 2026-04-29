@@ -4,14 +4,12 @@ import Tecnologias from '../sections/Tecnologias';
 import Proyectos from '../sections/Proyectos';
 import Contacto from '../sections/Contacto';
 import Footer from '../sections/Footer';
-// import { useThemeStore } from '../store/themeStore';
 // import FloatingShapesOnPath from '../components/FloatingShapesOnPath';
 import NavigationMenu from '../interfaces/NavigationMenu';
 import { useHamburgerStore } from '../store/hamburgerStore';
 import { cn } from '../utils/cn';
 
 function Inicio() {
-  // const { theme, toggleTheme } = useThemeStore();
   const isOpen = useHamburgerStore(state => state.isOpen);
 
   return (
@@ -23,7 +21,6 @@ function Inicio() {
         })}
       />
       <main id='smooth-content'>
-        {/* <button onClick={toggleTheme}>{theme === 'dark' ? '🌙 Dark' : '☀️ Light'}</button> */}
         {/* <FloatingShapesOnPath /> */}
 
         <Hero />

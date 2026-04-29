@@ -10,6 +10,7 @@ import { useScrollTo } from '../hooks/useScrollTo';
 import { useHandleClickOutside } from '../hooks/useHandleClickOutside';
 import { useRef } from 'react';
 import MenuButton from '../components/MenuButton';
+import DarkLightButton from '../components/DarkLightButton';
 
 function NavigationMenu({ className }: WithClassName) {
   const { contextSafe } = useGSAP();
@@ -30,7 +31,10 @@ function NavigationMenu({ className }: WithClassName) {
       ref={ref}
       className={cn('bg-miscellaneous-primary flex flex-col justify-between p-l max-w-80 w-full h-svh lg:h-screen border-l border-neutral-inverse-primary', className)}
     >
-      <MenuButton className='fixed right-5 top-5 z-20' />
+      <div className='fixed right-5 top-5 flex gap-s'>
+        <DarkLightButton />
+        <MenuButton />
+      </div>
 
       <HeaderLogo />
       <div className='flex flex-col items-start gap-s'>
