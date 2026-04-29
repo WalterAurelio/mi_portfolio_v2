@@ -5,7 +5,7 @@ function Contacto() {
   return (
     <section
       id='contact-section'
-      className='h-96 lg:h-screen p-l s-px bg-neutral-inverse-primary flex flex-col items-center'
+      className='h-96 lg:h-screen p-l lg:pt-5 bg-neutral-inverse-primary flex flex-col items-center'
     >
       <MiscTitle>
         Lorem ipsum dolor sit

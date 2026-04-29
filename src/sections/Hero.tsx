@@ -8,7 +8,7 @@ function Hero() {
   return (
     <section
       id='hero-section'
-      className='w-full h-screen s-px s-pt lg:pb-5 flex flex-col justify-between'
+      className='w-full h-svh lg:h-screen s-px s-pt lg:pb-5 flex flex-col justify-between'
     >
       <div className='flex flex-col max-lg:my-auto gap-m lg:gap-5 w-fit'>
         <h1 className='font-bold lowercase leading-[0.73] text-[26.796875vw] lg:text-[14.251841vw]'>Aurelio</h1>

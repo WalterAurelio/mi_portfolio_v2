@@ -24,7 +24,7 @@ function Proyectos() {
       id='projects-section'
       className='relative'
     >
-      <div className='w-full h-screen s-p'>
+      <div className='w-full h-svh lg:h-screen s-p pt-lg'>
         <SectionCompound
           title='Proyectos'
           handwritten='Proyectos'

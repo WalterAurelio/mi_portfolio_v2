@@ -45,6 +45,7 @@ function Tecnologias() {
           id='technologies-description'
           title='Tecnologías'
           handwritten='Tecnologias'
+          className='items-center text-center'
         />
       </div>
       <div className='w-full h-[500vh] relative'>

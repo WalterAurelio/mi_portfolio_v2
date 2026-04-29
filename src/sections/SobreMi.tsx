@@ -4,7 +4,7 @@ function SobreMi() {
   return (
     <section
       id='about-section'
-      className='w-full h-screen s-p'
+      className='w-full h-svh lg:h-screen s-p pt-lg'
     >
       <SectionCompound
         title='Sobre mí'

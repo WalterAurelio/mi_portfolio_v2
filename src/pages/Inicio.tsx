@@ -6,7 +6,6 @@ import Contacto from '../sections/Contacto';
 import Footer from '../sections/Footer';
 // import { useThemeStore } from '../store/themeStore';
 // import FloatingShapesOnPath from '../components/FloatingShapesOnPath';
-import MenuButton from '../components/MenuButton';
 import NavigationMenu from '../interfaces/NavigationMenu';
 import { useHamburgerStore } from '../store/hamburgerStore';
 import { cn } from '../utils/cn';
@@ -17,11 +16,10 @@ function Inicio() {
 
   return (
     <>
-      <MenuButton className='fixed right-5 top-5 z-20' />
       <NavigationMenu
         className={cn('fixed top-0 z-10 transition-all duration-300', {
           'right-0': isOpen,
-          '-right-80 opacity-0': !isOpen
+          '-right-80': !isOpen
         })}
       />
       <main id='smooth-content'>

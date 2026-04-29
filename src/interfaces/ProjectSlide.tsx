@@ -18,7 +18,7 @@ function ProjectSlide({
 }: Props) {
   return (
     <div
-      className={cn('flex w-screen h-screen px-l flex-col justify-center items-center bg-miscellaneous-secondary relative', className)}
+      className={cn('flex w-screen h-svh lg:h-screen px-l flex-col justify-center items-center bg-miscellaneous-secondary relative', className)}
       {...props}
     >
       <img

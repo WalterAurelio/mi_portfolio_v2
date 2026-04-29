@@ -6,29 +6,32 @@ import { cn } from '../utils/cn';
 import type { WithClassName } from '../types/WithClassName';
 import { Fragment } from 'react/jsx-runtime';
 import { useGSAP } from '@gsap/react';
-import { useHamburgerStore } from '../store/hamburgerStore';
-import gsap from 'gsap';
+import { useScrollTo } from '../hooks/useScrollTo';
+import { useHandleClickOutside } from '../hooks/useHandleClickOutside';
+import { useRef } from 'react';
+import MenuButton from '../components/MenuButton';
 
 function NavigationMenu({ className }: WithClassName) {
   const { contextSafe } = useGSAP();
-  const setIsOpen = useHamburgerStore(state => state.setIsOpen);
+  const { scrollTo } = useScrollTo();
+  const ref = useRef(null);
+
   const navigationInfo = [
     { prefix: '01', description: 'Sobre mí', href: '#about-section' },
     { prefix: '02', description: 'Tecnologías', href: '#technologies-section' },
     { prefix: '03', description: 'Proyectos', href: '#projects-section' },
     { prefix: '04', description: 'Contacto', href: '#contact-section' }
   ];
-  const scrollTo = (id: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    setIsOpen(false);
-    gsap.to(window, {
-      duration: 0.56,
-      scrollTo: id
-    });
-  };
+
+  useHandleClickOutside(ref);
 
   return (
-    <nav className={cn('bg-miscellaneous-primary flex flex-col justify-between p-l max-w-80 w-full h-svh lg:h-screen', className)}>
+    <nav
+      ref={ref}
+      className={cn('bg-miscellaneous-primary flex flex-col justify-between p-l max-w-80 w-full h-svh lg:h-screen border-l border-neutral-inverse-primary', className)}
+    >
+      <MenuButton className='fixed right-5 top-5 z-20' />
+
       <HeaderLogo />
       <div className='flex flex-col items-start gap-s'>
         {navigationInfo.map((e, i) => (
