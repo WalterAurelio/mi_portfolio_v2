@@ -31,7 +31,7 @@ function NavigationMenu({ className }: WithClassName) {
       ref={ref}
       className={cn('bg-miscellaneous-primary flex flex-col justify-between p-l max-w-80 w-full h-svh lg:h-screen border-l border-neutral-inverse-primary', className)}
     >
-      <div className='fixed right-5 top-5 flex gap-s'>
+      <div className='fixed right-4 lg:right-5 top-4 lg:top-5 flex gap-s'>
         <DarkLightButton />
         <MenuButton />
       </div>

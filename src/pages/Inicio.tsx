@@ -4,10 +4,10 @@ import Tecnologias from '../sections/Tecnologias';
 import Proyectos from '../sections/Proyectos';
 import Contacto from '../sections/Contacto';
 import Footer from '../sections/Footer';
-// import FloatingShapesOnPath from '../components/FloatingShapesOnPath';
 import NavigationMenu from '../interfaces/NavigationMenu';
 import { useHamburgerStore } from '../store/hamburgerStore';
 import { cn } from '../utils/cn';
+import FloatingShapesOnPath from '../components/FloatingShapesOnPath';
 
 function Inicio() {
   const isOpen = useHamburgerStore(state => state.isOpen);
@@ -20,9 +20,8 @@ function Inicio() {
           '-right-80': !isOpen
         })}
       />
-      <main id='smooth-content'>
-        {/* <FloatingShapesOnPath /> */}
-
+      <main id='smooth-content' className='relative'>
+        <FloatingShapesOnPath />
         <Hero />
         <SobreMi />
         <Tecnologias />

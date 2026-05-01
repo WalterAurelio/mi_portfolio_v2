@@ -45,8 +45,7 @@ function GradientShape({ className, variant = 'warm', id, reverseAnimation, dela
           id={`path-${id}`}
           d='M120 120 m -120,0 a 120,120 0 1,0 240,0 a 120,120 0 1,0 -240,0'
           fill='none'
-          stroke='black'
-          strokeWidth='1'
+          stroke='none'
         />
       </svg>
     </div>

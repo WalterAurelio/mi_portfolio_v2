@@ -17,6 +17,7 @@ function App() {
       ignoreMobileResize: true,
       normalizeScroll: true
     });
+    ScrollTrigger.refresh();
   });
 
   return (

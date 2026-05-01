@@ -21,7 +21,7 @@ function NetworkPill({ Icon = GithubLogo, size = 'large', children = 'Network', 
     >
       <Icon
         className={cn(
-          'size-1.5 absolute left-[50%] -translate-x-[50%] bottom-0 group-hover:size-6 transition-all duration-300 group-hover:bottom-2.25 opacity-0 group-hover:opacity-100 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)]',
+          'text-neutral-tertiary size-1.5 absolute left-[50%] -translate-x-[50%] bottom-0 group-hover:size-6 transition-all duration-300 group-hover:bottom-2.25 opacity-0 group-hover:opacity-100 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)]',
           { hidden: size === 'small' }
         )}
       />
@@ -29,4 +29,4 @@ function NetworkPill({ Icon = GithubLogo, size = 'large', children = 'Network', 
     </a>
   );
 }
-export default NetworkPill
+export default NetworkPill;
