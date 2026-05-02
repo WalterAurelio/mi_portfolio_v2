@@ -11,6 +11,7 @@ import GitLogo from '../assets/svg/GitLogo.svg?react';
 import ReactLogo from '../assets/svg/ReactLogo.svg?react';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/all';
+import gsap from 'gsap';
 
 function Tecnologias() {
   const techs = [
@@ -27,12 +28,21 @@ function Tecnologias() {
 
   useGSAP(() => {
     ScrollTrigger.create({
-      trigger: '#technologies-description',
+      trigger: '#technologies',
       start: 'center center',
       endTrigger: '#projects-section',
       end: 'top bottom',
       pin: true
     });
+
+    const tl = gsap.timeline({
+      defaults: { duration: 1.2 },
+      scrollTrigger: { trigger: '#technologies-section', start: 'top center', end: 'bottom center', toggleActions: 'play none none reverse' }
+    });
+
+    tl.from('#technologies-section-title', { filter: 'blur(20px)', ease: 'power2.inOut' })
+      .from('#technologies-handwritten-title', { filter: 'blur(20px)', ease: 'circ.out' }, '-=0.8')
+      .from('#technologies-section-body', { filter: 'blur(20px)', x: -50, autoAlpha: 0, ease: 'circ.out' }, '-=0.8');
   });
 
   return (
@@ -42,7 +52,7 @@ function Tecnologias() {
     >
       <div className='w-full h-screen s-p lg:flex items-center justify-center'>
         <SectionCompound
-          id='technologies-description'
+          id='technologies'
           title='Tecnologías'
           handwritten='Tecnologias'
           className='items-center text-center'

@@ -9,17 +9,23 @@ type Props = React.HTMLAttributes<HTMLDivElement> & {
   body?: string;
 };
 
-function SectionCompound({ className, title, handwritten, body, ...props }: Props) {
+function SectionCompound({ className, title, handwritten, body, id, ...props }: Props) {
   return (
     <div
+      id={id}
       className={cn('flex max-w-162.25 w-full flex-col items-start gap-xl', className)}
       {...props}
     >
       <div className='relative'>
-        <SectionTitle>{title}</SectionTitle>
-        <HandwrittenTitle className='absolute left-9 top-9 -z-10'>{handwritten}</HandwrittenTitle>
+        <SectionTitle id={`${id}-section-title`}>{title}</SectionTitle>
+        <HandwrittenTitle
+          id={`${id}-handwritten-title`}
+          className='absolute left-9 top-9 -z-10'
+        >
+          {handwritten}
+        </HandwrittenTitle>
       </div>
-      <SectionBody>{body}</SectionBody>
+      <SectionBody id={`${id}-section-body`}>{body}</SectionBody>
     </div>
   );
 }

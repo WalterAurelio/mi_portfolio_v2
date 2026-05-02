@@ -1,10 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
 import gsap from 'gsap';
-import { ScrollTrigger, ScrollSmoother, MotionPathPlugin, ScrollToPlugin } from 'gsap/all';
+import { ScrollTrigger, ScrollSmoother, MotionPathPlugin, ScrollToPlugin, SplitText, DrawSVGPlugin } from 'gsap/all';
 import { useGSAP } from '@gsap/react';
 import Inicio from './pages/Inicio';
 
-gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother, MotionPathPlugin, ScrollToPlugin);
+gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother, MotionPathPlugin, ScrollToPlugin, SplitText, DrawSVGPlugin);
 
 function App() {
   useGSAP(() => {

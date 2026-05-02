@@ -1,6 +1,13 @@
-import type { PropsWithChildren } from 'react';
+type Props = React.HTMLAttributes<HTMLHeadingElement>;
 
-function SectionTitle({ children = 'Section Title' }: PropsWithChildren) {
-  return <h2 className='h1-bold'>{children}</h2>;
+function SectionTitle({ children = 'Section Title', ...props }: Props) {
+  return (
+    <h2
+      className='h1-bold'
+      {...props}
+    >
+      {children}
+    </h2>
+  );
 }
 export default SectionTitle;

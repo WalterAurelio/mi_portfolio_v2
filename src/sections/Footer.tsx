@@ -12,7 +12,7 @@ function Footer() {
       <div className='s-px my-auto flex justify-between'>
         <div className='flex flex-col gap-xs'>
           <p className='text-neutral-inverse-tertiary h3-bold leading-[0.72] lowercase'>Aurelio</p>
-          <FrontendDeveloper className='w-26.25 lg:w-32.75' />
+          <FrontendDeveloper className='w-26.25 lg:w-32.75 text-neutral-disabled' />
         </div>
 
         <div className='flex gap-s lg:gap-m'>
