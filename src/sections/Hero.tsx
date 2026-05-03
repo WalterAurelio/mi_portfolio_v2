@@ -5,6 +5,7 @@ import LinkedinLogo from '../assets/svg/LinkedinLogo B.svg?react';
 import DownloadSimple from '../assets/svg/DownloadSimple.svg?react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import { filterBlur } from '../utils/filterBlur';
 
 function Hero() {
   const cursiveColor = '#AEA0A1'; /* #AEA0A1 */
@@ -16,12 +17,12 @@ function Hero() {
     tl1
       .from('#warm-shape', { scale: 0.5, autoAlpha: 0, xPercent: -100, ease: 'back.out' })
       .from('#cold-shape', { scale: 0.5, autoAlpha: 0, yPercent: 100, ease: 'back.out' }, '-=1')
-      .from('#aurelio', { filter: 'blur(20px)', xPercent: -50, autoAlpha: 0, ease: 'power2.inOut' }, '-=0.8');
+      .from('#aurelio', { filter: filterBlur, xPercent: -50, autoAlpha: 0, ease: 'power2.inOut' }, '-=0.8');
 
     tl2
       .set('#frontend-developer path', { strokeWidth: '1px', stroke: cursiveColor })
       .from('#frontend-developer path', { drawSVG: 0, duration: 2, stagger: 0.12, ease: 'expo.out' }, '+=2')
-      .to('#frontend-developer path', { fill: cursiveColor, duration: 0.4, stagger: 0.12 }, '-=3.6')
+      .to('#frontend-developer path', { fill: cursiveColor, duration: 0.2, stagger: 0.12 }, '-=3.6')
       .from('#pill-container .hero-pill', { yPercent: -100, duration: 0.8, stagger: 0.12, ease: 'expo.inOut' }, '-=1.6');
   });
 
@@ -39,7 +40,7 @@ function Hero() {
         </h1>
         <FrontendDeveloper
           id='frontend-developer'
-          className='w-[63.85vw] lg:w-[33.905vw] text-neutral-inverse-primary/0'
+          className='w-[63.85vw] lg:w-[33.905vw] text-neutral-disabled/0'
         />
 
         <ul

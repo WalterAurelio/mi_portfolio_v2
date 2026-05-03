@@ -3,6 +3,7 @@ import { useGSAP } from '@gsap/react';
 import ProjectSlide from '../interfaces/ProjectSlide';
 import SectionCompound from '../interfaces/SectionCompound';
 import { ScrollTrigger, SplitText } from 'gsap/all';
+import { filterBlur } from '../utils/filterBlur';
 
 function Proyectos() {
   useGSAP(() => {
@@ -13,7 +14,7 @@ function Proyectos() {
     const split = SplitText.create('#projects-section-body', { type: 'lines', mask: 'lines' });
 
     tl1
-      .from('#projects-section-title', { filter: 'blur(20px)', xPercent: 36.5 })
+      .from('#projects-section-title', { filter: filterBlur, xPercent: 36.5, autoAlpha: 0 })
       .from('#projects-handwritten-title', { yPercent: -36.5, autoAlpha: 0 }, '-=0.8')
       .from(split.lines, { yPercent: 100, duration: 0.632, stagger: 0.189 }, '-=0.8');
 

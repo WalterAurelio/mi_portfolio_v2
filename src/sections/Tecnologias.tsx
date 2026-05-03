@@ -12,6 +12,7 @@ import ReactLogo from '../assets/svg/ReactLogo.svg?react';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/all';
 import gsap from 'gsap';
+import { filterBlur } from '../utils/filterBlur';
 
 function Tecnologias() {
   const techs = [
@@ -40,9 +41,9 @@ function Tecnologias() {
       scrollTrigger: { trigger: '#technologies-section', start: 'top center', end: 'bottom center', toggleActions: 'play none none reverse' }
     });
 
-    tl.from('#technologies-section-title', { filter: 'blur(20px)', ease: 'power2.inOut' })
-      .from('#technologies-handwritten-title', { filter: 'blur(20px)', ease: 'circ.out' }, '-=0.8')
-      .from('#technologies-section-body', { filter: 'blur(20px)', x: -50, autoAlpha: 0, ease: 'circ.out' }, '-=0.8');
+    tl.from('#technologies-section-title', { filter: filterBlur, ease: 'power2.inOut', autoAlpha: 0 })
+      .from('#technologies-handwritten-title', { filter: filterBlur, ease: 'circ.out', autoAlpha: 0 }, '-=0.8')
+      .from('#technologies-section-body', { filter: filterBlur, x: -50, autoAlpha: 0, ease: 'circ.out' }, '-=0.8');
   });
 
   return (

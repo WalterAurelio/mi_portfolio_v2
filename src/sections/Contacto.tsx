@@ -3,6 +3,7 @@ import Button from '../components/Button';
 import MiscTitle from '../components/MiscTitle';
 import gsap from 'gsap';
 import { SplitText } from 'gsap/all';
+import { filterBlur } from '../utils/filterBlur';
 
 function Contacto() {
   useGSAP(() => {
@@ -18,7 +19,7 @@ function Contacto() {
       stagger: 0.144,
       ease: 'expo.inOut'
     })
-      .from('#contact-email', { filter: 'blur(20px)', yPercent: 50, autoAlpha: 0, ease: 'power3.inOut' }, '-=0.8')
+      .from('#contact-email', { filter: filterBlur, yPercent: 50, autoAlpha: 0, ease: 'power3.inOut' }, '-=0.8')
       .from('#contact-button', { autoAlpha: 0, scale: 1.5, ease: 'circ.out' }, '-=.2');
   });
 

@@ -2,6 +2,7 @@ import { useGSAP } from '@gsap/react';
 import SectionCompound from '../interfaces/SectionCompound';
 import gsap from 'gsap';
 import { SplitText } from 'gsap/all';
+import { filterBlur } from '../utils/filterBlur';
 
 function SobreMi() {
   useGSAP(() => {
@@ -11,7 +12,7 @@ function SobreMi() {
     });
     const split = SplitText.create('#about-section-body', { type: 'lines', mask: 'lines' });
 
-    tl.from('#about-section-title', { filter: 'blur(20px)', xPercent: -36.5 })
+    tl.from('#about-section-title', { filter: filterBlur, xPercent: -36.5, autoAlpha: 0 })
       .from('#about-handwritten-title', { yPercent: -36.5, autoAlpha: 0 }, '-=0.8')
       .from(split.lines, { yPercent: 100, duration: 0.633, stagger: 0.189 }, '-=0.8');
   });

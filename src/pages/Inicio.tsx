@@ -20,7 +20,10 @@ function Inicio() {
           '-right-80': !isOpen
         })}
       />
-      <main id='smooth-content' className='relative'>
+      <main
+        id='smooth-content'
+        className='relative'
+      >
         <FloatingShapesOnPath />
         <Hero />
         <SobreMi />
