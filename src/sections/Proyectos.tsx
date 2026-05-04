@@ -4,8 +4,10 @@ import ProjectSlide from '../interfaces/ProjectSlide';
 import SectionCompound from '../interfaces/SectionCompound';
 import { ScrollTrigger, SplitText } from 'gsap/all';
 import { filterBlur } from '../utils/filterBlur';
+import type { WithClassName } from '../types/WithClassName';
+import { cn } from '../utils/cn';
 
-function Proyectos() {
+function Proyectos({ className }: WithClassName) {
   useGSAP(() => {
     const tl1 = gsap.timeline({
       defaults: { duration: 1.2, ease: 'circ.out' },
@@ -34,7 +36,7 @@ function Proyectos() {
   return (
     <section
       id='projects-section'
-      className='relative h-[300svh] lg:h-[300vh]'
+      className={cn('relative', className)}
     >
       <div className='w-full h-svh lg:h-screen s-p pt-lg'>
         <SectionCompound

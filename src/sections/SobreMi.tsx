@@ -3,8 +3,10 @@ import SectionCompound from '../interfaces/SectionCompound';
 import gsap from 'gsap';
 import { SplitText } from 'gsap/all';
 import { filterBlur } from '../utils/filterBlur';
+import type { WithClassName } from '../types/WithClassName';
+import { cn } from '../utils/cn';
 
-function SobreMi() {
+function SobreMi({ className }: WithClassName) {
   useGSAP(() => {
     const tl = gsap.timeline({
       defaults: { duration: 1.2, ease: 'circ.out' },
@@ -20,7 +22,7 @@ function SobreMi() {
   return (
     <section
       id='about-section'
-      className='w-full h-svh lg:h-screen s-p pt-lg'
+      className={cn('w-full h-svh lg:h-screen s-p pt-lg', className)}
     >
       <SectionCompound
         id='about'
