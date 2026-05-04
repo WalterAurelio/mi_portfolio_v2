@@ -34,7 +34,7 @@ function Proyectos() {
   return (
     <section
       id='projects-section'
-      className='relative h-[300vh]'
+      className='relative h-[300svh] lg:h-[300vh]'
     >
       <div className='w-full h-svh lg:h-screen s-p pt-lg'>
         <SectionCompound

@@ -1,5 +1,5 @@
 import Sun from '../assets/svg/Sun.svg?react';
-import Moon from '../assets/svg/Moon 2.svg?react';
+import Moon from '../assets/svg/Moon.svg?react';
 import { useThemeStore } from '../store/themeStore';
 import type { WithClassName } from '../types/WithClassName';
 import { cn } from '../utils/cn';

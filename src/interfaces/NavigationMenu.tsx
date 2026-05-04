@@ -9,8 +9,8 @@ import { useGSAP } from '@gsap/react';
 import { useScrollTo } from '../hooks/useScrollTo';
 import { useHandleClickOutside } from '../hooks/useHandleClickOutside';
 import { useRef } from 'react';
-import MenuButton from '../components/MenuButton';
 import DarkLightButton from '../components/DarkLightButton';
+import MenuButton from '../components/MenuButton';
 
 function NavigationMenu({ className }: WithClassName) {
   const { contextSafe } = useGSAP();
@@ -31,12 +31,12 @@ function NavigationMenu({ className }: WithClassName) {
       ref={ref}
       className={cn('bg-miscellaneous-primary flex flex-col justify-between p-l max-w-80 w-full h-svh lg:h-screen border-l border-neutral-inverse-primary', className)}
     >
-      <div className='fixed right-4 lg:right-5 top-4 lg:top-5 flex gap-s'>
+      <div className='flex gap-s'>
+        <HeaderLogo />
         <DarkLightButton />
-        <MenuButton />
       </div>
+      <MenuButton className='fixed right-4 top-4' />
 
-      <HeaderLogo />
       <div className='flex flex-col items-start gap-s'>
         {navigationInfo.map((e, i) => (
           <Fragment key={i}>
