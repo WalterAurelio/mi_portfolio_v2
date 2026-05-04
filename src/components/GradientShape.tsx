@@ -29,7 +29,7 @@ function GradientShape({ className, variant = 'warm', id, reverseAnimation, dela
     <div className={cn('w-fit relative', className)}>
       <div
         id={id}
-        className={cn('h-39 aspect-square rounded-full blur-md', {
+        className={cn('h-19.5 lg:h-39 aspect-square rounded-full blur-md', {
           'bg-gradient-to-r from-[#ff7262] to-[#a259ff]': variant === 'warm',
           'bg-gradient-to-r from-[#1abcfe] to-[#0acf83]': variant === 'cold'
         })}

@@ -22,14 +22,14 @@ function Inicio() {
       />
       <main
         id='smooth-content'
-        className='relative'
+        className='relative flex flex-col gap-[17.232376vh]'
       >
         <FloatingShapesOnPath />
         <Hero />
         <SobreMi />
         <Tecnologias />
         <Proyectos />
-        <Contacto />
+        <Contacto className='-my-[17.232376vh]' />
         <Footer />
       </main>
     </>

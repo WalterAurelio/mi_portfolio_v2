@@ -4,8 +4,10 @@ import MiscTitle from '../components/MiscTitle';
 import gsap from 'gsap';
 import { SplitText } from 'gsap/all';
 import { filterBlur } from '../utils/filterBlur';
+import type { WithClassName } from '../types/WithClassName';
+import { cn } from '../utils/cn';
 
-function Contacto() {
+function Contacto({ className }: WithClassName) {
   useGSAP(() => {
     const tl = gsap.timeline({
       defaults: { duration: 1.2 },
@@ -26,7 +28,7 @@ function Contacto() {
   return (
     <section
       id='contact-section'
-      className='h-96 lg:h-screen p-l lg:pt-5 bg-neutral-inverse-primary flex flex-col items-center'
+      className={cn('h-96 lg:h-screen p-l lg:pt-5 bg-neutral-inverse-primary flex flex-col items-center', className)}
     >
       <MiscTitle id='contact-title'>
         Lorem ipsum dolor sit

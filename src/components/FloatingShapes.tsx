@@ -5,7 +5,7 @@ type Props = React.ComponentPropsWithoutRef<'div'>;
 function FloatingShapes({ ...props }: Props) {
   return (
     <div
-      className='w-58.5 aspect-square relative'
+      className='w-29.25 lg:w-58.5 aspect-square relative'
       {...props}
     >
       <GradientShape
